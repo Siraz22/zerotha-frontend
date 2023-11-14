@@ -1,0 +1,14 @@
+/* CSS for circular profile picture */
+.profile-card {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  width: 100px; /* Adjust the width of the circle as needed */
+  height: 100px; /* Adjust the height of the circle as needed */
+  background-color: #fff; /* Set the background color of the circle */
+  border-radius: 50%; /* Makes the div a circle */
+  left: 5%;
+  transform: translateY(-50%);
+}
