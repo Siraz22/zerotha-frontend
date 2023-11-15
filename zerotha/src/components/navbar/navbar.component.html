@@ -1,0 +1,46 @@
+<style>
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="navbar-brand dropdown">
+    <img style="padding: 0px 12px;" src="https://companieslogo.com/img/orig/DB1.DE.D-6a83a223.png?t=1651903436"
+      alt="logo.png" height="35" id="brandDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    ZeroTha
+    <div class="dropdown-menu" aria-labelledby="brandDropdown">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="mx-auto">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img style="right:0" src="path/to/your/profile-picture.jpg" alt="Profile" width="30" height="30"
+          class="rounded-circle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div style="right: 0px" class="dropdown-menu" aria-labelledby="profileDropdown">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">Settings</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

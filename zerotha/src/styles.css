@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Add this custom class for ng-select */
+.ze-ng-select {
+  width: 100%; /* Adjust width as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+  color: #000000; /* Text color */
+  border: 1px solid #ddd; /* Button border */
+  border-radius: 4px; /* Button border-radius */
+  padding: 10px 15px;
+}
+
+/* Customize the appearance of the dropdown items */
+.ze-ng-select .ng-dropdown-panel {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background-color: #f4f4f4; /* Background color of dropdown panel */
+  position: absolute;
+  top: 100%; /* Position the dropdown below the button */
+  left: 0; /* Align the left side of the dropdown with the button */
+  width: 100%; /* Make the dropdown width match the button width */
+  border: 1px solid #ddd; /* Match button border color */
+  box-sizing: border-box; /* Ensure border width is included in the width */
+}
+
+.ze-ng-select .ng-dropdown-panel .ng-option {
+  padding: 8px 12px; /* Adjust padding as needed */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ze-ng-select .ng-dropdown-panel .ng-option:hover {
+  background-color: #e2e6ea; /* Adjust hover background color as needed */
+}
+
+.ze-ng-select .ng-arrow-wrapper {
+  border-left: 5px solid transparent; /* Hide the default arrow */
+}
+
+.ze-ng-select .ng-arrow-down::before {
+  border-top: 5px solid #fff; /* Create a custom arrow */
+}
