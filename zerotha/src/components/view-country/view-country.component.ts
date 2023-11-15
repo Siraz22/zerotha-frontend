@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewCountryComponent implements OnInit {
   public countryList: string[] = ['India', 'America'];
-  public selectedCountry: string = '';
+  public selectedCountry: string = 'India';
 
   constructor() {}
 

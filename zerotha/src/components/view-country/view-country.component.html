@@ -1,35 +1,90 @@
 <div class="band">
-  <div class="header">
-    <div class="switchbar-container">
-      <div class="switchbar" id="switchbar">
-        <div class="switch" [class.selected]="selectedOption === 1" (click)="selectOption(1)">
-          <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/4449/4449895.png">
-          Stock
+    <div class="header">
+        <div class="switchbar-container">
+            <div class="switchbar" id="switchbar">
+                <div class="switch" [class.selected]="selectedOption === 1" (click)="selectOption(1)">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/4449/4449895.png">
+                    Stock
+                </div>
+                <div class="switch" [class.selected]="selectedOption === 2" (click)="selectOption(2)">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/3133/3133613.png">
+                    Debt
+                </div>
+                <div class="switch" [class.selected]="selectedOption === 3" (click)="selectOption(3)">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1473/1473504.png">
+                    Metals
+                </div>
+                <div class="switch" [class.selected]="selectedOption === 4" (click)="selectOption(4)">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/855/855288.png">
+                    MF
+                </div>
+                <div class="switch" [class.selected]="selectedOption === 5" (click)="selectOption(5)">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/7280/7280222.png">
+                    Crypto
+                </div>
+                <div class="switch" [class.selected]="selectedOption === 6" (click)="selectOption(6)">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1041/1041728.png">
+                    Info
+                </div>
+            </div>
         </div>
-        <div class="switch" [class.selected]="selectedOption === 2" (click)="selectOption(2)">
-          <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/3133/3133613.png">
-          Debt
+        <div class="select-country">
+            <ng-select [items]="countryList" [(ngModel)]="selectedCountry" class="ze-ng-select"
+                [clearSearchOnAdd]="true" placeholder="Select Country"></ng-select>
         </div>
-        <div class="switch" [class.selected]="selectedOption === 3" (click)="selectOption(3)">
-          <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1473/1473504.png">
-          Metals
-        </div>
-        <div class="switch" [class.selected]="selectedOption === 4" (click)="selectOption(4)">
-          <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/855/855288.png">
-          MF
-        </div>
-        <div class="switch" [class.selected]="selectedOption === 5" (click)="selectOption(5)">
-          <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/7280/7280222.png">
-          Crypto
-        </div>
-        <div class="switch" [class.selected]="selectedOption === 6" (click)="selectOption(6)">
-          <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1041/1041728.png">
-          Info
-        </div>
-      </div>
     </div>
-    <div class="dropdown">
-      <ng-select [items]="countryList" class="ze-ng-select" placeholder="Select Country"></ng-select>
+    <div class="container mt-4">
+        <div class="investment-overview-card">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="container">
+                        <p><strong>{{'Good Afternoon, @Username! 🎉'}}</strong></p>
+                        <p>{{'Change is the only constant!'}}</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card-text">
+                                            Current Value
+                                        </div>
+                                        <div class="card-title">
+                                            {{'₹ 4,90,542'}}
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text">
+                                            Invested Amount - ₹ 4,11,288
+                                        </div>
+                                        <div class="card-text">
+                                            Total P&L - +79,254 (+19.27%)
+                                        </div>
+                                        <div class="card-text">
+                                            Today's P&L - +3,107 (+0.63%)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                Your Profit and Loss
+                            </div>
+                            <div style="right: 2rem" class="col-6">
+                                <ng-select class="ze-ng-select" placeholder="Dropdown"></ng-select>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Some kind of waffle chart here?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </div>
 </div>

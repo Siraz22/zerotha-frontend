@@ -1,6 +1,18 @@
+.band {
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .switchbar-container {
-  max-width: 100rem;
-  margin: auto;
+  justify-content: center;
+  max-width: 50rem;
+  margin: 0 auto;
   flex: 0.6;
 }
 
@@ -64,28 +76,32 @@
   border-radius: 50px;
 }
 
-.band {
-  background-color: #f3f3f3;
-  padding: 20px;
-}
-
-.header {
+.select-country {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  right: 1rem;
 }
 
-.dropdown {
-  margin-left: 20px;
+.investment-overview-card {
+  border: #ddd;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
 }
 
 /* Media query for mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
   .header {
     flex-direction: column;
   }
 
-  .dropdown {
+  .select-country {
+    position: relative;
+    right: 0px;
     margin-top: 10px;
     margin-left: 0;
   }
