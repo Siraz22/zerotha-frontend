@@ -4,3 +4,4 @@ Frontend for zerodha. Hobby project to track investments from both US and India.
 
 Makeshift JIRA
 FE-01: Make a dummy dashboard and set up basic routing
+FE-02: Make navbar and component to view a country's investment
