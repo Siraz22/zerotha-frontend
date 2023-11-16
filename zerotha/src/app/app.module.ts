@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ViewDashboardComponent } from 'src/components/view-dashboard/view-dashboard.component';
 import { NavbarComponent } from 'src/components/navbar/navbar.component';
 import { ViewCountryComponent } from 'src/components/view-country/view-country.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,14 @@ import { ViewCountryComponent } from 'src/components/view-country/view-country.c
     NavbarComponent,
     ViewCountryComponent,
   ],
-  imports: [NgSelectModule, FormsModule, BrowserModule, AppRoutingModule],
+  imports: [
+    NgSelectModule,
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
