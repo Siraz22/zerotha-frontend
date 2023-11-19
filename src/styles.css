@@ -4,126 +4,167 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 @font-face {
-  font-family: 'GraphikLight';
-  src: url('./assets/GraphikLight.otf');
+    font-family: 'GraphikLight';
+    src: url('./assets/GraphikLight.otf');
 }
 
 @font-face {
-  font-family: 'GraphikRegular';
-  src: url('./assets/GraphikRegular.otf');
+    font-family: 'GraphikRegular';
+    src: url('./assets/GraphikRegular.otf');
 }
 
 @font-face {
-  font-family: 'GraphikMedium';
-  src: url('./assets/GraphikMedium.otf');
+    font-family: 'GraphikMedium';
+    src: url('./assets/GraphikMedium.otf');
 }
 
 @font-face {
-  font-family: 'GraphikBold';
-  src: url('./assets/GraphikBold.otf');
+    font-family: 'GraphikBold';
+    src: url('./assets/GraphikBold.otf');
 }
 
 body {
-  font-family: 'GraphikMedium';
+    font-family: 'GraphikMedium';
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'GraphikBold';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'GraphikBold';
 }
 
 small {
-  font-family: 'GraphikLight';
+    font-family: 'GraphikLight';
 }
 
 strong {
-  font-family: 'GraphikMedium';
+    font-family: 'GraphikMedium';
 }
+
+/* GLOBAL OVERRIDING OF COMMON CLASSES */
+/* Global Modal Settings */
+
+.modal-header {
+    border-bottom: none;
+}
+
+.table td {
+    padding: 20px 12px;
+}
+
+.table th {
+    padding: 5px 5px;
+}
+
+.form-control:focus {
+    border-color: black;
+    box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 1);
+}
+
+.form-group.row {
+    margin-bottom: 10px;
+}
+
+/* CUSTOM CLASSES for ZEROTHA */
 
 /* Custom Button */
 
 .ze-btn {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  color: #000000; 
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.ze-btn-primary {
+    background-color: black;
+    color: white;
+}
+
+.ze-btn-secondary {
+    background-color: blue;
+    color: white;
 }
 
 /* Custom Ng-select */
 
 .ze-ng-select {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  color: #000000; 
-  border: 1px solid #ddd; 
-  border-radius: 4px;
-  padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
 }
 
 .ze-ng-select .ng-dropdown-panel {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #f4f4f4;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 .ze-ng-select .ng-dropdown-panel .ng-option {
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .ze-ng-select .ng-dropdown-panel .ng-option:hover {
-  background-color: #e2e6ea;
+    background-color: #e2e6ea;
 }
 
 .ze-ng-select .ng-arrow-wrapper {
-  border-left: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 
 .ze-ng-select .ng-arrow-down::before {
-  border-top: 5px solid #fff;
+    border-top: 5px solid #fff;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 .ze-hr {
-  margin: 0px;
-  padding: 0px;
-  border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
 }
 
 /* Custom table styles */
 
-.table td {
-  padding: 20px 12px;
-}
-
-.table th {
-  padding: 5px 5px;
-}
-
 .ze-table-heading {
-  font-size: 1em;
-  color: #888;
-  font-weight: normal;
-  text-align: center;
-  font-family: 'GraphikLight';
+    font-size: 1em;
+    color: #888;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'GraphikLight';
 }
 
 .ze-table-body {
-  text-align: center;
-  font-weight: normal;
-  font-family: 'GraphikRegular';
-  vertical-align: middle;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'GraphikRegular';
+    vertical-align: middle;
 }
 
-/* Cursor */
+/* Custom Cursor */
 
 .ze-pointer {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+.ze-pointer:hover {
+    background-color: lightgrey;
+}
+
+/* Custom Icon buttons */
+
+.ze-icon-btn {
+    padding: 10px;
+    border-radius: 5px;
 }
