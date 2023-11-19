@@ -1,0 +1,107 @@
+.band {
+  background-color: #f3f3f3;
+  padding: 20px 20px 0px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switchbar-container {
+  justify-content: center;
+  max-width: 50rem;
+  margin: 0 auto;
+  flex: 0.6;
+}
+
+.switchbar {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.switch {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+.switch:hover {
+  background-color: #ddd;
+}
+
+.selected {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.option-switchbar {
+  display: flex;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.option-switchbar-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.option-switch {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+}
+
+.option-switch:hover {
+  background-color: #ddd;
+  border-radius: 50px;
+}
+
+.option-selected {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.investment-overview-card {
+  border: #ddd;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 1030px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .select-country {
+    position: relative;
+    right: 0px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .switchbar-container{
+    margin: 0px;
+  }
+}

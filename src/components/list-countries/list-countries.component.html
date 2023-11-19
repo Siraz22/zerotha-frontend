@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between">
+    <span style="font-family: 'GraphikMedium'; font-size: 1.6rem;">Your Countries</span>
+    <button class="btn ze-btn" (click)="openAddCountryModal()">Add Country</button>
+  </div>
+  <table class="table" style="margin-top: 15px;">
+    <thead class="ze-table-heading">
+      <tr>
+        <th style="width: 40%; font-size: 1.4em; text-align: left; ">Country</th>
+        <th>Currency</th>
+        <th>Weight</th>
+        <th style="text-align: right;">Invested Amount</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="ze-table-body">
+      <tr *ngFor="let countryDTO of countryDTOs">
+        <td style="text-align: left;">
+          <span class="ze-pointer" (click)="goToCountry(countryDTO.id)"><strong>{{countryDTO.name}}</strong></span>
+        </td>
+        <td class="currency">{{countryDTO.currency}}</td>
+        <td>{{calculateWeight(countryDTO.id)}}</td>
+        <td style="text-align: right">{{calculateInvestedAmount(countryDTO)}}</td>
+        <td><i class="fas fa-ellipsis-vertical ze-pointer"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
