@@ -9,7 +9,7 @@
                 <th style="width: 40%; font-size: 1.4em; text-align: left; ">Country</th>
                 <th>Currency</th>
                 <th>Weight</th>
-                <th style="text-align: right;">Invested Amount</th>
+                <th style="text-align: right;">Amount</th>
                 <th></th>
             </tr>
         </thead>
@@ -17,7 +17,8 @@
             <tr *ngFor="let countryDTO of countryDTOs">
                 <td style="text-align: left;">
                     <span class="ze-pointer" (click)="goToCountry(countryDTO.id)">
-                        <strong>{{countryDTO.name}}</strong>
+                        <img src={{countryDTO.flagUrl}} height="35px">
+                        <strong>{{' '+countryDTO.name}}</strong>
                     </span>
                 </td>
                 <td class="currency">{{countryDTO.currency}}</td>

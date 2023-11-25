@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: 'GraphikMedium';
+    font-family: 'GraphikRegular';
 }
 
 h1,
@@ -137,7 +137,7 @@ strong {
 
 /* Custom table styles */
 
-.ze-table-heading {
+table .ze-table-heading {
     font-size: 1em;
     color: #888;
     font-weight: normal;
@@ -145,7 +145,7 @@ strong {
     font-family: 'GraphikLight';
 }
 
-.ze-table-body {
+table .ze-table-body {
     text-align: center;
     font-weight: normal;
     font-family: 'GraphikRegular';
