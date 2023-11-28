@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -11,12 +12,13 @@ import { ViewCountryComponent } from 'src/components/view-country/view-country.c
 import { ViewDashboardComponent } from 'src/components/view-dashboard/view-dashboard.component';
 
 import { AddCountryModalComponent } from '../components/modal-components/add-country-modal/add-country-modal.component';
+import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-    declarations: [AppComponent, ViewDashboardComponent, NavbarComponent, ViewCountryComponent, ListCountriesComponent, AddCountryModalComponent],
-    imports: [BrowserModule, FormsModule, ReactiveFormsModule, NgbModule, NgSelectModule, AppRoutingModule, BrowserAnimationsModule, MatTabsModule],
+    declarations: [AppComponent, ViewDashboardComponent, NavbarComponent, ViewCountryComponent, ListCountriesComponent, AddCountryModalComponent, ObjectNgSelectComponent],
+    imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, NgbModule, NgSelectModule, AppRoutingModule, BrowserAnimationsModule, MatTabsModule],
     providers: [],
     bootstrap: [AppComponent],
 })

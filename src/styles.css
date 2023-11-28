@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~@ng-select/ng-select/themes/default.theme.css';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -68,6 +69,9 @@ strong {
     margin-bottom: 10px;
 }
 
+.ng-select {
+}
+
 /* CUSTOM CLASSES for ZEROTHA */
 
 /* Custom Button */
@@ -93,40 +97,6 @@ strong {
 /* Custom Ng-select */
 
 .ze-ng-select {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #000000;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px 15px;
-}
-
-.ze-ng-select .ng-dropdown-panel {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f4f4f4;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-}
-
-.ze-ng-select .ng-dropdown-panel .ng-option {
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.ze-ng-select .ng-dropdown-panel .ng-option:hover {
-    background-color: #e2e6ea;
-}
-
-.ze-ng-select .ng-arrow-wrapper {
-    border-left: 5px solid transparent;
-}
-
-.ze-ng-select .ng-arrow-down::before {
-    border-top: 5px solid #fff;
 }
 
 .ze-hr {
@@ -155,6 +125,10 @@ table .ze-table-body {
 /* Custom Cursor */
 
 .ze-pointer {
+    cursor: pointer;
+}
+
+.ze-pointer-plain {
     cursor: pointer;
 }
 

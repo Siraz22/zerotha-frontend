@@ -26,7 +26,7 @@
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item active">
-                    <a class="nav-link d-flex align-items-center" (click)="redirectToPath('countries')">
+                    <a class="nav-link d-flex align-items-center ze-pointer-plain" (click)="redirectToPath('countries')">
                         <img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" width="30" height="30" class="me-2">
                         Globe
                     </a>
@@ -39,7 +39,7 @@
                         </a>
                     </div>
                     <div ngbDropdownMenu (mouseout)="hoverout(dropAccount)" aria-labelledby="dropdownAccount">
-                        <button ngbDropdownItem>Account Menu</button>
+                        <button (click)="redirectToPath('dashboard')" ngbDropdownItem>Account Menu</button>
                         <button ngbDropdownItem>Another Action</button>
                         <button ngbDropdownItem>Something else is here</button>
                     </div>

@@ -1,22 +1,37 @@
-<!-- add-country-modal.component.html -->
-
 <div class="modal-header">
     <h4 class="modal-title">Add Country</h4>
     <i class="fa-solid fa-xmark close-icon ze-icon-btn ze-pointer" (click)="closeModal()"></i>
 </div>
 <div class="modal-body">
     <form [formGroup]="formGroup">
-        <div class="form-group row ze-row">
-            <label for="countryName" class="col-sm-3 col-form-label">Name</label>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Name</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="countryName" placeholder="Enter Country Name">
+                <app-object-ng-select (ngModelChange)="autofillCountryDetails()" formControlName="countryName" [items]="offlineRecords" [searchFn]="searchFn" [labelFn]="labelFn"
+                    placeholder="Enter Country" bindValue="name">
+                </app-object-ng-select>
             </div>
         </div>
-        <div class="form-group row ze-row">
-            <label for="currency" class="col-sm-3 col-form-label">Currency</label>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Currency</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="currency" placeholder="Enter Currency">
+                <input type="text" formControlName="currencyCode" class="form-control" id="currency" placeholder="Enter Currency">
             </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Currency Name</label>
+            <div class="col-sm-9">
+                <input type="text" formControlName="currencyName" class="form-control" id="currencyName" placeholder="Enter Country Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Symbol</label>
+            <div class="col-sm-9">
+                <input type="text" formControlName="currencySymbol" class="form-control" id="currencySymbol" placeholder="Enter Symbol">
+            </div>
+        </div>
+        <div class="container" *ngIf="selectedCountry && selectedCountry.image">
+            <img src="{{ this.selectedCountry.image }}">
         </div>
     </form>
 </div>

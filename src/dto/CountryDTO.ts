@@ -1,6 +1,7 @@
 export class CountryDTO {
-    public id: number;
-    public name: string;
-    public currency: string;
-    public flagUrl: string;
+    id: number;
+    name: string;
+    currency: string;
+    currencyName: string;
+    currencySymbol: string;
 }
