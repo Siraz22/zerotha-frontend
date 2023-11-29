@@ -1,0 +1,10 @@
+<ng-select class="ze-ng-select" [searchFn]="searchFn" [items]="items" [virtualScroll]="true" [clearable]="true" placeholder="{{placeholder}}" [bindValue]="bindValue"
+    [(ngModel)]=" value" (change)="change()" (blur)="onTouch()">
+    <ng-template ng-label-tmp let-item="item" let-clear="clear">
+        <span aria-hidden="true" (click)="clear(item)" class="ng-value-icon left">×</span>
+        <span class="ng-value-label">{{labelFn(item)}}</span>
+    </ng-template>
+    <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+        <div>{{labelFn(item)}}</div>
+    </ng-template>
+</ng-select>

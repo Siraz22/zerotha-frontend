@@ -1,0 +1,2310 @@
+[
+    {
+        "name": "Ascension Island",
+        "code": "AC",
+        "emoji": "🇦🇨",
+        "unicode": "U+1F1E6 U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AC.svg"
+    },
+    {
+        "name": "Andorra",
+        "code": "AD",
+        "emoji": "🇦🇩",
+        "unicode": "U+1F1E6 U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AD.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "United Arab Emirates",
+        "code": "AE",
+        "emoji": "🇦🇪",
+        "unicode": "U+1F1E6 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AE.svg",
+        "currency_code": "AED",
+        "currency_name": "United Arab Emirates Dirham",
+        "currency_symbol": "AED"
+    },
+    {
+        "name": "Afghanistan",
+        "code": "AF",
+        "emoji": "🇦🇫",
+        "unicode": "U+1F1E6 U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AF.svg",
+        "currency_code": "AFN",
+        "currency_name": "Afghan Afghani",
+        "currency_symbol": "Af"
+    },
+    {
+        "name": "Antigua & Barbuda",
+        "code": "AG",
+        "emoji": "🇦🇬",
+        "unicode": "U+1F1E6 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AG.svg"
+    },
+    {
+        "name": "Anguilla",
+        "code": "AI",
+        "emoji": "🇦🇮",
+        "unicode": "U+1F1E6 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AI.svg",
+        "currency_code": "XCD",
+        "currency_name": "Eastern Caribbean Dollar",
+        "currency_symbol": "EC$"
+    },
+    {
+        "name": "Albania",
+        "code": "AL",
+        "emoji": "🇦🇱",
+        "unicode": "U+1F1E6 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AL.svg",
+        "currency_code": "ALL",
+        "currency_name": "Albanian Lek",
+        "currency_symbol": "ALL"
+    },
+    {
+        "name": "Armenia",
+        "code": "AM",
+        "emoji": "🇦🇲",
+        "unicode": "U+1F1E6 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AM.svg",
+        "currency_code": "AMD",
+        "currency_name": "Armenian Dram",
+        "currency_symbol": "AMD"
+    },
+    {
+        "name": "Angola",
+        "code": "AO",
+        "emoji": "🇦🇴",
+        "unicode": "U+1F1E6 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AO.svg",
+        "currency_code": "AOA",
+        "currency_name": "Angolan Kwanza",
+        "currency_symbol": "Kz"
+    },
+    {
+        "name": "Antarctica",
+        "code": "AQ",
+        "emoji": "🇦🇶",
+        "unicode": "U+1F1E6 U+1F1F6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AQ.svg",
+        "currency_code": "XCD",
+        "currency_name": "Eastern Caribbean Dollar",
+        "currency_symbol": "EC$"
+    },
+    {
+        "name": "Argentina",
+        "code": "AR",
+        "emoji": "🇦🇷",
+        "unicode": "U+1F1E6 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AR.svg",
+        "currency_code": "ARS",
+        "currency_name": "Argentine Peso",
+        "currency_symbol": "AR$"
+    },
+    {
+        "name": "American Samoa",
+        "code": "AS",
+        "emoji": "🇦🇸",
+        "unicode": "U+1F1E6 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AS.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Austria",
+        "code": "AT",
+        "emoji": "🇦🇹",
+        "unicode": "U+1F1E6 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AT.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Australia",
+        "code": "AU",
+        "emoji": "🇦🇺",
+        "unicode": "U+1F1E6 U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AU.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    {
+        "name": "Aruba",
+        "code": "AW",
+        "emoji": "🇦🇼",
+        "unicode": "U+1F1E6 U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AW.svg",
+        "currency_code": "AWG",
+        "currency_name": "Aruban Florin",
+        "currency_symbol": "Afl."
+    },
+    {
+        "name": "Åland Islands",
+        "code": "AX",
+        "emoji": "🇦🇽",
+        "unicode": "U+1F1E6 U+1F1FD",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AX.svg"
+    },
+    {
+        "name": "Azerbaijan",
+        "code": "AZ",
+        "emoji": "🇦🇿",
+        "unicode": "U+1F1E6 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AZ.svg",
+        "currency_code": "AZN",
+        "currency_name": "Azerbaijani Manat",
+        "currency_symbol": "man."
+    },
+    {
+        "name": "Bosnia & Herzegovina",
+        "code": "BA",
+        "emoji": "🇧🇦",
+        "unicode": "U+1F1E7 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BA.svg"
+    },
+    {
+        "name": "Barbados",
+        "code": "BB",
+        "emoji": "🇧🇧",
+        "unicode": "U+1F1E7 U+1F1E7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BB.svg",
+        "currency_code": "BBD",
+        "currency_name": "Barbadian dollar",
+        "currency_symbol": "Bds$"
+    },
+    {
+        "name": "Bangladesh",
+        "code": "BD",
+        "emoji": "🇧🇩",
+        "unicode": "U+1F1E7 U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BD.svg",
+        "currency_code": "BDT",
+        "currency_name": "Bangladeshi Taka",
+        "currency_symbol": "Tk"
+    },
+    {
+        "name": "Belgium",
+        "code": "BE",
+        "emoji": "🇧🇪",
+        "unicode": "U+1F1E7 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BE.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Burkina Faso",
+        "code": "BF",
+        "emoji": "🇧🇫",
+        "unicode": "U+1F1E7 U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BF.svg",
+        "currency_code": "XOF",
+        "currency_name": "CFA Franc BCEAO",
+        "currency_symbol": "CFA"
+    },
+    {
+        "name": "Bulgaria",
+        "code": "BG",
+        "emoji": "🇧🇬",
+        "unicode": "U+1F1E7 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BG.svg",
+        "currency_code": "BGN",
+        "currency_name": "Bulgarian Lev",
+        "currency_symbol": "BGN"
+    },
+    {
+        "name": "Bahrain",
+        "code": "BH",
+        "emoji": "🇧🇭",
+        "unicode": "U+1F1E7 U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BH.svg",
+        "currency_code": "BHD",
+        "currency_name": "Bahraini Dinar",
+        "currency_symbol": "BD"
+    },
+    {
+        "name": "Burundi",
+        "code": "BI",
+        "emoji": "🇧🇮",
+        "unicode": "U+1F1E7 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BI.svg",
+        "currency_code": "BIF",
+        "currency_name": "Burundian Franc",
+        "currency_symbol": "FBu"
+    },
+    {
+        "name": "Benin",
+        "code": "BJ",
+        "emoji": "🇧🇯",
+        "unicode": "U+1F1E7 U+1F1EF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BJ.svg",
+        "currency_code": "XOF",
+        "currency_name": "CFA Franc BCEAO",
+        "currency_symbol": "CFA"
+    },
+    {
+        "name": "St. Barthélemy",
+        "code": "BL",
+        "emoji": "🇧🇱",
+        "unicode": "U+1F1E7 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BL.svg"
+    },
+    {
+        "name": "Bermuda",
+        "code": "BM",
+        "emoji": "🇧🇲",
+        "unicode": "U+1F1E7 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BM.svg",
+        "currency_code": "BMD",
+        "currency_name": "Bermudian dollar",
+        "currency_symbol": "BD$"
+    },
+    {
+        "name": "Brunei",
+        "code": "BN",
+        "emoji": "🇧🇳",
+        "unicode": "U+1F1E7 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BN.svg",
+        "currency_code": "BND",
+        "currency_name": "Brunei Dollar",
+        "currency_symbol": "BN$"
+    },
+    {
+        "name": "Bolivia",
+        "code": "BO",
+        "emoji": "🇧🇴",
+        "unicode": "U+1F1E7 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BO.svg",
+        "currency_code": "BOB",
+        "currency_name": "Bolivian Boliviano",
+        "currency_symbol": "Bs"
+    },
+    {
+        "name": "Caribbean Netherlands",
+        "code": "BQ",
+        "emoji": "🇧🇶",
+        "unicode": "U+1F1E7 U+1F1F6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BQ.svg"
+    },
+    {
+        "name": "Brazil",
+        "code": "BR",
+        "emoji": "🇧🇷",
+        "unicode": "U+1F1E7 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BR.svg",
+        "currency_code": "BRL",
+        "currency_name": "Brazilian Real",
+        "currency_symbol": "R$"
+    },
+    {
+        "name": "Bahamas",
+        "code": "BS",
+        "emoji": "🇧🇸",
+        "unicode": "U+1F1E7 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BS.svg",
+        "currency_code": "BSD",
+        "currency_name": "Bahamian dollar",
+        "currency_symbol": "B$"
+    },
+    {
+        "name": "Bhutan",
+        "code": "BT",
+        "emoji": "🇧🇹",
+        "unicode": "U+1F1E7 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BT.svg",
+        "currency_code": "BTN",
+        "currency_name": "Bhutanese ngultrum",
+        "currency_symbol": "Nu."
+    },
+    {
+        "name": "Bouvet Island",
+        "code": "BV",
+        "emoji": "🇧🇻",
+        "unicode": "U+1F1E7 U+1F1FB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BV.svg",
+        "currency_code": "NOK",
+        "currency_name": "Norwegian Krone",
+        "currency_symbol": "Nkr"
+    },
+    {
+        "name": "Botswana",
+        "code": "BW",
+        "emoji": "🇧🇼",
+        "unicode": "U+1F1E7 U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BW.svg",
+        "currency_code": "BWP",
+        "currency_name": "Botswanan Pula",
+        "currency_symbol": "BWP"
+    },
+    {
+        "name": "Belarus",
+        "code": "BY",
+        "emoji": "🇧🇾",
+        "unicode": "U+1F1E7 U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BY.svg",
+        "currency_code": "BYR"
+    },
+    {
+        "name": "Belize",
+        "code": "BZ",
+        "emoji": "🇧🇿",
+        "unicode": "U+1F1E7 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/BZ.svg",
+        "currency_code": "BZD",
+        "currency_name": "Belize Dollar",
+        "currency_symbol": "BZ$"
+    },
+    {
+        "name": "Canada",
+        "code": "CA",
+        "emoji": "🇨🇦",
+        "unicode": "U+1F1E8 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CA.svg",
+        "currency_code": "CAD",
+        "currency_name": "Canadian Dollar",
+        "currency_symbol": "CA$"
+    },
+    {
+        "name": "Cocos (Keeling) Islands",
+        "code": "CC",
+        "emoji": "🇨🇨",
+        "unicode": "U+1F1E8 U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CC.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    {
+        "name": "Congo - Kinshasa",
+        "code": "CD",
+        "emoji": "🇨🇩",
+        "unicode": "U+1F1E8 U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CD.svg"
+    },
+    {
+        "name": "Central African Republic",
+        "code": "CF",
+        "emoji": "🇨🇫",
+        "unicode": "U+1F1E8 U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CF.svg",
+        "currency_code": "XAF",
+        "currency_name": "CFA Franc BEAC",
+        "currency_symbol": "FCFA"
+    },
+    {
+        "name": "Congo - Brazzaville",
+        "code": "CG",
+        "emoji": "🇨🇬",
+        "unicode": "U+1F1E8 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CG.svg"
+    },
+    {
+        "name": "Switzerland",
+        "code": "CH",
+        "emoji": "🇨🇭",
+        "unicode": "U+1F1E8 U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CH.svg",
+        "currency_code": "CHF",
+        "currency_name": "Swiss Franc",
+        "currency_symbol": "CHF"
+    },
+    {
+        "name": "Côte d’Ivoire",
+        "code": "CI",
+        "emoji": "🇨🇮",
+        "unicode": "U+1F1E8 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CI.svg"
+    },
+    {
+        "name": "Cook Islands",
+        "code": "CK",
+        "emoji": "🇨🇰",
+        "unicode": "U+1F1E8 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CK.svg",
+        "currency_code": "NZD",
+        "currency_name": "New Zealand Dollar",
+        "currency_symbol": "NZ$"
+    },
+    {
+        "name": "Chile",
+        "code": "CL",
+        "emoji": "🇨🇱",
+        "unicode": "U+1F1E8 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CL.svg",
+        "currency_code": "CLP",
+        "currency_name": "Chilean Peso",
+        "currency_symbol": "CL$"
+    },
+    {
+        "name": "Cameroon",
+        "code": "CM",
+        "emoji": "🇨🇲",
+        "unicode": "U+1F1E8 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CM.svg",
+        "currency_code": "XAF",
+        "currency_name": "CFA Franc BEAC",
+        "currency_symbol": "FCFA"
+    },
+    {
+        "name": "China",
+        "code": "CN",
+        "emoji": "🇨🇳",
+        "unicode": "U+1F1E8 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CN.svg",
+        "currency_code": "CNY",
+        "currency_name": "Chinese Yuan",
+        "currency_symbol": "CN¥"
+    },
+    {
+        "name": "Colombia",
+        "code": "CO",
+        "emoji": "🇨🇴",
+        "unicode": "U+1F1E8 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CO.svg",
+        "currency_code": "COP",
+        "currency_name": "Colombian Peso",
+        "currency_symbol": "CO$"
+    },
+    {
+        "name": "Clipperton Island",
+        "code": "CP",
+        "emoji": "🇨🇵",
+        "unicode": "U+1F1E8 U+1F1F5",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CP.svg"
+    },
+    {
+        "name": "Costa Rica",
+        "code": "CR",
+        "emoji": "🇨🇷",
+        "unicode": "U+1F1E8 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CR.svg",
+        "currency_code": "CRC",
+        "currency_name": "Costa Rican Colón",
+        "currency_symbol": "₡"
+    },
+    {
+        "name": "Cuba",
+        "code": "CU",
+        "emoji": "🇨🇺",
+        "unicode": "U+1F1E8 U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CU.svg",
+        "currency_code": "CUP",
+        "currency_name": "Cuban peso",
+        "currency_symbol": "$MN"
+    },
+    {
+        "name": "Cape Verde",
+        "code": "CV",
+        "emoji": "🇨🇻",
+        "unicode": "U+1F1E8 U+1F1FB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CV.svg",
+        "currency_code": "CVE",
+        "currency_name": "Cape Verdean Escudo",
+        "currency_symbol": "CV$"
+    },
+    { "name": "Curaçao", "code": "CW", "emoji": "🇨🇼", "unicode": "U+1F1E8 U+1F1FC", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CW.svg" },
+    {
+        "name": "Christmas Island",
+        "code": "CX",
+        "emoji": "🇨🇽",
+        "unicode": "U+1F1E8 U+1F1FD",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CX.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    {
+        "name": "Cyprus",
+        "code": "CY",
+        "emoji": "🇨🇾",
+        "unicode": "U+1F1E8 U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CY.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    { "name": "Czechia", "code": "CZ", "emoji": "🇨🇿", "unicode": "U+1F1E8 U+1F1FF", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CZ.svg" },
+    {
+        "name": "Germany",
+        "code": "DE",
+        "emoji": "🇩🇪",
+        "unicode": "U+1F1E9 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DE.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    { "name": "Diego Garcia", "code": "DG", "emoji": "🇩🇬", "unicode": "U+1F1E9 U+1F1EC", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DG.svg" },
+    {
+        "name": "Djibouti",
+        "code": "DJ",
+        "emoji": "🇩🇯",
+        "unicode": "U+1F1E9 U+1F1EF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DJ.svg",
+        "currency_code": "DJF",
+        "currency_name": "Djiboutian Franc",
+        "currency_symbol": "Fdj"
+    },
+    {
+        "name": "Denmark",
+        "code": "DK",
+        "emoji": "🇩🇰",
+        "unicode": "U+1F1E9 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DK.svg",
+        "currency_code": "DKK",
+        "currency_name": "Danish Krone",
+        "currency_symbol": "Dkr"
+    },
+    {
+        "name": "Dominica",
+        "code": "DM",
+        "emoji": "🇩🇲",
+        "unicode": "U+1F1E9 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DM.svg",
+        "currency_code": "XCD",
+        "currency_name": "Eastern Caribbean Dollar",
+        "currency_symbol": "EC$"
+    },
+    {
+        "name": "Dominican Republic",
+        "code": "DO",
+        "emoji": "🇩🇴",
+        "unicode": "U+1F1E9 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DO.svg",
+        "currency_code": "DOP",
+        "currency_name": "Dominican Peso",
+        "currency_symbol": "RD$"
+    },
+    {
+        "name": "Algeria",
+        "code": "DZ",
+        "emoji": "🇩🇿",
+        "unicode": "U+1F1E9 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/DZ.svg",
+        "currency_code": "DZD",
+        "currency_name": "Algerian Dinar",
+        "currency_symbol": "DA"
+    },
+    {
+        "name": "Ceuta & Melilla",
+        "code": "EA",
+        "emoji": "🇪🇦",
+        "unicode": "U+1F1EA U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EA.svg"
+    },
+    {
+        "name": "Ecuador",
+        "code": "EC",
+        "emoji": "🇪🇨",
+        "unicode": "U+1F1EA U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EC.svg",
+        "currency_code": "ECS"
+    },
+    {
+        "name": "Estonia",
+        "code": "EE",
+        "emoji": "🇪🇪",
+        "unicode": "U+1F1EA U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EE.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Egypt",
+        "code": "EG",
+        "emoji": "🇪🇬",
+        "unicode": "U+1F1EA U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EG.svg",
+        "currency_code": "EGP",
+        "currency_name": "Egyptian Pound",
+        "currency_symbol": "EGP"
+    },
+    {
+        "name": "Western Sahara",
+        "code": "EH",
+        "emoji": "🇪🇭",
+        "unicode": "U+1F1EA U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EH.svg",
+        "currency_code": "MAD",
+        "currency_name": "Moroccan Dirham",
+        "currency_symbol": "MAD"
+    },
+    {
+        "name": "Eritrea",
+        "code": "ER",
+        "emoji": "🇪🇷",
+        "unicode": "U+1F1EA U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ER.svg",
+        "currency_code": "ERN",
+        "currency_name": "Eritrean Nakfa",
+        "currency_symbol": "Nfk"
+    },
+    {
+        "name": "Spain",
+        "code": "ES",
+        "emoji": "🇪🇸",
+        "unicode": "U+1F1EA U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ES.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Ethiopia",
+        "code": "ET",
+        "emoji": "🇪🇹",
+        "unicode": "U+1F1EA U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ET.svg",
+        "currency_code": "ETB",
+        "currency_name": "Ethiopian Birr",
+        "currency_symbol": "Br"
+    },
+    {
+        "name": "European Union",
+        "code": "EU",
+        "emoji": "🇪🇺",
+        "unicode": "U+1F1EA U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/EU.svg"
+    },
+    {
+        "name": "Finland",
+        "code": "FI",
+        "emoji": "🇫🇮",
+        "unicode": "U+1F1EB U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/FI.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    { "name": "Fiji", "code": "FJ", "emoji": "🇫🇯", "unicode": "U+1F1EB U+1F1EF", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/FJ.svg" },
+    {
+        "name": "Falkland Islands",
+        "code": "FK",
+        "emoji": "🇫🇰",
+        "unicode": "U+1F1EB U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/FK.svg",
+        "currency_code": "FKP",
+        "currency_name": "Falkland Islands pound",
+        "currency_symbol": "FK£"
+    },
+    { "name": "Micronesia", "code": "FM", "emoji": "🇫🇲", "unicode": "U+1F1EB U+1F1F2", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/FM.svg" },
+    {
+        "name": "Faroe Islands",
+        "code": "FO",
+        "emoji": "🇫🇴",
+        "unicode": "U+1F1EB U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/FO.svg",
+        "currency_code": "DKK",
+        "currency_name": "Danish Krone",
+        "currency_symbol": "Dkr"
+    },
+    {
+        "name": "France",
+        "code": "FR",
+        "emoji": "🇫🇷",
+        "unicode": "U+1F1EB U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/FR.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Gabon",
+        "code": "GA",
+        "emoji": "🇬🇦",
+        "unicode": "U+1F1EC U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GA.svg",
+        "currency_code": "XAF",
+        "currency_name": "CFA Franc BEAC",
+        "currency_symbol": "FCFA"
+    },
+    {
+        "name": "United Kingdom",
+        "code": "GB",
+        "emoji": "🇬🇧",
+        "unicode": "U+1F1EC U+1F1E7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GB.svg",
+        "currency_code": "GBP",
+        "currency_name": "British Pound Sterling",
+        "currency_symbol": "£"
+    },
+    {
+        "name": "Grenada",
+        "code": "GD",
+        "emoji": "🇬🇩",
+        "unicode": "U+1F1EC U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GD.svg",
+        "currency_code": "XCD",
+        "currency_name": "Eastern Caribbean Dollar",
+        "currency_symbol": "EC$"
+    },
+    {
+        "name": "Georgia",
+        "code": "GE",
+        "emoji": "🇬🇪",
+        "unicode": "U+1F1EC U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GE.svg",
+        "currency_code": "GEL",
+        "currency_name": "Georgian Lari",
+        "currency_symbol": "GEL"
+    },
+    {
+        "name": "French Guiana",
+        "code": "GF",
+        "emoji": "🇬🇫",
+        "unicode": "U+1F1EC U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GF.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    { "name": "Guernsey", "code": "GG", "emoji": "🇬🇬", "unicode": "U+1F1EC U+1F1EC", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GG.svg" },
+    {
+        "name": "Ghana",
+        "code": "GH",
+        "emoji": "🇬🇭",
+        "unicode": "U+1F1EC U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GH.svg",
+        "currency_code": "GHS",
+        "currency_name": "Ghanaian Cedi",
+        "currency_symbol": "GH₵"
+    },
+    {
+        "name": "Gibraltar",
+        "code": "GI",
+        "emoji": "🇬🇮",
+        "unicode": "U+1F1EC U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GI.svg",
+        "currency_code": "GIP",
+        "currency_name": "Gibraltar pound",
+        "currency_symbol": "£"
+    },
+    {
+        "name": "Greenland",
+        "code": "GL",
+        "emoji": "🇬🇱",
+        "unicode": "U+1F1EC U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GL.svg",
+        "currency_code": "DKK",
+        "currency_name": "Danish Krone",
+        "currency_symbol": "Dkr"
+    },
+    {
+        "name": "Gambia",
+        "code": "GM",
+        "emoji": "🇬🇲",
+        "unicode": "U+1F1EC U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GM.svg",
+        "currency_code": "GMD",
+        "currency_name": "Gambian dalasi",
+        "currency_symbol": "D"
+    },
+    {
+        "name": "Guinea",
+        "code": "GN",
+        "emoji": "🇬🇳",
+        "unicode": "U+1F1EC U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GN.svg",
+        "currency_code": "GNF",
+        "currency_name": "Guinean Franc",
+        "currency_symbol": "FG"
+    },
+    {
+        "name": "Guadeloupe",
+        "code": "GP",
+        "emoji": "🇬🇵",
+        "unicode": "U+1F1EC U+1F1F5",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GP.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Equatorial Guinea",
+        "code": "GQ",
+        "emoji": "🇬🇶",
+        "unicode": "U+1F1EC U+1F1F6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GQ.svg",
+        "currency_code": "XAF",
+        "currency_name": "CFA Franc BEAC",
+        "currency_symbol": "FCFA"
+    },
+    {
+        "name": "Greece",
+        "code": "GR",
+        "emoji": "🇬🇷",
+        "unicode": "U+1F1EC U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GR.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "South Georgia & South Sandwich Islands",
+        "code": "GS",
+        "emoji": "🇬🇸",
+        "unicode": "U+1F1EC U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GS.svg"
+    },
+    {
+        "name": "Guatemala",
+        "code": "GT",
+        "emoji": "🇬🇹",
+        "unicode": "U+1F1EC U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GT.svg",
+        "currency_code": "QTQ"
+    },
+    {
+        "name": "Guam",
+        "code": "GU",
+        "emoji": "🇬🇺",
+        "unicode": "U+1F1EC U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GU.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Guinea-Bissau",
+        "code": "GW",
+        "emoji": "🇬🇼",
+        "unicode": "U+1F1EC U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GW.svg",
+        "currency_code": "CFA"
+    },
+    {
+        "name": "Guyana",
+        "code": "GY",
+        "emoji": "🇬🇾",
+        "unicode": "U+1F1EC U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GY.svg",
+        "currency_code": "GYD",
+        "currency_name": "Guyanese dollar",
+        "currency_symbol": "GY$"
+    },
+    {
+        "name": "Hong Kong SAR China",
+        "code": "HK",
+        "emoji": "🇭🇰",
+        "unicode": "U+1F1ED U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HK.svg"
+    },
+    {
+        "name": "Heard & McDonald Islands",
+        "code": "HM",
+        "emoji": "🇭🇲",
+        "unicode": "U+1F1ED U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HM.svg"
+    },
+    {
+        "name": "Honduras",
+        "code": "HN",
+        "emoji": "🇭🇳",
+        "unicode": "U+1F1ED U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HN.svg",
+        "currency_code": "HNL",
+        "currency_name": "Honduran Lempira",
+        "currency_symbol": "HNL"
+    },
+    {
+        "name": "Croatia",
+        "code": "HR",
+        "emoji": "🇭🇷",
+        "unicode": "U+1F1ED U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HR.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Haiti",
+        "code": "HT",
+        "emoji": "🇭🇹",
+        "unicode": "U+1F1ED U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HT.svg",
+        "currency_code": "HTG",
+        "currency_name": "Haitian gourde",
+        "currency_symbol": "G"
+    },
+    {
+        "name": "Hungary",
+        "code": "HU",
+        "emoji": "🇭🇺",
+        "unicode": "U+1F1ED U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/HU.svg",
+        "currency_code": "HUF",
+        "currency_name": "Hungarian Forint",
+        "currency_symbol": "Ft"
+    },
+    {
+        "name": "Canary Islands",
+        "code": "IC",
+        "emoji": "🇮🇨",
+        "unicode": "U+1F1EE U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IC.svg"
+    },
+    {
+        "name": "Indonesia",
+        "code": "ID",
+        "emoji": "🇮🇩",
+        "unicode": "U+1F1EE U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ID.svg",
+        "currency_code": "IDR",
+        "currency_name": "Indonesian Rupiah",
+        "currency_symbol": "Rp"
+    },
+    {
+        "name": "Ireland",
+        "code": "IE",
+        "emoji": "🇮🇪",
+        "unicode": "U+1F1EE U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IE.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Israel",
+        "code": "IL",
+        "emoji": "🇮🇱",
+        "unicode": "U+1F1EE U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IL.svg",
+        "currency_code": "ILS",
+        "currency_name": "Israeli New Sheqel",
+        "currency_symbol": "₪"
+    },
+    { "name": "Isle of Man", "code": "IM", "emoji": "🇮🇲", "unicode": "U+1F1EE U+1F1F2", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IM.svg" },
+    {
+        "name": "India",
+        "code": "IN",
+        "emoji": "🇮🇳",
+        "unicode": "U+1F1EE U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IN.svg",
+        "currency_code": "INR",
+        "currency_name": "Indian Rupee",
+        "currency_symbol": "Rs"
+    },
+    {
+        "name": "British Indian Ocean Territory",
+        "code": "IO",
+        "emoji": "🇮🇴",
+        "unicode": "U+1F1EE U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IO.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Iraq",
+        "code": "IQ",
+        "emoji": "🇮🇶",
+        "unicode": "U+1F1EE U+1F1F6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IQ.svg",
+        "currency_code": "IQD",
+        "currency_name": "Iraqi Dinar",
+        "currency_symbol": "IQD"
+    },
+    {
+        "name": "Iran",
+        "code": "IR",
+        "emoji": "🇮🇷",
+        "unicode": "U+1F1EE U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IR.svg",
+        "currency_code": "IRR",
+        "currency_name": "Iranian Rial",
+        "currency_symbol": "IRR"
+    },
+    {
+        "name": "Iceland",
+        "code": "IS",
+        "emoji": "🇮🇸",
+        "unicode": "U+1F1EE U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IS.svg",
+        "currency_code": "ISK",
+        "currency_name": "Icelandic Króna",
+        "currency_symbol": "Ikr"
+    },
+    {
+        "name": "Italy",
+        "code": "IT",
+        "emoji": "🇮🇹",
+        "unicode": "U+1F1EE U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/IT.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    { "name": "Jersey", "code": "JE", "emoji": "🇯🇪", "unicode": "U+1F1EF U+1F1EA", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/JE.svg" },
+    {
+        "name": "Jamaica",
+        "code": "JM",
+        "emoji": "🇯🇲",
+        "unicode": "U+1F1EF U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/JM.svg",
+        "currency_code": "JMD",
+        "currency_name": "Jamaican Dollar",
+        "currency_symbol": "J$"
+    },
+    {
+        "name": "Jordan",
+        "code": "JO",
+        "emoji": "🇯🇴",
+        "unicode": "U+1F1EF U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/JO.svg",
+        "currency_code": "JOD",
+        "currency_name": "Jordanian Dinar",
+        "currency_symbol": "JD"
+    },
+    {
+        "name": "Japan",
+        "code": "JP",
+        "emoji": "🇯🇵",
+        "unicode": "U+1F1EF U+1F1F5",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/JP.svg",
+        "currency_code": "JPY",
+        "currency_name": "Japanese Yen",
+        "currency_symbol": "¥"
+    },
+    {
+        "name": "Kenya",
+        "code": "KE",
+        "emoji": "🇰🇪",
+        "unicode": "U+1F1F0 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KE.svg",
+        "currency_code": "KES",
+        "currency_name": "Kenyan Shilling",
+        "currency_symbol": "Ksh"
+    },
+    {
+        "name": "Kyrgyzstan",
+        "code": "KG",
+        "emoji": "🇰🇬",
+        "unicode": "U+1F1F0 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KG.svg",
+        "currency_code": "KGS",
+        "currency_name": "Kyrgyzstani som",
+        "currency_symbol": "С̲ "
+    },
+    {
+        "name": "Cambodia",
+        "code": "KH",
+        "emoji": "🇰🇭",
+        "unicode": "U+1F1F0 U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KH.svg",
+        "currency_code": "KHR",
+        "currency_name": "Cambodian Riel",
+        "currency_symbol": "KHR"
+    },
+    {
+        "name": "Kiribati",
+        "code": "KI",
+        "emoji": "🇰🇮",
+        "unicode": "U+1F1F0 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KI.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    {
+        "name": "Comoros",
+        "code": "KM",
+        "emoji": "🇰🇲",
+        "unicode": "U+1F1F0 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KM.svg",
+        "currency_code": "KMF",
+        "currency_name": "Comorian Franc",
+        "currency_symbol": "CF"
+    },
+    {
+        "name": "St. Kitts & Nevis",
+        "code": "KN",
+        "emoji": "🇰🇳",
+        "unicode": "U+1F1F0 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KN.svg"
+    },
+    {
+        "name": "North Korea",
+        "code": "KP",
+        "emoji": "🇰🇵",
+        "unicode": "U+1F1F0 U+1F1F5",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KP.svg",
+        "currency_code": "KPW",
+        "currency_name": "North Korean won",
+        "currency_symbol": "₩"
+    },
+    {
+        "name": "South Korea",
+        "code": "KR",
+        "emoji": "🇰🇷",
+        "unicode": "U+1F1F0 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KR.svg",
+        "currency_code": "KRW",
+        "currency_name": "South Korean Won",
+        "currency_symbol": "₩"
+    },
+    {
+        "name": "Kuwait",
+        "code": "KW",
+        "emoji": "🇰🇼",
+        "unicode": "U+1F1F0 U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KW.svg",
+        "currency_code": "KWD",
+        "currency_name": "Kuwaiti Dinar",
+        "currency_symbol": "KD"
+    },
+    {
+        "name": "Cayman Islands",
+        "code": "KY",
+        "emoji": "🇰🇾",
+        "unicode": "U+1F1F0 U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KY.svg",
+        "currency_code": "KYD",
+        "currency_name": "Cayman Islands dollar",
+        "currency_symbol": "CI$"
+    },
+    {
+        "name": "Kazakhstan",
+        "code": "KZ",
+        "emoji": "🇰🇿",
+        "unicode": "U+1F1F0 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/KZ.svg",
+        "currency_code": "KZT",
+        "currency_name": "Kazakhstani Tenge",
+        "currency_symbol": "KZT"
+    },
+    {
+        "name": "Laos",
+        "code": "LA",
+        "emoji": "🇱🇦",
+        "unicode": "U+1F1F1 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LA.svg",
+        "currency_code": "LAK",
+        "currency_name": "Lao kip",
+        "currency_symbol": "₭N"
+    },
+    {
+        "name": "Lebanon",
+        "code": "LB",
+        "emoji": "🇱🇧",
+        "unicode": "U+1F1F1 U+1F1E7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LB.svg",
+        "currency_code": "LBP",
+        "currency_name": "Lebanese Pound",
+        "currency_symbol": "LB£"
+    },
+    { "name": "St. Lucia", "code": "LC", "emoji": "🇱🇨", "unicode": "U+1F1F1 U+1F1E8", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LC.svg" },
+    {
+        "name": "Liechtenstein",
+        "code": "LI",
+        "emoji": "🇱🇮",
+        "unicode": "U+1F1F1 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LI.svg",
+        "currency_code": "CHF",
+        "currency_name": "Swiss Franc",
+        "currency_symbol": "CHF"
+    },
+    {
+        "name": "Sri Lanka",
+        "code": "LK",
+        "emoji": "🇱🇰",
+        "unicode": "U+1F1F1 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LK.svg",
+        "currency_code": "LKR",
+        "currency_name": "Sri Lankan Rupee",
+        "currency_symbol": "SLRs"
+    },
+    {
+        "name": "Liberia",
+        "code": "LR",
+        "emoji": "🇱🇷",
+        "unicode": "U+1F1F1 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LR.svg",
+        "currency_code": "LRD",
+        "currency_name": "Liberian dollar",
+        "currency_symbol": "LD$"
+    },
+    {
+        "name": "Lesotho",
+        "code": "LS",
+        "emoji": "🇱🇸",
+        "unicode": "U+1F1F1 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LS.svg",
+        "currency_code": "LSL",
+        "currency_name": "Lesotho loti",
+        "currency_symbol": "L"
+    },
+    {
+        "name": "Lithuania",
+        "code": "LT",
+        "emoji": "🇱🇹",
+        "unicode": "U+1F1F1 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LT.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Luxembourg",
+        "code": "LU",
+        "emoji": "🇱🇺",
+        "unicode": "U+1F1F1 U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LU.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Latvia",
+        "code": "LV",
+        "emoji": "🇱🇻",
+        "unicode": "U+1F1F1 U+1F1FB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LV.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    { "name": "Libya", "code": "LY", "emoji": "🇱🇾", "unicode": "U+1F1F1 U+1F1FE", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/LY.svg" },
+    {
+        "name": "Morocco",
+        "code": "MA",
+        "emoji": "🇲🇦",
+        "unicode": "U+1F1F2 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MA.svg",
+        "currency_code": "MAD",
+        "currency_name": "Moroccan Dirham",
+        "currency_symbol": "MAD"
+    },
+    {
+        "name": "Monaco",
+        "code": "MC",
+        "emoji": "🇲🇨",
+        "unicode": "U+1F1F2 U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MC.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Moldova",
+        "code": "MD",
+        "emoji": "🇲🇩",
+        "unicode": "U+1F1F2 U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MD.svg",
+        "currency_code": "MDL",
+        "currency_name": "Moldovan Leu",
+        "currency_symbol": "MDL"
+    },
+    { "name": "Montenegro", "code": "ME", "emoji": "🇲🇪", "unicode": "U+1F1F2 U+1F1EA", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ME.svg" },
+    { "name": "St. Martin", "code": "MF", "emoji": "🇲🇫", "unicode": "U+1F1F2 U+1F1EB", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MF.svg" },
+    {
+        "name": "Madagascar",
+        "code": "MG",
+        "emoji": "🇲🇬",
+        "unicode": "U+1F1F2 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MG.svg",
+        "currency_code": "MGF"
+    },
+    {
+        "name": "Marshall Islands",
+        "code": "MH",
+        "emoji": "🇲🇭",
+        "unicode": "U+1F1F2 U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MH.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "North Macedonia",
+        "code": "MK",
+        "emoji": "🇲🇰",
+        "unicode": "U+1F1F2 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MK.svg",
+        "currency_code": "MKD",
+        "currency_name": "Macedonian Denar",
+        "currency_symbol": "MKD"
+    },
+    {
+        "name": "Mali",
+        "code": "ML",
+        "emoji": "🇲🇱",
+        "unicode": "U+1F1F2 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ML.svg",
+        "currency_code": "XOF",
+        "currency_name": "CFA Franc BCEAO",
+        "currency_symbol": "CFA"
+    },
+    {
+        "name": "Myanmar (Burma)",
+        "code": "MM",
+        "emoji": "🇲🇲",
+        "unicode": "U+1F1F2 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MM.svg"
+    },
+    {
+        "name": "Mongolia",
+        "code": "MN",
+        "emoji": "🇲🇳",
+        "unicode": "U+1F1F2 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MN.svg",
+        "currency_code": "MNT",
+        "currency_name": "Mongolian tögrög",
+        "currency_symbol": "₮"
+    },
+    {
+        "name": "Macao SAR China",
+        "code": "MO",
+        "emoji": "🇲🇴",
+        "unicode": "U+1F1F2 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MO.svg"
+    },
+    {
+        "name": "Northern Mariana Islands",
+        "code": "MP",
+        "emoji": "🇲🇵",
+        "unicode": "U+1F1F2 U+1F1F5",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MP.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Martinique",
+        "code": "MQ",
+        "emoji": "🇲🇶",
+        "unicode": "U+1F1F2 U+1F1F6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MQ.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Mauritania",
+        "code": "MR",
+        "emoji": "🇲🇷",
+        "unicode": "U+1F1F2 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MR.svg",
+        "currency_code": "MRO",
+        "currency_name": null,
+        "currency_symbol": null
+    },
+    {
+        "name": "Montserrat",
+        "code": "MS",
+        "emoji": "🇲🇸",
+        "unicode": "U+1F1F2 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MS.svg",
+        "currency_code": "XCD",
+        "currency_name": "Eastern Caribbean Dollar",
+        "currency_symbol": "EC$"
+    },
+    {
+        "name": "Malta",
+        "code": "MT",
+        "emoji": "🇲🇹",
+        "unicode": "U+1F1F2 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MT.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Mauritius",
+        "code": "MU",
+        "emoji": "🇲🇺",
+        "unicode": "U+1F1F2 U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MU.svg",
+        "currency_code": "MUR",
+        "currency_name": "Mauritian Rupee",
+        "currency_symbol": "MURs"
+    },
+    {
+        "name": "Maldives",
+        "code": "MV",
+        "emoji": "🇲🇻",
+        "unicode": "U+1F1F2 U+1F1FB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MV.svg",
+        "currency_code": "MVR",
+        "currency_name": "Maldivian rufiyaa",
+        "currency_symbol": "Rf"
+    },
+    {
+        "name": "Malawi",
+        "code": "MW",
+        "emoji": "🇲🇼",
+        "unicode": "U+1F1F2 U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MW.svg",
+        "currency_code": "MWK",
+        "currency_name": "Malawian kwacha",
+        "currency_symbol": "K"
+    },
+    {
+        "name": "Mexico",
+        "code": "MX",
+        "emoji": "🇲🇽",
+        "unicode": "U+1F1F2 U+1F1FD",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MX.svg",
+        "currency_code": "MXN",
+        "currency_name": "Mexican Peso",
+        "currency_symbol": "MX$"
+    },
+    {
+        "name": "Malaysia",
+        "code": "MY",
+        "emoji": "🇲🇾",
+        "unicode": "U+1F1F2 U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MY.svg",
+        "currency_code": "MYR",
+        "currency_name": "Malaysian Ringgit",
+        "currency_symbol": "RM"
+    },
+    {
+        "name": "Mozambique",
+        "code": "MZ",
+        "emoji": "🇲🇿",
+        "unicode": "U+1F1F2 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/MZ.svg",
+        "currency_code": "MZN",
+        "currency_name": "Mozambican Metical",
+        "currency_symbol": "MTn"
+    },
+    {
+        "name": "Namibia",
+        "code": "NA",
+        "emoji": "🇳🇦",
+        "unicode": "U+1F1F3 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NA.svg",
+        "currency_code": "NAD",
+        "currency_name": "Namibian Dollar",
+        "currency_symbol": "N$"
+    },
+    {
+        "name": "New Caledonia",
+        "code": "NC",
+        "emoji": "🇳🇨",
+        "unicode": "U+1F1F3 U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NC.svg",
+        "currency_code": "XPF",
+        "currency_name": "CFP Franc",
+        "currency_symbol": "F"
+    },
+    {
+        "name": "Niger",
+        "code": "NE",
+        "emoji": "🇳🇪",
+        "unicode": "U+1F1F3 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NE.svg",
+        "currency_code": "XOF",
+        "currency_name": "CFA Franc BCEAO",
+        "currency_symbol": "CFA"
+    },
+    {
+        "name": "Norfolk Island",
+        "code": "NF",
+        "emoji": "🇳🇫",
+        "unicode": "U+1F1F3 U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NF.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    {
+        "name": "Nigeria",
+        "code": "NG",
+        "emoji": "🇳🇬",
+        "unicode": "U+1F1F3 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NG.svg",
+        "currency_code": "NGN",
+        "currency_name": "Nigerian Naira",
+        "currency_symbol": "₦"
+    },
+    {
+        "name": "Nicaragua",
+        "code": "NI",
+        "emoji": "🇳🇮",
+        "unicode": "U+1F1F3 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NI.svg",
+        "currency_code": "NIO",
+        "currency_name": "Nicaraguan Córdoba",
+        "currency_symbol": "C$"
+    },
+    {
+        "name": "Netherlands",
+        "code": "NL",
+        "emoji": "🇳🇱",
+        "unicode": "U+1F1F3 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NL.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Norway",
+        "code": "NO",
+        "emoji": "🇳🇴",
+        "unicode": "U+1F1F3 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NO.svg",
+        "currency_code": "NOK",
+        "currency_name": "Norwegian Krone",
+        "currency_symbol": "Nkr"
+    },
+    {
+        "name": "Nepal",
+        "code": "NP",
+        "emoji": "🇳🇵",
+        "unicode": "U+1F1F3 U+1F1F5",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NP.svg",
+        "currency_code": "NPR",
+        "currency_name": "Nepalese Rupee",
+        "currency_symbol": "NPRs"
+    },
+    {
+        "name": "Nauru",
+        "code": "NR",
+        "emoji": "🇳🇷",
+        "unicode": "U+1F1F3 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NR.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    {
+        "name": "Niue",
+        "code": "NU",
+        "emoji": "🇳🇺",
+        "unicode": "U+1F1F3 U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NU.svg",
+        "currency_code": "NZD",
+        "currency_name": "New Zealand Dollar",
+        "currency_symbol": "NZ$"
+    },
+    {
+        "name": "New Zealand",
+        "code": "NZ",
+        "emoji": "🇳🇿",
+        "unicode": "U+1F1F3 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/NZ.svg",
+        "currency_code": "NZD",
+        "currency_name": "New Zealand Dollar",
+        "currency_symbol": "NZ$"
+    },
+    {
+        "name": "Oman",
+        "code": "OM",
+        "emoji": "🇴🇲",
+        "unicode": "U+1F1F4 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/OM.svg",
+        "currency_code": "OMR",
+        "currency_name": "Omani Rial",
+        "currency_symbol": "OMR"
+    },
+    {
+        "name": "Panama",
+        "code": "PA",
+        "emoji": "🇵🇦",
+        "unicode": "U+1F1F5 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PA.svg",
+        "currency_code": "PAB",
+        "currency_name": "Panamanian Balboa",
+        "currency_symbol": "B/."
+    },
+    {
+        "name": "Peru",
+        "code": "PE",
+        "emoji": "🇵🇪",
+        "unicode": "U+1F1F5 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PE.svg",
+        "currency_code": "PEN",
+        "currency_name": "Peruvian Nuevo Sol",
+        "currency_symbol": "S/."
+    },
+    {
+        "name": "French Polynesia",
+        "code": "PF",
+        "emoji": "🇵🇫",
+        "unicode": "U+1F1F5 U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PF.svg",
+        "currency_code": "XPF",
+        "currency_name": "CFP Franc",
+        "currency_symbol": "F"
+    },
+    {
+        "name": "Papua New Guinea",
+        "code": "PG",
+        "emoji": "🇵🇬",
+        "unicode": "U+1F1F5 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PG.svg",
+        "currency_code": "PGK",
+        "currency_name": "Papua New Guinean kina",
+        "currency_symbol": "K"
+    },
+    {
+        "name": "Philippines",
+        "code": "PH",
+        "emoji": "🇵🇭",
+        "unicode": "U+1F1F5 U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PH.svg",
+        "currency_code": "PHP",
+        "currency_name": "Philippine Peso",
+        "currency_symbol": "₱"
+    },
+    {
+        "name": "Pakistan",
+        "code": "PK",
+        "emoji": "🇵🇰",
+        "unicode": "U+1F1F5 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PK.svg",
+        "currency_code": "PKR",
+        "currency_name": "Pakistani Rupee",
+        "currency_symbol": "PKRs"
+    },
+    {
+        "name": "Poland",
+        "code": "PL",
+        "emoji": "🇵🇱",
+        "unicode": "U+1F1F5 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PL.svg",
+        "currency_code": "PLN",
+        "currency_name": "Polish Zloty",
+        "currency_symbol": "zł"
+    },
+    {
+        "name": "St. Pierre & Miquelon",
+        "code": "PM",
+        "emoji": "🇵🇲",
+        "unicode": "U+1F1F5 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PM.svg"
+    },
+    {
+        "name": "Pitcairn Islands",
+        "code": "PN",
+        "emoji": "🇵🇳",
+        "unicode": "U+1F1F5 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PN.svg",
+        "currency_code": "NZD",
+        "currency_name": "New Zealand Dollar",
+        "currency_symbol": "NZ$"
+    },
+    {
+        "name": "Puerto Rico",
+        "code": "PR",
+        "emoji": "🇵🇷",
+        "unicode": "U+1F1F5 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PR.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Palestinian Territories",
+        "code": "PS",
+        "emoji": "🇵🇸",
+        "unicode": "U+1F1F5 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PS.svg"
+    },
+    {
+        "name": "Portugal",
+        "code": "PT",
+        "emoji": "🇵🇹",
+        "unicode": "U+1F1F5 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PT.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Palau",
+        "code": "PW",
+        "emoji": "🇵🇼",
+        "unicode": "U+1F1F5 U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PW.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Paraguay",
+        "code": "PY",
+        "emoji": "🇵🇾",
+        "unicode": "U+1F1F5 U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/PY.svg",
+        "currency_code": "PYG",
+        "currency_name": "Paraguayan Guarani",
+        "currency_symbol": "₲"
+    },
+    {
+        "name": "Qatar",
+        "code": "QA",
+        "emoji": "🇶🇦",
+        "unicode": "U+1F1F6 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/QA.svg",
+        "currency_code": "QAR",
+        "currency_name": "Qatari Rial",
+        "currency_symbol": "QR"
+    },
+    { "name": "Réunion", "code": "RE", "emoji": "🇷🇪", "unicode": "U+1F1F7 U+1F1EA", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/RE.svg" },
+    {
+        "name": "Romania",
+        "code": "RO",
+        "emoji": "🇷🇴",
+        "unicode": "U+1F1F7 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/RO.svg",
+        "currency_code": "RON",
+        "currency_name": "Romanian Leu",
+        "currency_symbol": "RON"
+    },
+    {
+        "name": "Serbia",
+        "code": "RS",
+        "emoji": "🇷🇸",
+        "unicode": "U+1F1F7 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/RS.svg",
+        "currency_code": "RSD",
+        "currency_name": "Serbian Dinar",
+        "currency_symbol": "din."
+    },
+    { "name": "Russia", "code": "RU", "emoji": "🇷🇺", "unicode": "U+1F1F7 U+1F1FA", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/RU.svg" },
+    {
+        "name": "Rwanda",
+        "code": "RW",
+        "emoji": "🇷🇼",
+        "unicode": "U+1F1F7 U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/RW.svg",
+        "currency_code": "RWF",
+        "currency_name": "Rwandan Franc",
+        "currency_symbol": "RWF"
+    },
+    {
+        "name": "Saudi Arabia",
+        "code": "SA",
+        "emoji": "🇸🇦",
+        "unicode": "U+1F1F8 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SA.svg",
+        "currency_code": "SAR",
+        "currency_name": "Saudi Riyal",
+        "currency_symbol": "SR"
+    },
+    {
+        "name": "Solomon Islands",
+        "code": "SB",
+        "emoji": "🇸🇧",
+        "unicode": "U+1F1F8 U+1F1E7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SB.svg",
+        "currency_code": "SBD",
+        "currency_name": "Solomon Islands dollar",
+        "currency_symbol": "SI$"
+    },
+    {
+        "name": "Seychelles",
+        "code": "SC",
+        "emoji": "🇸🇨",
+        "unicode": "U+1F1F8 U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SC.svg",
+        "currency_code": "SCR",
+        "currency_name": "Seychellois rupee",
+        "currency_symbol": "SRe"
+    },
+    {
+        "name": "Sudan",
+        "code": "SD",
+        "emoji": "🇸🇩",
+        "unicode": "U+1F1F8 U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SD.svg",
+        "currency_code": "SDG",
+        "currency_name": "Sudanese Pound",
+        "currency_symbol": "SDG"
+    },
+    {
+        "name": "Sweden",
+        "code": "SE",
+        "emoji": "🇸🇪",
+        "unicode": "U+1F1F8 U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SE.svg",
+        "currency_code": "SEK",
+        "currency_name": "Swedish Krona",
+        "currency_symbol": "Skr"
+    },
+    {
+        "name": "Singapore",
+        "code": "SG",
+        "emoji": "🇸🇬",
+        "unicode": "U+1F1F8 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SG.svg",
+        "currency_code": "SGD",
+        "currency_name": "Singapore Dollar",
+        "currency_symbol": "S$"
+    },
+    { "name": "St. Helena", "code": "SH", "emoji": "🇸🇭", "unicode": "U+1F1F8 U+1F1ED", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SH.svg" },
+    {
+        "name": "Slovenia",
+        "code": "SI",
+        "emoji": "🇸🇮",
+        "unicode": "U+1F1F8 U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SI.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Svalbard & Jan Mayen",
+        "code": "SJ",
+        "emoji": "🇸🇯",
+        "unicode": "U+1F1F8 U+1F1EF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SJ.svg"
+    },
+    {
+        "name": "Slovakia",
+        "code": "SK",
+        "emoji": "🇸🇰",
+        "unicode": "U+1F1F8 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SK.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Sierra Leone",
+        "code": "SL",
+        "emoji": "🇸🇱",
+        "unicode": "U+1F1F8 U+1F1F1",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SL.svg",
+        "currency_code": "SLL",
+        "currency_name": "Sierra Leonean leone",
+        "currency_symbol": "Le"
+    },
+    {
+        "name": "San Marino",
+        "code": "SM",
+        "emoji": "🇸🇲",
+        "unicode": "U+1F1F8 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SM.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "Senegal",
+        "code": "SN",
+        "emoji": "🇸🇳",
+        "unicode": "U+1F1F8 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SN.svg",
+        "currency_code": "XOF",
+        "currency_name": "CFA Franc BCEAO",
+        "currency_symbol": "CFA"
+    },
+    {
+        "name": "Somalia",
+        "code": "SO",
+        "emoji": "🇸🇴",
+        "unicode": "U+1F1F8 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SO.svg",
+        "currency_code": "SOS",
+        "currency_name": "Somali Shilling",
+        "currency_symbol": "Ssh"
+    },
+    {
+        "name": "Suriname",
+        "code": "SR",
+        "emoji": "🇸🇷",
+        "unicode": "U+1F1F8 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SR.svg",
+        "currency_code": "SRD",
+        "currency_name": "Surinamese dollar",
+        "currency_symbol": "Sr$"
+    },
+    {
+        "name": "South Sudan",
+        "code": "SS",
+        "emoji": "🇸🇸",
+        "unicode": "U+1F1F8 U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SS.svg",
+        "currency_code": "SSP",
+        "currency_name": "South Sudanese pound",
+        "currency_symbol": "SS£"
+    },
+    {
+        "name": "São Tomé & Príncipe",
+        "code": "ST",
+        "emoji": "🇸🇹",
+        "unicode": "U+1F1F8 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ST.svg"
+    },
+    {
+        "name": "El Salvador",
+        "code": "SV",
+        "emoji": "🇸🇻",
+        "unicode": "U+1F1F8 U+1F1FB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SV.svg",
+        "currency_code": "SVC"
+    },
+    { "name": "Sint Maarten", "code": "SX", "emoji": "🇸🇽", "unicode": "U+1F1F8 U+1F1FD", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SX.svg" },
+    {
+        "name": "Syria",
+        "code": "SY",
+        "emoji": "🇸🇾",
+        "unicode": "U+1F1F8 U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SY.svg",
+        "currency_code": "SYP",
+        "currency_name": "Syrian Pound",
+        "currency_symbol": "SY£"
+    },
+    { "name": "Eswatini", "code": "SZ", "emoji": "🇸🇿", "unicode": "U+1F1F8 U+1F1FF", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SZ.svg" },
+    {
+        "name": "Tristan da Cunha",
+        "code": "TA",
+        "emoji": "🇹🇦",
+        "unicode": "U+1F1F9 U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TA.svg"
+    },
+    {
+        "name": "Turks & Caicos Islands",
+        "code": "TC",
+        "emoji": "🇹🇨",
+        "unicode": "U+1F1F9 U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TC.svg"
+    },
+    {
+        "name": "Chad",
+        "code": "TD",
+        "emoji": "🇹🇩",
+        "unicode": "U+1F1F9 U+1F1E9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TD.svg",
+        "currency_code": "XAF",
+        "currency_name": "CFA Franc BEAC",
+        "currency_symbol": "FCFA"
+    },
+    {
+        "name": "French Southern Territories",
+        "code": "TF",
+        "emoji": "🇹🇫",
+        "unicode": "U+1F1F9 U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TF.svg"
+    },
+    {
+        "name": "Togo",
+        "code": "TG",
+        "emoji": "🇹🇬",
+        "unicode": "U+1F1F9 U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TG.svg",
+        "currency_code": "XOF",
+        "currency_name": "CFA Franc BCEAO",
+        "currency_symbol": "CFA"
+    },
+    {
+        "name": "Thailand",
+        "code": "TH",
+        "emoji": "🇹🇭",
+        "unicode": "U+1F1F9 U+1F1ED",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TH.svg",
+        "currency_code": "THB",
+        "currency_name": "Thai Baht",
+        "currency_symbol": "฿"
+    },
+    {
+        "name": "Tajikistan",
+        "code": "TJ",
+        "emoji": "🇹🇯",
+        "unicode": "U+1F1F9 U+1F1EF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TJ.svg",
+        "currency_code": "TJS",
+        "currency_name": "Tajikistani somoni",
+        "currency_symbol": "SM"
+    },
+    {
+        "name": "Tokelau",
+        "code": "TK",
+        "emoji": "🇹🇰",
+        "unicode": "U+1F1F9 U+1F1F0",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TK.svg",
+        "currency_code": "NZD",
+        "currency_name": "New Zealand Dollar",
+        "currency_symbol": "NZ$"
+    },
+    { "name": "Timor-Leste", "code": "TL", "emoji": "🇹🇱", "unicode": "U+1F1F9 U+1F1F1", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TL.svg" },
+    {
+        "name": "Turkmenistan",
+        "code": "TM",
+        "emoji": "🇹🇲",
+        "unicode": "U+1F1F9 U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TM.svg",
+        "currency_code": "TMT",
+        "currency_name": "Turkmenistan manat",
+        "currency_symbol": "T"
+    },
+    {
+        "name": "Tunisia",
+        "code": "TN",
+        "emoji": "🇹🇳",
+        "unicode": "U+1F1F9 U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TN.svg",
+        "currency_code": "TND",
+        "currency_name": "Tunisian Dinar",
+        "currency_symbol": "DT"
+    },
+    {
+        "name": "Tonga",
+        "code": "TO",
+        "emoji": "🇹🇴",
+        "unicode": "U+1F1F9 U+1F1F4",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TO.svg",
+        "currency_code": "TOP",
+        "currency_name": "Tongan Paʻanga",
+        "currency_symbol": "T$"
+    },
+    {
+        "name": "Turkey",
+        "code": "TR",
+        "emoji": "🇹🇷",
+        "unicode": "U+1F1F9 U+1F1F7",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TR.svg",
+        "currency_code": "TRY",
+        "currency_name": "Turkish Lira",
+        "currency_symbol": "TL"
+    },
+    {
+        "name": "Trinidad & Tobago",
+        "code": "TT",
+        "emoji": "🇹🇹",
+        "unicode": "U+1F1F9 U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TT.svg"
+    },
+    {
+        "name": "Tuvalu",
+        "code": "TV",
+        "emoji": "🇹🇻",
+        "unicode": "U+1F1F9 U+1F1FB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TV.svg",
+        "currency_code": "AUD",
+        "currency_name": "Australian Dollar",
+        "currency_symbol": "AU$"
+    },
+    { "name": "Taiwan", "code": "TW", "emoji": "🇹🇼", "unicode": "U+1F1F9 U+1F1FC", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TW.svg" },
+    {
+        "name": "Tanzania",
+        "code": "TZ",
+        "emoji": "🇹🇿",
+        "unicode": "U+1F1F9 U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/TZ.svg",
+        "currency_code": "TZS",
+        "currency_name": "Tanzanian Shilling",
+        "currency_symbol": "TSh"
+    },
+    {
+        "name": "Ukraine",
+        "code": "UA",
+        "emoji": "🇺🇦",
+        "unicode": "U+1F1FA U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UA.svg",
+        "currency_code": "UAH",
+        "currency_name": "Ukrainian Hryvnia",
+        "currency_symbol": "₴"
+    },
+    {
+        "name": "Uganda",
+        "code": "UG",
+        "emoji": "🇺🇬",
+        "unicode": "U+1F1FA U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UG.svg",
+        "currency_code": "UGX",
+        "currency_name": "Ugandan Shilling",
+        "currency_symbol": "USh"
+    },
+    {
+        "name": "U.S. Outlying Islands",
+        "code": "UM",
+        "emoji": "🇺🇲",
+        "unicode": "U+1F1FA U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UM.svg"
+    },
+    {
+        "name": "United Nations",
+        "code": "UN",
+        "emoji": "🇺🇳",
+        "unicode": "U+1F1FA U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UN.svg"
+    },
+    {
+        "name": "United States",
+        "code": "US",
+        "emoji": "🇺🇸",
+        "unicode": "U+1F1FA U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/US.svg",
+        "currency_code": "USD",
+        "currency_name": "US Dollar",
+        "currency_symbol": "$"
+    },
+    {
+        "name": "Uruguay",
+        "code": "UY",
+        "emoji": "🇺🇾",
+        "unicode": "U+1F1FA U+1F1FE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UY.svg",
+        "currency_code": "UYU",
+        "currency_name": "Uruguayan Peso",
+        "currency_symbol": "$U"
+    },
+    {
+        "name": "Uzbekistan",
+        "code": "UZ",
+        "emoji": "🇺🇿",
+        "unicode": "U+1F1FA U+1F1FF",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UZ.svg",
+        "currency_code": "UZS",
+        "currency_name": "Uzbekistan Som",
+        "currency_symbol": "UZS"
+    },
+    { "name": "Vatican City", "code": "VA", "emoji": "🇻🇦", "unicode": "U+1F1FB U+1F1E6", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VA.svg" },
+    {
+        "name": "St. Vincent & Grenadines",
+        "code": "VC",
+        "emoji": "🇻🇨",
+        "unicode": "U+1F1FB U+1F1E8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VC.svg"
+    },
+    {
+        "name": "Venezuela",
+        "code": "VE",
+        "emoji": "🇻🇪",
+        "unicode": "U+1F1FB U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VE.svg",
+        "currency_code": "VEF",
+        "currency_name": "Venezuelan Bolívar",
+        "currency_symbol": "Bs.F."
+    },
+    {
+        "name": "British Virgin Islands",
+        "code": "VG",
+        "emoji": "🇻🇬",
+        "unicode": "U+1F1FB U+1F1EC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VG.svg"
+    },
+    {
+        "name": "U.S. Virgin Islands",
+        "code": "VI",
+        "emoji": "🇻🇮",
+        "unicode": "U+1F1FB U+1F1EE",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VI.svg"
+    },
+    {
+        "name": "Vietnam",
+        "code": "VN",
+        "emoji": "🇻🇳",
+        "unicode": "U+1F1FB U+1F1F3",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VN.svg",
+        "currency_code": "VND",
+        "currency_name": "Vietnamese Dong",
+        "currency_symbol": "₫"
+    },
+    {
+        "name": "Vanuatu",
+        "code": "VU",
+        "emoji": "🇻🇺",
+        "unicode": "U+1F1FB U+1F1FA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VU.svg",
+        "currency_code": "VUV",
+        "currency_name": "Vanuatu vatu",
+        "currency_symbol": "VT"
+    },
+    {
+        "name": "Wallis & Futuna",
+        "code": "WF",
+        "emoji": "🇼🇫",
+        "unicode": "U+1F1FC U+1F1EB",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/WF.svg"
+    },
+    {
+        "name": "Samoa",
+        "code": "WS",
+        "emoji": "🇼🇸",
+        "unicode": "U+1F1FC U+1F1F8",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/WS.svg",
+        "currency_code": "WST",
+        "currency_name": "Samoan tālā",
+        "currency_symbol": "WS$"
+    },
+    { "name": "Kosovo", "code": "XK", "emoji": "🇽🇰", "unicode": "U+1F1FD U+1F1F0", "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/XK.svg" },
+    {
+        "name": "Yemen",
+        "code": "YE",
+        "emoji": "🇾🇪",
+        "unicode": "U+1F1FE U+1F1EA",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/YE.svg",
+        "currency_code": "YER",
+        "currency_name": "Yemeni Rial",
+        "currency_symbol": "YR"
+    },
+    {
+        "name": "Mayotte",
+        "code": "YT",
+        "emoji": "🇾🇹",
+        "unicode": "U+1F1FE U+1F1F9",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/YT.svg",
+        "currency_code": "EUR",
+        "currency_name": "Euro",
+        "currency_symbol": "€"
+    },
+    {
+        "name": "South Africa",
+        "code": "ZA",
+        "emoji": "🇿🇦",
+        "unicode": "U+1F1FF U+1F1E6",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ZA.svg",
+        "currency_code": "ZAR",
+        "currency_name": "South African Rand",
+        "currency_symbol": "R"
+    },
+    {
+        "name": "Zambia",
+        "code": "ZM",
+        "emoji": "🇿🇲",
+        "unicode": "U+1F1FF U+1F1F2",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ZM.svg",
+        "currency_code": "ZMW",
+        "currency_name": "Zambian Kwacha",
+        "currency_symbol": "ZK"
+    },
+    {
+        "name": "Zimbabwe",
+        "code": "ZW",
+        "emoji": "🇿🇼",
+        "unicode": "U+1F1FF U+1F1FC",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ZW.svg",
+        "currency_code": "ZWD"
+    },
+    {
+        "name": "England",
+        "code": "ENGLAND",
+        "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "unicode": "U+1F3F4 U+E0067 U+E0062 U+E0065 U+E006E U+E0067 U+E007F",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/ENGLAND.svg",
+        "currency_code": "GBP",
+        "currency_name": "British Pound Sterling",
+        "currency_symbol": "£"
+    },
+    {
+        "name": "Scotland",
+        "code": "SCOTLAND",
+        "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "unicode": "U+1F3F4 U+E0067 U+E0062 U+E0073 U+E0063 U+E0074 U+E007F",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/SCOTLAND.svg",
+        "currency_code": "GBP",
+        "currency_name": "British Pound Sterling",
+        "currency_symbol": "£"
+    },
+    {
+        "name": "Wales",
+        "code": "WALES",
+        "emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+        "unicode": "U+1F3F4 U+E0067 U+E0062 U+E0077 U+E006C U+E0073 U+E007F",
+        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/WALES.svg",
+        "currency_code": "GBP",
+        "currency_name": "British Pound Sterling",
+        "currency_symbol": "£"
+    }
+]
