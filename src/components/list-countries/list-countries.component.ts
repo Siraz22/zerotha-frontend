@@ -37,6 +37,8 @@ export class ListCountriesComponent implements OnInit {
                 );
             }
         });
+
+        //this.countryService.testing();
     }
 
     public calculateWeight(id: number): number {

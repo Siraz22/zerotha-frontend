@@ -42,9 +42,13 @@ export class AddCountryModalComponent implements OnInit {
     }
 
     public saveCountry(): void {
-        const countryDTO: CountryDTO = this.compileCountryDTO();
-        const modalResult: ModalResult = { response: ModalResponse.SUCCESS, data: countryDTO };
-        this.activeModal.close(modalResult);
+        if (this.formGroup.invalid) {
+            console.log('Error bhai!');
+        } else {
+            const countryDTO: CountryDTO = this.compileCountryDTO();
+            const modalResult: ModalResult = { response: ModalResponse.SUCCESS, data: countryDTO };
+            this.activeModal.close(modalResult);
+        }
     }
 
     public autofillCountryDetails(): void {
@@ -60,7 +64,7 @@ export class AddCountryModalComponent implements OnInit {
 
     private createFormGroup(): void {
         this.formGroup = this.formBuilder.group({
-            countryName: [null, Validators.required],
+            countryName: ['india', Validators.required],
             currencyCode: [null, Validators.required],
             currencyName: [null],
             currencySymbol: [null],

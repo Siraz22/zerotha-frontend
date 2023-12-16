@@ -1,0 +1,89 @@
+<div class="overview-band">
+    <div class="container">
+        <p>Viewing - {{selectedInvestmentType}} data</p>
+        <div class="investment-overview-card">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="container">
+                        <p>
+                            <strong>{{'Good Afternoon, @Username! 🎉'}}</strong>
+                        </p>
+                        <p>{{'Change is the only constant!'}}</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card-text">
+                                            Current Value
+                                        </div>
+                                        <div class="card-title">
+                                            {{'₹ 4,90,542'}}
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text">
+                                            Invested Amount - ₹ 4,11,288
+                                        </div>
+                                        <div class="card-text">
+                                            Total P&L - +79,254 (+19.27%)
+                                        </div>
+                                        <div class="card-text">
+                                            Today's P&L - +3,107 (+0.63%)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                Your Profit and Loss
+                            </div>
+                            <div style="right: 2rem" class="col-6">
+                                <ng-select class="ze-ng-select" placeholder="Dropdown"></ng-select>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Tree Chart here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <mat-tab-group (selectedTabChange)="tabClicked($event)" mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="Insights"></mat-tab>
+            <mat-tab label="Holdings"></mat-tab>
+            <mat-tab label="Orders"></mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
+
+<div ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs tab-band">
+    <div ngbNavItem="Insights">
+        <ng-template ngbNavContent>
+            <div class="container">
+                Insights Component
+            </div>
+        </ng-template>
+    </div>
+    <div ngbNavItem="Holdings">
+        <ng-template ngbNavContent>
+            <div class="container">
+                Holdings Component
+            </div>
+        </ng-template>
+    </div>
+    <div ngbNavItem="Orders">
+        <ng-template ngbNavContent>
+            <div class="container">
+                <app-view-country-order [countryDTO]="currentCountryDTO" [selectedInvestmentType]="selectedInvestmentType"></app-view-country-order>
+            </div>
+        </ng-template>
+    </div>
+</div>
+<div [ngbNavOutlet]="nav"></div>
