@@ -55,7 +55,8 @@
             </div>
         </div>
 
-        <mat-tab-group (selectedTabChange)="tabClicked($event)" mat-stretch-tabs="false" mat-align-tabs="start">
+        <mat-tab-group [selectedIndex]="getActiveTabIndex()" (selectedTabChange)="tabClicked($event)" (selectedTabChange)="tabClicked($event)" mat-stretch-tabs="false"
+            mat-align-tabs="start">
             <mat-tab label="Insights"></mat-tab>
             <mat-tab label="Holdings"></mat-tab>
             <mat-tab label="Orders"></mat-tab>
@@ -63,7 +64,7 @@
     </div>
 </div>
 
-<div ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs tab-band">
+<div ngbNav #nav="ngbNav" [activeId]="this.searchParams.activeTab" class="nav-tabs tab-band">
     <div ngbNavItem="Insights">
         <ng-template ngbNavContent>
             <div class="container">
