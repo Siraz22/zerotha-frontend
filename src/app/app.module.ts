@@ -12,12 +12,26 @@ import { ViewCountryComponent } from 'src/components/view-country/view-country.c
 import { ViewDashboardComponent } from 'src/components/view-dashboard/view-dashboard.component';
 
 import { AddCountryModalComponent } from '../components/modal-components/add-country-modal/add-country-modal.component';
+import { AddStocksOrderModalComponent } from '../components/modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
+import { ViewCountryInvestmentComponent } from '../components/view-country-investment/view-country-investment.component';
+import { ViewCountryStockOrderComponent } from '../components/view-country-stock-order/view-country-stock-order.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-    declarations: [AppComponent, ViewDashboardComponent, NavbarComponent, ViewCountryComponent, ListCountriesComponent, AddCountryModalComponent, ObjectNgSelectComponent],
+    declarations: [
+        AppComponent,
+        ViewDashboardComponent,
+        NavbarComponent,
+        ViewCountryComponent,
+        ListCountriesComponent,
+        AddCountryModalComponent,
+        ViewCountryStockOrderComponent,
+        ObjectNgSelectComponent,
+        ViewCountryInvestmentComponent,
+        AddStocksOrderModalComponent,
+    ],
     imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, NgbModule, NgSelectModule, AppRoutingModule, BrowserAnimationsModule, MatTabsModule],
     providers: [],
     bootstrap: [AppComponent],

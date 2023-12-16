@@ -1,5 +1,6 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Subject } from 'rxjs';
 
 @Component({
     selector: 'app-object-ng-select',
@@ -21,11 +22,16 @@ export class ObjectNgSelectComponent implements ControlValueAccessor {
     @Input()
     public labelFn: (item: any) => string;
     @Input()
+    public searchInput: Subject<string | null>;
+    @Input()
     public placeholder: string;
     @Input()
     public bindValue: string;
 
-    public value: string | string[];
+    @Output()
+    public selectedObject = new EventEmitter<any>();
+
+    public value: any;
     public onChange: (data: any) => void;
     public onTouch: () => void;
 
@@ -42,7 +48,8 @@ export class ObjectNgSelectComponent implements ControlValueAccessor {
     }
     setDisabledState?(isDisabled: boolean): void {}
 
-    public change(): void {
-        this.onChange(this.value);
+    public change(event: any): void {
+        this.onChange(event[this.bindValue]);
+        this.selectedObject.emit(event);
     }
 }
