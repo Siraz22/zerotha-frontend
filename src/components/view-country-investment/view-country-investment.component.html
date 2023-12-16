@@ -80,9 +80,11 @@
     </div>
     <div ngbNavItem="Orders">
         <ng-template ngbNavContent>
-            <div class="container">
-                <app-view-country-order [countryDTO]="currentCountryDTO" [selectedInvestmentType]="selectedInvestmentType"></app-view-country-order>
+            <div *ngIf="selectedInvestmentType === InvestmentType.STOCK" class="container">
+                <app-view-country-stock-order [countryDTO]="currentCountryDTO" [selectedInvestmentType]="selectedInvestmentType">
+                </app-view-country-stock-order>
             </div>
+
         </ng-template>
     </div>
 </div>

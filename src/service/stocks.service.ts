@@ -14,4 +14,8 @@ export class StocksService {
     public saveStock(stockDTO: StockDTO): Observable<StockDTO> {
         return this.httpClient.post<StockDTO>(`${environment.apiEndpoint}/stock`, stockDTO);
     }
+
+    public findAll(): Observable<StockDTO[]> {
+        return this.httpClient.get<StockDTO[]>(`${environment.apiEndpoint}/stock`);
+    }
 }

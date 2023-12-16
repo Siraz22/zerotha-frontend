@@ -64,7 +64,7 @@ export class AddCountryModalComponent implements OnInit {
 
     private createFormGroup(): void {
         this.formGroup = this.formBuilder.group({
-            countryName: ['india', Validators.required],
+            countryName: ['India', Validators.required],
             currencyCode: [null, Validators.required],
             currencyName: [null],
             currencySymbol: [null],

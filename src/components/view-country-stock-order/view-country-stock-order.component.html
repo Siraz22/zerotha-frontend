@@ -21,16 +21,24 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody class="ze-table-body">
+        <tbody *ngFor="let stockDTO of stockDTOs" class="ze-table-body">
             <tr>
                 <td style="text-align: left;">
                     <span class="ze-pointer">
-                        <strong>{{'Adani Ports'}}</strong>
+                        <!-- <strong>{{'Adani Ports'}}</strong> -->
+                        <strong>{{stockDTO.name}}</strong>
                     </span>
                 </td>
-                <td class="currency">{{'100'}}</td>
-                <td>{{'41'}}</td>
-                <td style="text-align: right">{{'4,100'}}</td>
+                <td class="currency">
+                    <!-- {{'100'}} -->
+                    {{stockDTO.averagePrice}}
+                </td>
+                <td>
+                    {{stockDTO.quantity}}
+                </td>
+                <td style="text-align: right">
+                    {{"Current Amount"}}
+                </td>
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">
                         <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>

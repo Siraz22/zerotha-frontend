@@ -15,7 +15,7 @@ import { AddCountryModalComponent } from '../components/modal-components/add-cou
 import { AddStocksOrderModalComponent } from '../components/modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
 import { ViewCountryInvestmentComponent } from '../components/view-country-investment/view-country-investment.component';
-import { ViewCountryOrderComponent } from '../components/view-country-order/view-country-order.component';
+import { ViewCountryStockOrderComponent } from '../components/view-country-stock-order/view-country-stock-order.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -27,7 +27,7 @@ import { AppComponent } from './app.component';
         ViewCountryComponent,
         ListCountriesComponent,
         AddCountryModalComponent,
-        ViewCountryOrderComponent,
+        ViewCountryStockOrderComponent,
         ObjectNgSelectComponent,
         ViewCountryInvestmentComponent,
         AddStocksOrderModalComponent,

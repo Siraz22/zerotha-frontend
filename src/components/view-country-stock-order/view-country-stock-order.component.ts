@@ -3,16 +3,18 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { countryWithMarketDataAPI } from '../../constants/projectConstants';
 import { CountryDTO } from '../../dto/CountryDTO';
+import { StockDTO } from '../../dto/StockDTO';
 import { InvestmentType } from '../../enums/Investment-type';
+import { StocksService } from '../../service/stocks.service';
 import { AddStocksOrderModalComponent } from '../modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
 
 @Component({
-    selector: 'app-view-country-order',
-    templateUrl: './view-country-order.component.html',
-    styleUrls: ['./view-country-order.component.css'],
+    selector: 'app-view-country-stock-order',
+    templateUrl: './view-country-stock-order.component.html',
+    styleUrls: ['./view-country-stock-order.component.css'],
 })
-export class ViewCountryOrderComponent implements OnInit {
-    constructor(private modalService: NgbModal, private investmentService: InvestmentService) {}
+export class ViewCountryStockOrderComponent implements OnInit {
+    constructor(private modalService: NgbModal, private stockService: StocksService) {}
 
     @Input()
     public countryDTO: CountryDTO;
@@ -20,6 +22,7 @@ export class ViewCountryOrderComponent implements OnInit {
     public selectedInvestmentType: InvestmentType;
 
     public hasMarketAPI = false;
+    public stockDTOs: StockDTO[] = [];
 
     ngOnInit() {
         this.isOrderUsingMarketAPI();
@@ -27,7 +30,9 @@ export class ViewCountryOrderComponent implements OnInit {
     }
 
     private findAll(): void {
-        this.investmentService.findAll();
+        this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
+            this.stockDTOs = stockDTOs;
+        });
     }
 
     private isOrderUsingMarketAPI(): void {
