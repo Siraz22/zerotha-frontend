@@ -69,7 +69,9 @@ strong {
     margin-bottom: 10px;
 }
 
-.ng-select {
+/* Global NgbDropdown settings */
+.dropdown-toggle::after {
+    display: none;
 }
 
 /* CUSTOM CLASSES for ZEROTHA */
@@ -95,9 +97,6 @@ strong {
 }
 
 /* Custom Ng-select */
-
-.ze-ng-select {
-}
 
 .ze-hr {
     margin: 0px;

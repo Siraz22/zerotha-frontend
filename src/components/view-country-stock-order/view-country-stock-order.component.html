@@ -17,7 +17,8 @@
                 <th style="width: 40%; font-size: 1.4em; text-align: left; ">Stock Name</th>
                 <th>Average Price</th>
                 <th>Quantity</th>
-                <th style="text-align: right;">Current Amount</th>
+                <th>Invested</th>
+                <th style="text-align: right;">Current Value</th>
                 <th></th>
             </tr>
         </thead>
@@ -36,6 +37,9 @@
                 <td>
                     {{stockDTO.quantity}}
                 </td>
+                <td>
+                    {{stockDTO.quantity * stockDTO.averagePrice}}
+                </td>
                 <td style="text-align: right">
                     {{"Current Amount"}}
                 </td>
@@ -43,7 +47,7 @@
                     <div ngbDropdown #countryActions="ngbDropdown">
                         <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>
                         <div ngbDropdownMenu>
-                            <button ngbDropdownItem>Edit</button>
+                            <button ngbDropdownItem (click)="openEditStockModal(stockDTO)">Edit</button>
                             <button ngbDropdownItem>Delete</button>
                         </div>
                     </div>

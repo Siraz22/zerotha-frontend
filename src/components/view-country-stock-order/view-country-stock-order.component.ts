@@ -4,9 +4,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { countryWithMarketDataAPI } from '../../constants/projectConstants';
 import { CountryDTO } from '../../dto/CountryDTO';
 import { StockDTO } from '../../dto/StockDTO';
-import { InvestmentType } from '../../enums/Investment-type';
 import { StocksService } from '../../service/stocks.service';
 import { AddStocksOrderModalComponent } from '../modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
+import { EditStocksOrderModalComponent } from '../modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
 
 @Component({
     selector: 'app-view-country-stock-order',
@@ -18,8 +18,6 @@ export class ViewCountryStockOrderComponent implements OnInit {
 
     @Input()
     public countryDTO: CountryDTO;
-    @Input()
-    public selectedInvestmentType: InvestmentType;
 
     public hasMarketAPI = false;
     public stockDTOs: StockDTO[] = [];
@@ -36,20 +34,21 @@ export class ViewCountryStockOrderComponent implements OnInit {
     }
 
     private isOrderUsingMarketAPI(): void {
-        if (this.selectedInvestmentType === InvestmentType.STOCK && countryWithMarketDataAPI.has(this.countryDTO.name)) {
+        if (countryWithMarketDataAPI.has(this.countryDTO.name)) {
             this.hasMarketAPI = true;
         }
     }
 
     public openAddOrderModal(): void {
-        if (this.selectedInvestmentType === InvestmentType.STOCK) {
-            const addStocksModalInstance = this.modalService.open(AddStocksOrderModalComponent, { size: 'lg' });
-            addStocksModalInstance.componentInstance.countryDTO = this.countryDTO;
+        const addStocksModalInstance = this.modalService.open(AddStocksOrderModalComponent, { size: 'lg' });
+        addStocksModalInstance.componentInstance.countryDTO = this.countryDTO;
 
-            //Hardcoded logic as a workaround for personal project.
-            //Currently, only US has free API for market data
-            //Indian market data is paid / locked behind a access token via third party login
-            addStocksModalInstance.componentInstance.hasMarketAPI = this.hasMarketAPI;
-        }
+        //Currently, only US has free API for market data
+        addStocksModalInstance.componentInstance.hasMarketAPI = this.hasMarketAPI;
+    }
+
+    public openEditStockModal(stockDTOToEdit: StockDTO): void {
+        const editStocksModalInstance = this.modalService.open(EditStocksOrderModalComponent, { size: 'lg' });
+        editStocksModalInstance.componentInstance.stockDTO = stockDTOToEdit;
     }
 }

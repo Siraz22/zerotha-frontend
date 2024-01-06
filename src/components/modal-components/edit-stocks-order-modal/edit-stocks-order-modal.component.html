@@ -7,8 +7,8 @@
         <div class="form-group row">
             <label class="col-sm-3 col-form-label">Name</label>
             <div class="col-sm-9">
-                <app-object-ng-select [items]="stocks" (selectedObject)="prefillSymbol($event)" [searchFn]="searchFn" [labelFn]="labelFn" [items]=" searchResults"
-                    formControlName="name" placeholder="Enter Stock Name" bindValue="name">
+                <app-object-ng-select [disabled]="true" [items]="stocks" [labelFn]="labelFn" [items]=" searchResults" formControlName="name" placeholder="Enter Stock Name"
+                    bindValue="name">
                 </app-object-ng-select>
             </div>
         </div>

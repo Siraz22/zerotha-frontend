@@ -4,13 +4,10 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
-import { InvestmentType } from '../../../enums/Investment-type';
 import { MarketCap } from '../../../enums/market-cap';
 import { Sector } from '../../../enums/sector';
-import { Alpaca_LatestBarSingleResponse } from '../../../interface/Alpaca_LatestBarSingleResponse';
 import { LocalAssetService } from '../../../service/local-asset.service';
 import { StocksService } from '../../../service/stocks.service';
-import { TickerSearchService } from '../../../service/ticker-search.service';
 
 interface StockJsonI {
     symbol: string;
@@ -18,18 +15,19 @@ interface StockJsonI {
 }
 
 @Component({
-    selector: 'app-add-stocks-order-modal',
-    templateUrl: './add-stocks-order-modal.component.html',
-    styleUrls: ['./add-stocks-order-modal.component.css'],
+    selector: 'app-edit-stocks-order-modal',
+    templateUrl: './edit-stocks-order-modal.component.html',
+    styleUrls: ['./edit-stocks-order-modal.component.css'],
 })
-export class AddStocksOrderModalComponent implements OnInit {
+export class EditStocksOrderModalComponent implements OnInit {
     public formGroup: FormGroup;
     public countryDTO: CountryDTO;
     public hasMarketAPI: boolean;
 
+    public stockDTO: StockDTO;
+
     public searchResults: any = [];
     public labelFn: (stockJson: StockJsonI) => string = this.labelFunction;
-    public searchFn: (searchTerm: string, stockJson: StockJsonI) => boolean = this.searchFunction;
 
     public selectedStock: any;
     public stocks: StockJsonI[] = [];
@@ -37,15 +35,10 @@ export class AddStocksOrderModalComponent implements OnInit {
     public MarketCap = MarketCap;
     public Sector = Sector;
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private activeModal: NgbActiveModal,
-        private localAssetService: LocalAssetService,
-        private tickerSearchService: TickerSearchService,
-        private stockService: StocksService
-    ) {}
+    constructor(private formBuilder: FormBuilder, private activeModal: NgbActiveModal, private localAssetService: LocalAssetService, private stockService: StocksService) {}
 
     ngOnInit() {
+        console.log(this.stockDTO);
         if (this.hasMarketAPI) {
             this.initializeStocks();
         }
@@ -55,19 +48,6 @@ export class AddStocksOrderModalComponent implements OnInit {
     private initializeStocks(): void {
         if (this.countryDTO.name == 'United States') {
             this.localAssetService.getLocalUSStocks().subscribe((data: StockJsonI[]) => (this.stocks = data));
-        }
-    }
-
-    public prefillSymbol(event: StockJsonI): void {
-        if (this.hasMarketAPI) {
-            if (this.countryDTO.name == 'United States') {
-                const symbol = event.symbol;
-                this.formGroup.get('symbol').setValue(symbol);
-                this.formGroup.updateValueAndValidity();
-                this.tickerSearchService.getOHLC_US(symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
-                    this.selectedStock = data;
-                });
-            }
         }
     }
 
@@ -89,37 +69,33 @@ export class AddStocksOrderModalComponent implements OnInit {
         this.formGroup.get('marketCap').setValue(marketCap);
     }
 
-    public openEditStockModal(): void {}
-
     private compileStockDTO(): StockDTO {
         const stockDTO = new StockDTO();
-        stockDTO.associatedCountryId = this.countryDTO.id;
-        stockDTO.name = this.formGroup.value.name;
-        stockDTO.symbol = this.formGroup.value.symbol;
+
+        // stockDTO.associatedCountryId = this.countryDTO.id;
+        // stockDTO.name = this.formGroup.value.name;
+        // stockDTO.symbol = this.formGroup.value.symbol;
+        // stockDTO.investmentType = InvestmentType.STOCK;
+
         stockDTO.quantity = this.formGroup.value.quantity;
         stockDTO.averagePrice = this.formGroup.value.averagePrice;
         stockDTO.marketCap = this.formGroup.value.marketCap;
         stockDTO.sector = this.formGroup.value.sector;
-        stockDTO.investmentType = InvestmentType.STOCK;
         return stockDTO;
     }
 
     private createFormGroup(): void {
         this.formGroup = this.formBuilder.group({
-            symbol: [null, Validators.required],
-            name: [null, Validators.required],
-            quantity: [0, Validators.required],
-            averagePrice: [0, Validators.required],
-            marketCap: [null, Validators.required],
-            sector: [null, Validators.required],
+            symbol: [{ value: this.stockDTO.symbol, disabled: true }, Validators.required],
+            name: [{ value: this.stockDTO.name, disabled: true }, Validators.required],
+            quantity: [this.stockDTO.quantity, Validators.required],
+            averagePrice: [this.stockDTO.averagePrice, Validators.required],
+            marketCap: [this.stockDTO.marketCap, Validators.required],
+            sector: [this.stockDTO.sector, Validators.required],
         });
     }
 
     private labelFunction(stockJson: StockJsonI): string {
         return stockJson.symbol + ' | ' + stockJson.name;
-    }
-
-    private searchFunction(searchTerm: string, stockJson: StockJsonI): boolean {
-        return stockJson.name.toLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1;
     }
 }
