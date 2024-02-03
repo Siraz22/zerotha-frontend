@@ -4,6 +4,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
+import { StockUpdateDTO } from '../../../dto/StockUpdateDTO';
 import { MarketCap } from '../../../enums/market-cap';
 import { Sector } from '../../../enums/sector';
 import { LocalAssetService } from '../../../service/local-asset.service';
@@ -22,15 +23,11 @@ interface StockJsonI {
 export class EditStocksOrderModalComponent implements OnInit {
     public formGroup: FormGroup;
     public countryDTO: CountryDTO;
-    public hasMarketAPI: boolean;
 
     public stockDTO: StockDTO;
 
     public searchResults: any = [];
     public labelFn: (stockJson: StockJsonI) => string = this.labelFunction;
-
-    public selectedStock: any;
-    public stocks: StockJsonI[] = [];
 
     public MarketCap = MarketCap;
     public Sector = Sector;
@@ -38,29 +35,15 @@ export class EditStocksOrderModalComponent implements OnInit {
     constructor(private formBuilder: FormBuilder, private activeModal: NgbActiveModal, private localAssetService: LocalAssetService, private stockService: StocksService) {}
 
     ngOnInit() {
-        console.log(this.stockDTO);
-        if (this.hasMarketAPI) {
-            this.initializeStocks();
-        }
         this.createFormGroup();
-    }
-
-    private initializeStocks(): void {
-        if (this.countryDTO.name == 'United States') {
-            this.localAssetService.getLocalUSStocks().subscribe((data: StockJsonI[]) => (this.stocks = data));
-        }
     }
 
     public closeModal(): void {
         this.activeModal.close();
     }
 
-    public onStockSelect(event: any): void {
-        console.log(event);
-    }
-
-    public saveStock(): void {
-        this.stockService.saveStock(this.compileStockDTO()).subscribe((_) => {
+    public updateStock(stockId: number): void {
+        this.stockService.updateStock(this.compileStockUpdateDTO(stockId)).subscribe((_) => {
             this.closeModal();
         });
     }
@@ -69,19 +52,23 @@ export class EditStocksOrderModalComponent implements OnInit {
         this.formGroup.get('marketCap').setValue(marketCap);
     }
 
-    private compileStockDTO(): StockDTO {
-        const stockDTO = new StockDTO();
+    public getSelectedStockJsonI(): StockJsonI[] {
+        return [{ symbol: this.stockDTO.symbol, name: this.stockDTO.name }];
+    }
 
-        // stockDTO.associatedCountryId = this.countryDTO.id;
-        // stockDTO.name = this.formGroup.value.name;
-        // stockDTO.symbol = this.formGroup.value.symbol;
-        // stockDTO.investmentType = InvestmentType.STOCK;
+    public getMarketCap(): MarketCap {
+        const temp = this.formGroup.get('marketCap').value;
+        return temp;
+    }
 
-        stockDTO.quantity = this.formGroup.value.quantity;
-        stockDTO.averagePrice = this.formGroup.value.averagePrice;
-        stockDTO.marketCap = this.formGroup.value.marketCap;
-        stockDTO.sector = this.formGroup.value.sector;
-        return stockDTO;
+    private compileStockUpdateDTO(stockId: number): StockUpdateDTO {
+        const stockUpdateDTO = new StockUpdateDTO();
+        stockUpdateDTO.id = stockId;
+        stockUpdateDTO.quantity = this.formGroup.value.quantity;
+        stockUpdateDTO.averagePrice = this.formGroup.value.averagePrice;
+        stockUpdateDTO.marketCap = this.formGroup.value.marketCap;
+        stockUpdateDTO.sector = this.formGroup.value.sector;
+        return stockUpdateDTO;
     }
 
     private createFormGroup(): void {

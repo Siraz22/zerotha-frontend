@@ -15,6 +15,7 @@
         <thead class="ze-table-heading">
             <tr>
                 <th style="width: 40%; font-size: 1.4em; text-align: left; ">Stock Name</th>
+                <th>Latest Price</th>
                 <th>Average Price</th>
                 <th>Quantity</th>
                 <th>Invested</th>
@@ -26,12 +27,15 @@
             <tr>
                 <td style="text-align: left;">
                     <span class="ze-pointer">
-                        <!-- <strong>{{'Adani Ports'}}</strong> -->
                         <strong>{{stockDTO.name}}</strong>
                     </span>
                 </td>
+                <td>
+                    <span class="ze-pointer">
+                        <strong>{{stockDTO.fe_currentPrice}}</strong>
+                    </span>
+                </td>
                 <td class="currency">
-                    <!-- {{'100'}} -->
                     {{stockDTO.averagePrice}}
                 </td>
                 <td>
@@ -41,14 +45,14 @@
                     {{stockDTO.quantity * stockDTO.averagePrice}}
                 </td>
                 <td style="text-align: right">
-                    {{"Current Amount"}}
+                    {{stockDTO.quantity * stockDTO.fe_currentPrice}}
                 </td>
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">
                         <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>
                         <div ngbDropdownMenu>
                             <button ngbDropdownItem (click)="openEditStockModal(stockDTO)">Edit</button>
-                            <button ngbDropdownItem>Delete</button>
+                            <button ngbDropdownItem (click)="openDeleteStockModal(stockDTO)">Delete</button>
                         </div>
                     </div>
                 </td>
