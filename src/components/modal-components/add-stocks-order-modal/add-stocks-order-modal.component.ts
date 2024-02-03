@@ -8,14 +8,10 @@ import { InvestmentType } from '../../../enums/Investment-type';
 import { MarketCap } from '../../../enums/market-cap';
 import { Sector } from '../../../enums/sector';
 import { Alpaca_LatestBarSingleResponse } from '../../../interface/Alpaca_LatestBarSingleResponse';
+import { IStockJson } from '../../../interface/StockJsonI';
 import { LocalAssetService } from '../../../service/local-asset.service';
 import { StocksService } from '../../../service/stocks.service';
 import { TickerSearchService } from '../../../service/ticker-search.service';
-
-interface StockJsonI {
-    symbol: string;
-    name: string;
-}
 
 @Component({
     selector: 'app-add-stocks-order-modal',
@@ -28,11 +24,11 @@ export class AddStocksOrderModalComponent implements OnInit {
     public hasMarketAPI: boolean;
 
     public searchResults: any = [];
-    public labelFn: (stockJson: StockJsonI) => string = this.labelFunction;
-    public searchFn: (searchTerm: string, stockJson: StockJsonI) => boolean = this.searchFunction;
+    public labelFn: (stockJson: IStockJson) => string = this.labelFunction;
+    public searchFn: (searchTerm: string, stockJson: IStockJson) => boolean = this.searchFunction;
 
     public selectedStock: any;
-    public stocks: StockJsonI[] = [];
+    public stocks: IStockJson[] = [];
 
     public MarketCap = MarketCap;
     public Sector = Sector;
@@ -52,23 +48,22 @@ export class AddStocksOrderModalComponent implements OnInit {
         this.createFormGroup();
     }
 
-    private initializeStocks(): void {
-        if (this.countryDTO.name == 'United States') {
-            this.localAssetService.getLocalUSStocks().subscribe((data: StockJsonI[]) => (this.stocks = data));
-        }
-    }
-
-    public prefillSymbol(event: StockJsonI): void {
+    public prefillSymbol(event: IStockJson): void {
         if (this.hasMarketAPI) {
             if (this.countryDTO.name == 'United States') {
-                const usEvent = event as StockJsonI;
-                const symbol = usEvent.symbol;
+                const symbol = event.symbol;
                 this.formGroup.get('symbol').setValue(symbol);
                 this.formGroup.updateValueAndValidity();
                 this.tickerSearchService.getOHLC_US(symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
                     this.selectedStock = data;
                 });
             }
+        }
+    }
+
+    private initializeStocks(): void {
+        if (this.countryDTO.name == 'United States') {
+            this.localAssetService.getLocalUSStocks().subscribe((data: IStockJson[]) => (this.stocks = data));
         }
     }
 
@@ -89,6 +84,8 @@ export class AddStocksOrderModalComponent implements OnInit {
     public onMarketCapSelect(marketCap: MarketCap): void {
         this.formGroup.get('marketCap').setValue(marketCap);
     }
+
+    public openEditStockModal(): void {}
 
     private compileStockDTO(): StockDTO {
         const stockDTO = new StockDTO();
@@ -114,11 +111,11 @@ export class AddStocksOrderModalComponent implements OnInit {
         });
     }
 
-    private labelFunction(stockJson: StockJsonI): string {
+    private labelFunction(stockJson: IStockJson): string {
         return stockJson.symbol + ' | ' + stockJson.name;
     }
 
-    private searchFunction(searchTerm: string, stockJson: StockJsonI): boolean {
+    private searchFunction(searchTerm: string, stockJson: IStockJson): boolean {
         return stockJson.name.toLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1;
     }
 }

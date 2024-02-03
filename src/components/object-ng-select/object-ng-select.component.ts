@@ -27,6 +27,8 @@ export class ObjectNgSelectComponent implements ControlValueAccessor {
     public placeholder: string;
     @Input()
     public bindValue: string;
+    @Input()
+    public disabled: boolean;
 
     @Output()
     public selectedObject = new EventEmitter<any>();

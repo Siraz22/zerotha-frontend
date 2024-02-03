@@ -1,5 +1,5 @@
-<ng-select class="ze-ng-select" [searchFn]="searchFn" [items]="items" [virtualScroll]="true" [clearable]="true" placeholder="{{placeholder}}" [bindValue]="bindValue"
-    [(ngModel)]="value" [typeahead]="searchInput" (change)="change($event)" (blur)="onTouch()">
+<ng-select class="ze-ng-select" [searchFn]="searchFn" [disabled]="disabled" [items]="items" [virtualScroll]="true" [clearable]="true" placeholder="{{placeholder}}"
+    [bindValue]="bindValue" [(ngModel)]="value" [typeahead]="searchInput" (change)="change($event)" (blur)="onTouch()">
     <ng-template ng-label-tmp let-item="item" let-clear="clear">
         <span aria-hidden="true" (click)="clear(item)" class="ng-value-icon left">×</span>
         <span class="ng-value-label">{{labelFn(item)}}</span>

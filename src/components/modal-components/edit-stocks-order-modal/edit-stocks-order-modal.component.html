@@ -7,8 +7,8 @@
         <div class="form-group row">
             <label class="col-sm-3 col-form-label">Name</label>
             <div class="col-sm-9">
-                <app-object-ng-select [items]="stocks" (selectedObject)="prefillSymbol($event)" [searchFn]="searchFn" [labelFn]="labelFn" [items]=" searchResults"
-                    formControlName="name" placeholder="Enter Stock Name" bindValue="name">
+                <app-object-ng-select [disabled]="true" [items]="getSelectedStockJsonI()" [labelFn]="labelFn" [items]="searchResults" formControlName="name"
+                    placeholder="Enter Stock Name" bindValue="name">
                 </app-object-ng-select>
             </div>
         </div>
@@ -36,23 +36,23 @@
             <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm" id="pillNav2" role="tablist"
                 style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
                 <li class="nav-item" role="presentation">
-                    <button (click)="onMarketCapSelect(MarketCap.SMALL_CAP)" class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
-                        aria-selected="true">Small
+                    <button (click)="onMarketCapSelect(MarketCap.SMALL_CAP)" [ngClass]="{'active':formGroup.get('marketCap').value===MarketCap.SMALL_CAP}"
+                        class="nav-link rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab">Small
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button (click)="onMarketCapSelect(MarketCap.MID_CAP)" class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-                        aria-selected="false">Mid
+                    <button (click)="onMarketCapSelect(MarketCap.MID_CAP)" [ngClass]="{'active':formGroup.get('marketCap').value===MarketCap.MID_CAP}" class="nav-link rounded-5"
+                        id="profile-tab2" data-bs-toggle="tab" type="button" role="tab">Mid
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button (click)="onMarketCapSelect(MarketCap.LARGE_CAP)" class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab"
-                        aria-selected="false">Large
+                    <button (click)="onMarketCapSelect(MarketCap.LARGE_CAP)" [ngClass]="{'active':formGroup.get('marketCap').value===MarketCap.LARGE_CAP}"
+                        class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab">Large
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button (click)="onMarketCapSelect(MarketCap.MEGA_CAP)" class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab"
-                        aria-selected="false">Mega
+                    <button (click)="onMarketCapSelect(MarketCap.MEGA_CAP)" [ngClass]="{'active':formGroup.get('marketCap').value===MarketCap.MEGA_CAP}" class="nav-link rounded-5"
+                        id="contact-tab2" data-bs-toggle="tab" type="button" role="tab">Mega
                     </button>
                 </li>
             </ul>
@@ -102,7 +102,8 @@
 
             <!-- Second Column -->
             <div class="col-4">
-
+                <!-- Add similar changes for the remaining sectors -->
+                <!-- Financials -->
                 <div class="form-check">
                     <input [value]="Sector.FINANCIALS" class="form-check-input" type="radio" formControlName="sector" id="financials" checked>
                     <label class="form-check-label" for="financials">
@@ -110,6 +111,7 @@
                         Financials
                     </label>
                 </div>
+                <!-- Consumer Discretionary -->
                 <div class="form-check">
                     <input [value]="Sector.CONSUMER_DISCRETIONARY" class="form-check-input" type="radio" formControlName="sector" id="consumerDiscretionary">
                     <label class="form-check-label" for="consumerDiscretionary">
@@ -117,6 +119,7 @@
                         Consumer Discretionary
                     </label>
                 </div>
+                <!-- Consumer Staples -->
                 <div class="form-check">
                     <input [value]="Sector.CONSUMER_STAPLES" class="form-check-input" type="radio" formControlName="sector" id="consumerStaples">
                     <label class="form-check-label" for="consumerStaples">
@@ -124,6 +127,7 @@
                         Consumer Staples
                     </label>
                 </div>
+                <!-- Information Technology -->
                 <div class="form-check">
                     <input [value]="Sector.INFORMATION_TECHNOLOGY" class="form-check-input" type="radio" formControlName="sector" id="informationTechnology">
                     <label class="form-check-label" for="informationTechnology">
@@ -135,6 +139,8 @@
 
             <!-- Third Column -->
             <div class="col-4">
+                <!-- Add similar changes for the remaining sectors -->
+                <!-- Communication -->
                 <div class="form-check">
                     <input [value]="Sector.COMMUNICATION" class="form-check-input" type="radio" formControlName="sector" id="communication">
                     <label class="form-check-label" for="communication">
@@ -142,6 +148,7 @@
                         Communication
                     </label>
                 </div>
+                <!-- Real Estate -->
                 <div class="form-check">
                     <input [value]="Sector.REAL_ESTATE" class="form-check-input" type="radio" formControlName="sector" id="realEstate">
                     <label class="form-check-label" for="realEstate">
@@ -149,6 +156,7 @@
                         Real Estate
                     </label>
                 </div>
+                <!-- ETF -->
                 <div class="form-check">
                     <input [value]="Sector.ETF" class="form-check-input" type="radio" formControlName="sector" id="etf">
                     <label class="form-check-label" for="etf">
@@ -156,6 +164,7 @@
                         ETF
                     </label>
                 </div>
+                <!-- Index Funds -->
                 <div class="form-check">
                     <input [value]="Sector.INDEX_FUNDS" class="form-check-input" type="radio" formControlName="sector" id="indexFunds">
                     <label class="form-check-label" for="indexFunds">
@@ -168,14 +177,9 @@
     </form>
 </div>
 
-<div *ngIf="selectedStock">
-    <p>Low : {{selectedStock.bar.l}}, Closing : {{selectedStock.bar.c}}, High : {{selectedStock.bar.h}}</p>
-    As of {{selectedStock.bar.t}}
-</div>
-
 {{debugForm.value | json}}
 
 <div class="modal-footer d-flex justify-content-between">
     <button type="button" class="ze-btn" (click)="closeModal()">Cancel</button>
-    <button type="button" class="ze-btn ze-btn-primary" (click)="saveStock()">Create</button>
+    <button type="button" class="ze-btn ze-btn-primary" (click)="updateStock(stockDTO.id)">Update</button>
 </div>

@@ -1,7 +1,7 @@
 <div class="overview-band">
     <div class="container">
         <p>Viewing - {{selectedInvestmentType}} data</p>
-        <div class="investment-overview-card">
+        <div class="investment-overview-card mb-4">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <div class="container">
@@ -82,7 +82,7 @@
     <div ngbNavItem="Orders">
         <ng-template ngbNavContent>
             <div *ngIf="selectedInvestmentType === InvestmentType.STOCK" class="container">
-                <app-view-country-stock-order [countryDTO]="currentCountryDTO" [selectedInvestmentType]="selectedInvestmentType">
+                <app-view-country-stock-order [countryDTO]="currentCountryDTO">
                 </app-view-country-stock-order>
             </div>
 
