@@ -1,0 +1,7 @@
+export enum InvestmentType {
+    STOCK = 'STOCK',
+    DEBT = 'DEBT',
+    PRECIOUS_METALS = 'PRECIOUS_METALS',
+    MUTUAL_FUNDS = 'MUTUAL_FUNDS',
+    DIGITAL_ASSETS = 'DIGITAL_ASSETS',
+}

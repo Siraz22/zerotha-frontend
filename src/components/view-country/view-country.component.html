@@ -1,0 +1,30 @@
+<div class="overview-band pt-4 pb-4">
+    <div class="header">
+        <div class="switchbar-container">
+            <div class="switchbar" id="switchbar">
+                <div class="switch" [class.selected]="selectedInvestmentType === InvestmentType.STOCK" (click)="selectInvestment('stocks')">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/4449/4449895.png">
+                    Stock
+                </div>
+                <div class="switch" [class.selected]="selectedInvestmentType === InvestmentType.DEBT" (click)="selectInvestment('debt')">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/3133/3133613.png">
+                    Debt
+                </div>
+                <div class="switch" [class.selected]="selectedInvestmentType === InvestmentType.PRECIOUS_METALS" (click)="selectInvestment('metals')">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1473/1473504.png">
+                    Metals
+                </div>
+                <div class="switch" [class.selected]="selectedInvestmentType === InvestmentType.MUTUAL_FUNDS" (click)="selectInvestment('mutual-funds')">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/855/855288.png">
+                    MF
+                </div>
+                <div class="switch" [class.selected]="selectedInvestmentType === undefined" (click)="selectInvestment('info')">
+                    <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1041/1041728.png">
+                    Info
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

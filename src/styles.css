@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@ng-select/ng-select/themes/default.theme.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+@font-face {
+    font-family: 'GraphikLight';
+    src: url('./assets/GraphikLight.otf');
+}
+
+@font-face {
+    font-family: 'GraphikRegular';
+    src: url('./assets/GraphikRegular.otf');
+}
+
+@font-face {
+    font-family: 'GraphikMedium';
+    src: url('./assets/GraphikMedium.otf');
+}
+
+@font-face {
+    font-family: 'GraphikBold';
+    src: url('./assets/GraphikBold.otf');
+}
+
+body {
+    font-family: 'GraphikRegular';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'GraphikBold';
+}
+
+small {
+    font-family: 'GraphikLight';
+}
+
+strong {
+    font-family: 'GraphikMedium';
+}
+
+/* GLOBAL OVERRIDING OF COMMON CLASSES */
+/* Global Modal Settings */
+
+.modal-header {
+    border-bottom: none;
+}
+
+.table td {
+    padding: 20px 12px;
+}
+
+.table th {
+    padding: 5px 5px;
+}
+
+.form-control:focus {
+    border-color: black;
+    box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 1);
+}
+
+.form-group.row {
+    margin-bottom: 10px;
+}
+
+/* Global NgbDropdown settings */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* CUSTOM CLASSES for ZEROTHA */
+
+/* Custom Button */
+
+.ze-btn {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.ze-btn-primary {
+    background-color: black;
+    color: white;
+}
+
+.ze-btn-secondary {
+    background-color: blue;
+    color: white;
+}
+
+/* Custom Ng-select */
+
+.ze-hr {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+}
+
+/* Custom table styles */
+
+table .ze-table-heading {
+    font-size: 1em;
+    color: #888;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'GraphikLight';
+}
+
+table .ze-table-body {
+    text-align: center;
+    font-weight: normal;
+    font-family: 'GraphikRegular';
+    vertical-align: middle;
+}
+
+/* Custom Cursor */
+
+.ze-pointer {
+    cursor: pointer;
+}
+
+.ze-pointer-plain {
+    cursor: pointer;
+}
+
+.ze-pointer:hover {
+    background-color: lightgrey;
+}
+
+/* Custom Icon buttons */
+
+.ze-icon-btn {
+    padding: 10px;
+    border-radius: 5px;
+}

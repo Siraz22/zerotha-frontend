@@ -1,0 +1,40 @@
+.overview-band {
+    background-color: #f3f3f3;
+}
+
+.tab-band {
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+    background-color: white;
+}
+
+.investment-overview-card {
+    border: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: white;
+    padding: 20px;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 1030px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .select-country {
+        position: relative;
+        right: 0px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .switchbar-container {
+        margin: 0px;
+    }
+}

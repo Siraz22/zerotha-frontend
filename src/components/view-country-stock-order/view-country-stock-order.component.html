@@ -1,0 +1,62 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-8 ">
+            <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'All Orders '}}</span>
+            <span class="badge rounded-pill bg-secondary ml-n">27</span>
+        </div>
+        <div class="col-2">
+            <input class="form-control" type="text" placeholder="Search for Stocks/Ticker" />
+        </div>
+        <div class="col-2 justify-content-end">
+            <button (click)="openAddOrderModal()" class="btn ze-btn">Add new Order?</button>
+        </div>
+    </div>
+    <table class="table" style="margin-top: 15px;">
+        <thead class="ze-table-heading">
+            <tr>
+                <th style="width: 40%; font-size: 1.4em; text-align: left; ">Stock Name</th>
+                <th>Latest Price</th>
+                <th>Average Price</th>
+                <th>Quantity</th>
+                <th>Invested</th>
+                <th style="text-align: right;">Current Value</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let stockDTO of stockDTOs" class="ze-table-body">
+            <tr>
+                <td style="text-align: left;">
+                    <span class="ze-pointer">
+                        <strong>{{stockDTO.name}}</strong>
+                    </span>
+                </td>
+                <td>
+                    <span class="ze-pointer">
+                        <strong>{{stockDTO.fe_currentPrice}}</strong>
+                    </span>
+                </td>
+                <td class="currency">
+                    {{stockDTO.averagePrice}}
+                </td>
+                <td>
+                    {{stockDTO.quantity}}
+                </td>
+                <td>
+                    {{stockDTO.quantity * stockDTO.averagePrice}}
+                </td>
+                <td style="text-align: right">
+                    {{stockDTO.quantity * stockDTO.fe_currentPrice}}
+                </td>
+                <td>
+                    <div ngbDropdown #countryActions="ngbDropdown">
+                        <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>
+                        <div ngbDropdownMenu>
+                            <button ngbDropdownItem (click)="openEditStockModal(stockDTO)">Edit</button>
+                            <button ngbDropdownItem (click)="openDeleteStockModal(stockDTO)">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

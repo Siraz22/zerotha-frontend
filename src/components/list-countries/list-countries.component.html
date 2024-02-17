@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <div class="d-flex justify-content-between">
+        <span style="font-family: 'GraphikMedium'; font-size: 1.6rem;">Your Countries</span>
+        <button class="btn ze-btn" (click)="openAddCountryModal()">Add Country</button>
+    </div>
+    <table class="table" style="margin-top: 15px;">
+        <thead class="ze-table-heading">
+            <tr>
+                <th style="width: 40%; font-size: 1.4em; text-align: left; ">Country</th>
+                <th>Currency</th>
+                <th>Weight</th>
+                <th style="text-align: right;">Current Amount</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="ze-table-body">
+            <tr *ngFor="let countryDTO of countryDTOs">
+                <td style="text-align: left;">
+                    <span class="ze-pointer" (click)="goToCountry(countryDTO.id)">
+                        <strong>{{countryDTO.name}}</strong>
+                    </span>
+                </td>
+                <td class="currency">{{countryDTO.currency}}</td>
+                <td>{{calculateWeight(countryDTO.id)}}</td>
+                <td style="text-align: right">{{countryDTO.currencySymbol}} {{calculateInvestedAmount(countryDTO)}}</td>
+                <td>
+                    <div ngbDropdown #countryActions="ngbDropdown">
+                        <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>
+                        <div ngbDropdownMenu>
+                            <button ngbDropdownItem>Edit</button>
+                            <button ngbDropdownItem>Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

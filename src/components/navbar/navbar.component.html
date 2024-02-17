@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div ngbDropdown #dropZerotha="ngbDropdown" class="navbar-header">
+            <a ngbDropdownToggle (mouseover)="hoverover(dropZerotha)" class="navbar-brand">
+                <img class="me-2" src="https://companieslogo.com/img/orig/DB1.DE.D-6a83a223.png?t=1651903436" alt="logo.png" height="35px">
+                Zerotha
+            </a>
+            <div ngbDropdownMenu (mouseout)="hoverout(dropZerotha)">
+                <button ngbDropdownItem>Zerotha Menu</button>
+                <button ngbDropdownItem>Another Action</button>
+                <button ngbDropdownItem>Something else is here</button>
+            </div>
+        </div>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZerothaNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="collapseZerothaNavbar">
+            <ul class="navbar-nav w-100 justify-content-center">
+                <li class="nav-item active">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link d-flex align-items-center ze-pointer-plain" (click)="redirectToPath('country')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" width="30" height="30" class="me-2">
+                        Globe
+                    </a>
+                </li>
+                <li ngbDropdown #dropAccount="ngbDropdown" (mouseover)="hoverover(dropAccount)" class="nav-item active">
+                    <div class=" nav-item" id="dropdownAccount" ngbDropdown #dropdown="ngbDropdown">
+                        <a class="nav-link d-flex align-items-center" role="button" ngbDropdownToggle>
+                            <img src="https://cdn-icons-png.flaticon.com/128/428/428933.png" alt="Profile" width="30" height="30" class="rounded-circle me-2">
+                            Account
+                        </a>
+                    </div>
+                    <div ngbDropdownMenu (mouseout)="hoverout(dropAccount)" aria-labelledby="dropdownAccount">
+                        <button (click)="redirectToPath('dashboard')" ngbDropdownItem>Account Menu</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
