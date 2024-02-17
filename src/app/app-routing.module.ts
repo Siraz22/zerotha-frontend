@@ -17,7 +17,6 @@ const routes: Routes = [
         children: [
             { path: 'stocks', component: ViewCountryInvestmentComponent, data: { selectedInvestmentType: InvestmentType.STOCK } },
             { path: 'debt', component: ViewCountryInvestmentComponent, data: { selectedInvestmentType: InvestmentType.DEBT } },
-            { path: 'digital', component: ViewCountryInvestmentComponent, data: { selectedInvestmentType: InvestmentType.DIGITAL_ASSETS } },
             { path: 'metals', component: ViewCountryInvestmentComponent, data: { selectedInvestmentType: InvestmentType.PRECIOUS_METALS } },
             { path: 'mutual-funds', component: ViewCountryInvestmentComponent, data: { selectedInvestmentType: InvestmentType.MUTUAL_FUNDS } },
             { path: 'info', component: ViewCountryInfoComponent },
