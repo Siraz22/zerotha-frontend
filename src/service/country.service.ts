@@ -10,19 +10,18 @@ import { environment } from '../environments/environment';
 })
 export class CountryService {
     constructor(private httpClient: HttpClient) {}
+
+    private countryApiPath = environment.apiEndpoint + '/country';
+
     public saveCountry(countryDTO: CountryDTO): Observable<CountryDTO> {
-        return this.httpClient.post<CountryDTO>('http://localhost:8080/api/v1/country', countryDTO);
+        return this.httpClient.post<CountryDTO>(this.countryApiPath, countryDTO);
     }
 
     public findAll(): Observable<CountryDTO[]> {
-        return this.httpClient.get<CountryDTO[]>('http://localhost:8080/api/v1/country');
+        return this.httpClient.get<CountryDTO[]>(this.countryApiPath);
     }
 
     public findOne(countryId: number): Observable<CountryDTO> {
         return this.httpClient.get<CountryDTO>(`${environment.apiEndpoint}/country/${countryId}`);
-    }
-
-    public testing() {
-        this.httpClient.get(`${environment.apiEndpoint}/country/testing`);
     }
 }
