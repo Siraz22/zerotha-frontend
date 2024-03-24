@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { CountryDTO } from '../dto/CountryDTO';
 import { environment } from '../environments/environment';
@@ -9,6 +9,13 @@ import { environment } from '../environments/environment';
     providedIn: 'root',
 })
 export class CountryService {
+    private countryBehaviourSubject = new BehaviorSubject<CountryDTO>(null);
+    currentCountryDTO$ = this.countryBehaviourSubject.asObservable();
+
+    updateCountryDTO(countryDTO: CountryDTO): void {
+        this.countryBehaviourSubject.next(countryDTO);
+    }
+
     constructor(private httpClient: HttpClient) {}
 
     private countryApiPath = environment.apiEndpoint + '/country';

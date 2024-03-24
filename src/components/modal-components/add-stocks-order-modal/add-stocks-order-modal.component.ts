@@ -96,7 +96,7 @@ export class AddStocksOrderModalComponent implements OnInit {
         stockDTO.averagePrice = this.formGroup.value.averagePrice;
         stockDTO.marketCap = this.formGroup.value.marketCap;
         stockDTO.sector = this.formGroup.value.sector;
-        stockDTO.investmentType = InvestmentType.STOCK;
+        stockDTO.investmentType = InvestmentType.STOCKS;
         return stockDTO;
     }
 

@@ -11,12 +11,13 @@ import { NavbarComponent } from 'src/components/navbar/navbar.component';
 import { ViewCountryComponent } from 'src/components/view-country/view-country.component';
 import { ViewDashboardComponent } from 'src/components/view-dashboard/view-dashboard.component';
 
+import { ViewCountryStockHoldingsComponent } from '../components/country-stocks/view-country-stock-holdings/view-country-stock-holdings.component';
+import { ViewCountryStockOrderComponent } from '../components/country-stocks/view-country-stock-order/view-country-stock-order.component';
+import { ViewCountryStocksComponent } from '../components/country-stocks/view-country-stocks/view-country-stocks.component';
 import { AddCountryModalComponent } from '../components/modal-components/add-country-modal/add-country-modal.component';
 import { AddStocksOrderModalComponent } from '../components/modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
 import { EditStocksOrderModalComponent } from '../components/modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
-import { ViewCountryInvestmentComponent } from '../components/view-country-investment/view-country-investment.component';
-import { ViewCountryStockOrderComponent } from '../components/view-country-stock-order/view-country-stock-order.component';
 import { ZeSwitchbarComponent } from '../components/ze-switchbar/ze-switchbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,9 +31,10 @@ import { AppComponent } from './app.component';
         ListCountriesComponent,
         AddCountryModalComponent,
         ViewCountryStockOrderComponent,
+        ViewCountryStockHoldingsComponent,
+        ViewCountryStocksComponent,
         ObjectNgSelectComponent,
         ZeSwitchbarComponent,
-        ViewCountryInvestmentComponent,
         AddStocksOrderModalComponent,
         EditStocksOrderModalComponent,
     ],

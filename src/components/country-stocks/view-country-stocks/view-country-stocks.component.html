@@ -1,6 +1,6 @@
 <div class="overview-band">
     <div class="container">
-        <p>Viewing - {{selectedInvestmentType}} data</p>
+        <p>Viewing - Stock data</p>
         <div class="investment-overview-card mb-4">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
@@ -55,8 +55,7 @@
             </div>
         </div>
 
-        <mat-tab-group [selectedIndex]="getActiveTabIndex()" (selectedTabChange)="tabClicked($event)" (selectedTabChange)="tabClicked($event)" mat-stretch-tabs="false"
-            mat-align-tabs="start">
+        <mat-tab-group [selectedIndex]="activeTabIndexForMatTab" (selectedTabChange)="tabClicked($event)" mat-stretch-tabs="false" mat-align-tabs="start">
             <mat-tab label="Insights"></mat-tab>
             <mat-tab label="Holdings"></mat-tab>
             <mat-tab label="Orders"></mat-tab>
@@ -64,7 +63,7 @@
     </div>
 </div>
 
-<div ngbNav #nav="ngbNav" [activeId]="this.searchParams.activeTab" class="nav-tabs tab-band">
+<div ngbNav #nav="ngbNav" [activeId]="searchParams.activeTab" class="nav-tabs tab-band">
     <div ngbNavItem="Insights">
         <ng-template ngbNavContent>
             <div class="container">
@@ -75,17 +74,17 @@
     <div ngbNavItem="Holdings">
         <ng-template ngbNavContent>
             <div class="container">
-                Holdings Component
+                <app-view-country-stock-holdings>
+                </app-view-country-stock-holdings>
             </div>
         </ng-template>
     </div>
     <div ngbNavItem="Orders">
         <ng-template ngbNavContent>
-            <div *ngIf="selectedInvestmentType === InvestmentType.STOCK" class="container">
-                <app-view-country-stock-order [countryDTO]="currentCountryDTO">
+            <div class="container">
+                <app-view-country-stock-order [countryDTO]="countryDTO">
                 </app-view-country-stock-order>
             </div>
-
         </ng-template>
     </div>
 </div>

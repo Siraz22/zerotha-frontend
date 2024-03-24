@@ -1,16 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { countryWithMarketDataAPI } from '../../constants/projectConstants';
-import { CountryDTO } from '../../dto/CountryDTO';
-import { StockDTO } from '../../dto/StockDTO';
-import { Alpaca_LatestBarSingleResponse } from '../../interface/Alpaca_LatestBarSingleResponse';
-import { LocalAssetService } from '../../service/local-asset.service';
-import { StocksService } from '../../service/stocks.service';
-import { TickerSearchService } from '../../service/ticker-search.service';
-import { AddStocksOrderModalComponent } from '../modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
-import { ConfirmationModalComponent } from '../modal-components/confirmation-modal/confirmation-modal.component';
-import { EditStocksOrderModalComponent } from '../modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
+import { countryWithMarketDataAPI } from '../../../constants/projectConstants';
+import { CountryDTO } from '../../../dto/CountryDTO';
+import { StockDTO } from '../../../dto/StockDTO';
+import { Alpaca_LatestBarSingleResponse } from '../../../interface/Alpaca_LatestBarSingleResponse';
+import { StocksService } from '../../../service/stocks.service';
+import { TickerSearchService } from '../../../service/ticker-search.service';
+import { AddStocksOrderModalComponent } from '../../modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
+import { ConfirmationModalComponent } from '../../modal-components/confirmation-modal/confirmation-modal.component';
+import { EditStocksOrderModalComponent } from '../../modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
 
 @Component({
     selector: 'app-view-country-stock-order',
@@ -18,12 +17,7 @@ import { EditStocksOrderModalComponent } from '../modal-components/edit-stocks-o
     styleUrls: ['./view-country-stock-order.component.css'],
 })
 export class ViewCountryStockOrderComponent implements OnInit {
-    constructor(
-        private modalService: NgbModal,
-        private stockService: StocksService,
-        private localAssetService: LocalAssetService,
-        private tickerSearchService: TickerSearchService
-    ) {}
+    constructor(private modalService: NgbModal, private stockService: StocksService, private tickerSearchService: TickerSearchService) {}
 
     @Input()
     public countryDTO: CountryDTO;
@@ -32,7 +26,7 @@ export class ViewCountryStockOrderComponent implements OnInit {
     public stockDTOs: StockDTO[] = [];
 
     ngOnInit() {
-        this.isOrderUsingMarketAPI();
+        this.hasMarketAPI = countryWithMarketDataAPI.has(this.countryDTO.name);
         this.findAll();
     }
 
@@ -43,12 +37,6 @@ export class ViewCountryStockOrderComponent implements OnInit {
                 this.populateCurrentPrice();
             }
         });
-    }
-
-    private isOrderUsingMarketAPI(): void {
-        if (countryWithMarketDataAPI.has(this.countryDTO.name)) {
-            this.hasMarketAPI = true;
-        }
     }
 
     public populateCurrentPrice(): void {
