@@ -23,8 +23,8 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody *ngFor="let stockDTO of stockDTOs" class="ze-table-body">
-            <tr>
+        <tbody class="ze-table-body">
+            <tr *ngFor="let stockDTO of stockDTOs">
                 <td style="text-align: left;">
                     <span class="ze-pointer">
                         <strong>{{stockDTO.name}}</strong>

@@ -4,8 +4,9 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
+import { StocksService } from '../../../service/stocks.service';
 
-interface CountryInvestmentQueryParams {
+interface ViewCountryStocksSearchParams {
     activeTab?: string;
 }
 
@@ -15,17 +16,17 @@ interface CountryInvestmentQueryParams {
     styleUrls: ['./view-country-stocks.component.css'],
 })
 export class ViewCountryStocksComponent {
-    constructor(private route: ActivatedRoute, private router: Router) {}
+    constructor(private route: ActivatedRoute, private router: Router, private stockService: StocksService) {}
 
     @Input()
     public countryDTO: CountryDTO;
 
     public stockDTOs: StockDTO[] = [];
-    public searchParams: CountryInvestmentQueryParams = {};
+    public searchParams: ViewCountryStocksSearchParams = { activeTab: 'Insights' };
     public activeTabIndexForMatTab = 0;
 
     ngOnInit() {
-        this.findParams();
+        this.findAll();
     }
 
     public tabClicked(selectedTab: MatTabChangeEvent): void {
@@ -34,7 +35,11 @@ export class ViewCountryStocksComponent {
         this.setRouteQueryParams();
     }
 
-    private findParams(): void {
+    private findAll(): void {
+        this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
+            this.stockDTOs = stockDTOs;
+        });
+
         this.route.queryParams.subscribe((queryParams) => {
             this.setSearchParams(queryParams);
             this.activeTabIndexForMatTab = this.getActiveTabIndex();

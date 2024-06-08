@@ -21,22 +21,13 @@ export class ViewCountryStockOrderComponent implements OnInit {
 
     @Input()
     public countryDTO: CountryDTO;
+    @Input()
+    public stockDTOs: StockDTO[];
 
     public hasMarketAPI = false;
-    public stockDTOs: StockDTO[] = [];
 
     ngOnInit() {
         this.hasMarketAPI = countryWithMarketDataAPI.has(this.countryDTO.name);
-        this.findAll();
-    }
-
-    private findAll(): void {
-        this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
-            this.stockDTOs = stockDTOs;
-            if (this.hasMarketAPI) {
-                this.populateCurrentPrice();
-            }
-        });
     }
 
     public populateCurrentPrice(): void {
@@ -68,7 +59,7 @@ export class ViewCountryStockOrderComponent implements OnInit {
 
         confirmationModalInstance.result.then((resultBoolean: boolean) => {
             if (resultBoolean) {
-                this.stockService.delete(stockDTOToDelete.id).subscribe((data) => console.log('Completed!'));
+                this.stockService.delete(stockDTOToDelete.id).subscribe((_) => console.log('Deleted!'));
             }
         });
     }
