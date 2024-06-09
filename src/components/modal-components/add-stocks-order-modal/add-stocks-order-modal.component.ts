@@ -67,8 +67,8 @@ export class AddStocksOrderModalComponent implements OnInit {
         }
     }
 
-    public closeModal(): void {
-        this.activeModal.close();
+    public closeModal(isSaved: boolean): void {
+        this.activeModal.close(isSaved);
     }
 
     public onStockSelect(event: any): void {
@@ -76,9 +76,14 @@ export class AddStocksOrderModalComponent implements OnInit {
     }
 
     public saveStock(): void {
-        this.stockService.saveStock(this.compileStockDTO()).subscribe((_) => {
-            this.closeModal();
-        });
+        this.stockService.saveStock(this.compileStockDTO()).subscribe(
+            (_) => {
+                this.closeModal(true);
+            },
+            (error) => {
+                console.error('Error:', error); // Log the error to get more information
+            }
+        );
     }
 
     public onMarketCapSelect(marketCap: MarketCap): void {
@@ -96,7 +101,7 @@ export class AddStocksOrderModalComponent implements OnInit {
         stockDTO.averagePrice = this.formGroup.value.averagePrice;
         stockDTO.marketCap = this.formGroup.value.marketCap;
         stockDTO.sector = this.formGroup.value.sector;
-        stockDTO.investmentType = InvestmentType.STOCKS;
+        stockDTO.investmentType = InvestmentType.STOCK;
         return stockDTO;
     }
 

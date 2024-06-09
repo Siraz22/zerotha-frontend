@@ -7,5 +7,5 @@ export class StockDTO extends InvestmentDTO {
     name: string;
     marketCap: MarketCap;
     sector: Sector;
-    fe_currentPrice: number;
+    fe_currentPrice?: number;
 }

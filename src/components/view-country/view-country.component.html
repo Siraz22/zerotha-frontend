@@ -2,11 +2,11 @@
     <div class="header">
         <div class="switchbar-container">
             <div class="switchbar" id="switchbar">
-                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.STOCKS" (click)="setSelectedInvestmentType(InvestmentType.STOCKS)">
+                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.STOCK" (click)="setSelectedInvestmentType(InvestmentType.STOCK)">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/4449/4449895.png">
                     Stocks
                 </div>
-                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.DEBTS" (click)="setSelectedInvestmentType(InvestmentType.DEBTS)">
+                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.DEBT" (click)="setSelectedInvestmentType(InvestmentType.DEBT)">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/3133/3133613.png">
                     Debts
                 </div>
@@ -28,5 +28,5 @@
     </div>
 </div>
 
-<app-view-country-stocks *ngIf="countryDTO && searchParams.investmentType===InvestmentType.STOCKS" [countryDTO]="countryDTO">
+<app-view-country-stocks *ngIf="countryDTO && searchParams.investmentType===InvestmentType.STOCK" [countryDTO]="countryDTO">
 </app-view-country-stocks>

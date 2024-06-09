@@ -4,7 +4,9 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
+import { Alpaca_LatestBarSingleResponse } from '../../../interface/Alpaca_LatestBarSingleResponse';
 import { StocksService } from '../../../service/stocks.service';
+import { TickerSearchService } from '../../../service/ticker-search.service';
 
 interface ViewCountryStocksSearchParams {
     activeTab?: string;
@@ -16,7 +18,7 @@ interface ViewCountryStocksSearchParams {
     styleUrls: ['./view-country-stocks.component.css'],
 })
 export class ViewCountryStocksComponent {
-    constructor(private route: ActivatedRoute, private router: Router, private stockService: StocksService) {}
+    constructor(private route: ActivatedRoute, private router: Router, private stockService: StocksService, private tickerSearchService: TickerSearchService) {}
 
     @Input()
     public countryDTO: CountryDTO;
@@ -35,14 +37,31 @@ export class ViewCountryStocksComponent {
         this.setRouteQueryParams();
     }
 
+    public refreshStocks(refresh: boolean): void {
+        if (refresh) {
+            this.findAll();
+        }
+    }
+
     private findAll(): void {
         this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
             this.stockDTOs = stockDTOs;
+            this.populateLivePrices();
         });
 
         this.route.queryParams.subscribe((queryParams) => {
             this.setSearchParams(queryParams);
             this.activeTabIndexForMatTab = this.getActiveTabIndex();
+        });
+    }
+
+    private populateLivePrices(): void {
+        this.stockDTOs.forEach((stockDTO) => {
+            if (this.countryDTO.name == 'United States') {
+                this.tickerSearchService.getOHLC_US(stockDTO.symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
+                    stockDTO.fe_currentPrice = data.bar.c;
+                });
+            }
         });
     }
 

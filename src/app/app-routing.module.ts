@@ -8,7 +8,7 @@ import { ViewCountryComponent } from '../components/view-country/view-country.co
 const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: ViewDashboardComponent },
-    { path: 'country/:countryId', redirectTo: 'country/:countryId/stocks', pathMatch: 'full' },
+    { path: 'country/:countryId', redirectTo: 'country/:countryId/stock', pathMatch: 'full' },
     { path: 'country/:countryId/:investmentType', component: ViewCountryComponent },
     { path: 'country', component: ListCountriesComponent },
 ];

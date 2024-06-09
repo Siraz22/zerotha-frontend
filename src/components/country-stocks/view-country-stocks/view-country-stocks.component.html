@@ -82,7 +82,7 @@
     <div ngbNavItem="Orders">
         <ng-template ngbNavContent>
             <div class="container">
-                <app-view-country-stock-order *ngIf="stockDTOs" [stockDTOs]="stockDTOs" [countryDTO]="countryDTO">
+                <app-view-country-stock-order *ngIf="stockDTOs" [stockDTOs]="stockDTOs" [countryDTO]="countryDTO" (refreshStocks)="refreshStocks($event)">
                 </app-view-country-stock-order>
             </div>
         </ng-template>
