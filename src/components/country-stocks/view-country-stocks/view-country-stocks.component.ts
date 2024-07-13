@@ -27,6 +27,12 @@ export class ViewCountryStocksComponent {
     public searchParams: ViewCountryStocksSearchParams = { activeTab: 'Insights' };
     public activeTabIndexForMatTab = 0;
 
+    public currentValue = 0;
+    public investedAmount = 0;
+
+    public todaysOpeningTotal = 0;
+    public todaysClosingTotal = 0;
+
     ngOnInit() {
         this.findAll();
     }
@@ -58,8 +64,14 @@ export class ViewCountryStocksComponent {
     private populateLivePrices(): void {
         this.stockDTOs.forEach((stockDTO) => {
             if (this.countryDTO.name == 'United States') {
-                this.tickerSearchService.getOHLC_US(stockDTO.symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
+                this.tickerSearchService.getFakeOHLC_US(stockDTO.symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
                     stockDTO.fe_currentPrice = data.bar.c;
+
+                    this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
+                    this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
+
+                    this.todaysOpeningTotal += data.bar.o;
+                    this.todaysClosingTotal += data.bar.c;
                 });
             }
         });

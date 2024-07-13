@@ -17,18 +17,21 @@
                                             Current Value
                                         </div>
                                         <div class="card-title">
-                                            {{'₹ 4,90,542'}}
+                                            {{currentValue}}
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="card-text">
-                                            Invested Amount - ₹ 4,11,288
+                                            Invested Amount : {{investedAmount | number}}
                                         </div>
                                         <div class="card-text">
-                                            Total P&L - +79,254 (+19.27%)
+                                            Total P&L : {{(currentValue - investedAmount) | number}}
+                                            ( {{ ((currentValue - investedAmount)  / investedAmount) | percent:'1.2-2' }})
                                         </div>
                                         <div class="card-text">
-                                            Today's P&L - +3,107 (+0.63%)
+                                            Today's P&L : {{todaysClosingTotal - todaysOpeningTotal | number}}
+                                            (
+                                            {{ (todaysClosingTotal - todaysOpeningTotal) / ((currentValue) - (todaysClosingTotal - todaysOpeningTotal)) | percent:'1.2-2' }})
                                         </div>
                                     </div>
                                 </div>

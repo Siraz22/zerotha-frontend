@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { Alpaca_LatestBarSingleResponse } from '../interface/Alpaca_LatestBarSingleResponse';
 
@@ -20,6 +20,37 @@ export class TickerSearchService {
         'APCA-API-KEY-ID': this.apiKey,
         'APCA-API-SECRET-KEY': this.apiSecretKey,
     });
+
+    public getFakeOHLC_US(symbol: string): Observable<Alpaca_LatestBarSingleResponse> {
+        if (symbol === 'MSFT')
+            return of({
+                bar: {
+                    c: 105.0, // Closing price
+                    h: 110.0, // Highest price
+                    l: 95.0, // Lowest price
+                    n: 1000, // Number of trades
+                    o: 100.0, // Opening price
+                    t: '2024-06-09T16:00:00Z', // Timestamp
+                    v: 5000, // Volume
+                    vw: 150.5, // Volume-weighted average price (VWAP)
+                },
+                symbol: symbol,
+            });
+        else
+            return of({
+                bar: {
+                    c: 55.0, // Closing price
+                    h: 60.0, // Highest price
+                    l: 40.0, // Lowest price
+                    n: 1100, // Number of trades
+                    o: 50.0, // Opening price
+                    t: '2024-06-09T17:00:00Z', // Timestamp
+                    v: 5200, // Volume
+                    vw: 152.5, // Volume-weighted average price (VWAP)
+                },
+                symbol: symbol,
+            });
+    }
 
     public getOHLC_US(symbol: string): Observable<Alpaca_LatestBarSingleResponse> {
         const options = {

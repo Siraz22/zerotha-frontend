@@ -2,24 +2,27 @@
     <div class="header">
         <div class="switchbar-container">
             <div class="switchbar" id="switchbar">
-                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.STOCK" (click)="setSelectedInvestmentType(InvestmentType.STOCK)">
+                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.STOCK"
+                    (click)="setSelectedInvestmentType(InvestmentType.STOCK.toLocaleLowerCase())">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/4449/4449895.png">
                     Stocks
                 </div>
-                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.DEBT" (click)="setSelectedInvestmentType(InvestmentType.DEBT)">
+                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.DEBT"
+                    (click)="setSelectedInvestmentType(InvestmentType.DEBT.toLocaleLowerCase())">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/3133/3133613.png">
                     Debts
                 </div>
                 <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.PRECIOUS_METALS"
-                    (click)="setSelectedInvestmentType(InvestmentType.PRECIOUS_METALS)">
+                    (click)="setSelectedInvestmentType(InvestmentType.PRECIOUS_METALS.toLocaleLowerCase())">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1473/1473504.png">
                     Metals
                 </div>
-                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.MUTUAL_FUNDS" (click)="setSelectedInvestmentType(InvestmentType.MUTUAL_FUNDS)">
+                <div class="switch" [class.selected]="searchParams.investmentType === InvestmentType.MUTUAL_FUNDS"
+                    (click)="setSelectedInvestmentType(InvestmentType.MUTUAL_FUNDS.toLocaleLowerCase())">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/855/855288.png">
                     MFs
                 </div>
-                <div class="switch" [class.selected]="searchParams.investmentType === undefined" (click)="setSelectedInvestmentType(null)">
+                <div class="switch" [class.selected]="searchParams.investmentType == undefined || null" (click)="setSelectedInvestmentType(null)">
                     <img class="option-switchbar-icon" src="https://cdn-icons-png.flaticon.com/128/1041/1041728.png">
                     Info
                 </div>

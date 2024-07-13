@@ -24,8 +24,36 @@
         </thead>
         <tbody class="ze-table-body">
             <tr *ngFor="let stockDTO of stockDTOs">
+                <td style="text-align: left;">
+                    <span class="ze-pointer">
+                        <strong>{{stockDTO.name}}</strong>
+                    </span>
+                </td>
                 <td>
-
+                    <span class="ze-pointer">
+                        <strong>{{stockDTO.fe_currentPrice}}</strong>
+                    </span>
+                </td>
+                <td>
+                    one day change
+                </td>
+                <td>
+                    {{stockDTO.quantity}}
+                </td>
+                <td>
+                    {{stockDTO.averagePrice}}
+                </td>
+                <td style="text-align: right">
+                    {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
+                </td>
+                <td style="text-align: right">
+                    {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
+                </td>
+                <td>
+                    weight %
+                </td>
+                <td>
+                    {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
                 </td>
             </tr>
         </tbody>

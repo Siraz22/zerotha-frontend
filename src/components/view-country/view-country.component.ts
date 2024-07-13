@@ -25,7 +25,7 @@ export class ViewCountryComponent implements OnInit {
     }
 
     public setSelectedInvestmentType(investmentType?: string): void {
-        this.searchParams.investmentType = investmentType.toUpperCase() as InvestmentType;
+        this.searchParams.investmentType = investmentType as InvestmentType;
         this.redirectToInvestmentType();
     }
 
