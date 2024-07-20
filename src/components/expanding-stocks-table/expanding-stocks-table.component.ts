@@ -81,6 +81,8 @@ export class ExpandingStocksTableComponent implements OnChanges {
                     return 'https://cdn-icons-png.flaticon.com/128/11147/11147483.png';
                 case MarketCap.SMALL_CAP:
                     return 'https://cdn-icons-png.flaticon.com/128/1974/1974214.png';
+                default:
+                    return '';
             }
         } else if (groupBy === StocksGroupBy.SECTOR) {
             switch (key) {
