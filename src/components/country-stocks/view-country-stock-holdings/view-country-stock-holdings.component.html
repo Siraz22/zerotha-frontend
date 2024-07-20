@@ -68,7 +68,7 @@
     </ng-container>
     <ng-container *ngIf="selectedGroupBy !== StocksGroupBy.NONE">
         <ng-container class="mt-4">
-            <app-expanding-stocks-table [stockDTOs]="stockDTOs" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
+            <app-expanding-stocks-table [stockDTOs]="stockDTOs" [totalInvestment]="totalInvestment" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
         </ng-container>
     </ng-container>
 </div>

@@ -39,8 +39,10 @@ export class ExpandingStocksTableComponent implements OnChanges {
     public stockDTOs: StockDTO[];
     @Input()
     public groupBy: StocksGroupBy;
+    @Input()
+    totalInvestment: number;
 
-    public groupedTableData: { [key: string]: any[] } = {};
+    public groupedTableData: { [key: string]: StockDTO[] } = {};
     public mapKeysAndImg: string[][] = [];
     public isRowCollapsed: { [key: string]: boolean } = {};
 
@@ -67,7 +69,73 @@ export class ExpandingStocksTableComponent implements OnChanges {
                 this.isRowCollapsed[key] = false;
             }
             this.groupedTableData[key].push(stock);
+
+            const c = this.groupedTableData[key].reduce((total, stockDTO) => total + stockDTO.fe_currentPrice || 0, 0);
         });
+    }
+
+    //To do : convert this to a pipe to avoid repeat calls
+    public calculateTotalInvestedValueForGroup(stockDTOs: StockDTO[]): number {
+        return stockDTOs.reduce((total, stockDTO) => total + stockDTO.quantity * stockDTO.averagePrice || 0, 0);
+    }
+
+    public calculateTotalPAndLForGroup(stockDTOs: StockDTO[]): number {
+        return stockDTOs.reduce((total, stockDTO) => total + stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice) || 0, 0);
+    }
+
+    public calculateTotalCurrentValueForGroup(stockDTOs: StockDTO[]): number {
+        return stockDTOs.reduce((total, stockDTO) => total + stockDTO.fe_currentPrice || 0, 0);
+    }
+
+    public calculateTotalWeightForGroup(stockDTOs: StockDTO[]): number {
+        return stockDTOs.reduce((total, stockDTO) => total + stockDTO.fe_currentPrice || 0, 0) / this.totalInvestment;
+    }
+
+    public formatEnumHeading(groupBy: StocksGroupBy, key: string): string {
+        if (groupBy === StocksGroupBy.MARKET_CAP) {
+            switch (key) {
+                case MarketCap.MEGA_CAP:
+                    return 'Mega Cap';
+                case MarketCap.LARGE_CAP:
+                    return 'Large Cap';
+                case MarketCap.MID_CAP:
+                    return 'Mid Cap';
+                case MarketCap.SMALL_CAP:
+                    return 'Small Cap';
+            }
+        } else if (groupBy === StocksGroupBy.SECTOR) {
+            switch (key) {
+                case Sector.ENERGY:
+                    return 'Energy';
+                case Sector.MATERIALS:
+                    return 'Materials';
+                case Sector.INDUSTRIALS:
+                    return 'Industrials';
+                case Sector.UTILITIES:
+                    return 'Utilities';
+                case Sector.HEALTHCARE:
+                    return 'Healthcare';
+                case Sector.FINANCIALS:
+                    return 'Financials';
+                case Sector.CONSUMER_DISCRETIONARY:
+                    return 'Consumer Discretionary';
+                case Sector.CONSUMER_STAPLES:
+                    return 'Consumer Staples';
+                case Sector.INFORMATION_TECHNOLOGY:
+                    return 'Information Technology';
+                case Sector.COMMUNICATION:
+                    return 'Communication';
+                case Sector.REAL_ESTATE:
+                    return 'Real Estate';
+                case Sector.ETF:
+                    return 'ETF';
+                case Sector.INDEX_FUNDS:
+                    return 'Index Funds';
+                default:
+                    return '';
+            }
+        }
+        return '';
     }
 
     private getImageLink(groupBy: StocksGroupBy, key: string): string {
@@ -112,54 +180,6 @@ export class ExpandingStocksTableComponent implements OnChanges {
                     return 'https://cdn-icons-png.flaticon.com/128/11443/11443091.png';
                 case Sector.INDEX_FUNDS:
                     return 'https://cdn-icons-png.flaticon.com/128/4449/4449895.png';
-                default:
-                    return '';
-            }
-        }
-        return '';
-    }
-
-    //To do : convert this to a pipe to avoid repeat calls
-    public formatEnumHeading(groupBy: StocksGroupBy, key: string): string {
-        if (groupBy === StocksGroupBy.MARKET_CAP) {
-            switch (key) {
-                case MarketCap.MEGA_CAP:
-                    return 'Mega Cap';
-                case MarketCap.LARGE_CAP:
-                    return 'Large Cap';
-                case MarketCap.MID_CAP:
-                    return 'Mid Cap';
-                case MarketCap.SMALL_CAP:
-                    return 'Small Cap';
-            }
-        } else if (groupBy === StocksGroupBy.SECTOR) {
-            switch (key) {
-                case Sector.ENERGY:
-                    return 'Energy';
-                case Sector.MATERIALS:
-                    return 'Materials';
-                case Sector.INDUSTRIALS:
-                    return 'Industrials';
-                case Sector.UTILITIES:
-                    return 'Utilities';
-                case Sector.HEALTHCARE:
-                    return 'Healthcare';
-                case Sector.FINANCIALS:
-                    return 'Financials';
-                case Sector.CONSUMER_DISCRETIONARY:
-                    return 'Consumer Discretionary';
-                case Sector.CONSUMER_STAPLES:
-                    return 'Consumer Staples';
-                case Sector.INFORMATION_TECHNOLOGY:
-                    return 'Information Technology';
-                case Sector.COMMUNICATION:
-                    return 'Communication';
-                case Sector.REAL_ESTATE:
-                    return 'Real Estate';
-                case Sector.ETF:
-                    return 'ETF';
-                case Sector.INDEX_FUNDS:
-                    return 'Index Funds';
                 default:
                     return '';
             }

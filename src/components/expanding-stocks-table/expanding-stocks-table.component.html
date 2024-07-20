@@ -30,12 +30,16 @@
                 <td class="col-1">
                 </td>
                 <td class="col-1" style="text-align: right">
+                    {{ calculateTotalInvestedValueForGroup(groupedTableData[keyAndImg[0]]) }}
                 </td>
                 <td class="col-1" style="text-align: right">
+                    {{ calculateTotalCurrentValueForGroup(groupedTableData[keyAndImg[0]]) }}
                 </td>
                 <td class="col-1">
+                    {{ calculateTotalWeightForGroup(groupedTableData[keyAndImg[0]]) | percent:'1.2-2' }}
                 </td>
                 <td class="col-1">
+                    {{ calculateTotalPAndLForGroup(groupedTableData[keyAndImg[0]]) }}
                 </td>
                 <td class="col-1">
                     <i [ngClass]="{'fa-caret-down': isRowCollapsed[keyAndImg[0]], 'fa-caret-up': !isRowCollapsed[keyAndImg[0]]}" class="fa-solid"></i>
@@ -66,7 +70,7 @@
                         {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
                     </td>
                     <td class="col-1">
-                        {{(stockDTO.fe_currentPrice / 150) | percent:'1.2-2'}}
+                        {{(stockDTO.fe_currentPrice / totalInvestment) | percent:'1.2-2'}}
                     </td>
                     <td class="col-1">
                         {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
