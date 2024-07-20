@@ -111,8 +111,8 @@ export class AddStocksOrderModalComponent implements OnInit {
             name: [null, Validators.required],
             quantity: [0, Validators.required],
             averagePrice: [0, Validators.required],
-            marketCap: [null, Validators.required],
-            sector: [null, Validators.required],
+            marketCap: [MarketCap.SMALL_CAP, Validators.required],
+            sector: [Sector.ENERGY, Validators.required],
         });
     }
 

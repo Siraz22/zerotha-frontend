@@ -23,7 +23,7 @@ export class ViewCountryStocksComponent {
     @Input()
     public countryDTO: CountryDTO;
 
-    public stockDTOs: StockDTO[] = [];
+    public stockDTOs: StockDTO[];
     public searchParams: ViewCountryStocksSearchParams = { activeTab: 'Insights' };
     public activeTabIndexForMatTab = 0;
 

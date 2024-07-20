@@ -5,57 +5,70 @@
         </div>
         <div class="col-4"></div>
         <div class="col-4">
-            <app-object-ng-select></app-object-ng-select>
+            <ng-select name="selectedOption" [clearable]="false" [items]="groupByOptions" [(ngModel)]="selectedGroupBy">
+                <ng-template ng-label-tmp let-item="item" let-clear="clear">
+                    <span aria-hidden="true" (click)="clear(item)" class="ng-value-icon left">×</span>
+                    <span class="ng-value-label">{{'Group by: '+item}}</span>
+                </ng-template>
+                <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+                    <div>{{'Group by: '+item}}</div>
+                </ng-template>
+            </ng-select>
         </div>
     </div>
-    <table class="table" style="margin-top: 15px;">
-        <thead class="ze-table-heading">
-            <tr>
-                <th>Name</th>
-                <th>Latest Price</th>
-                <th>1D change</th>
-                <th>Qty</th>
-                <th>Average Buy Price</th>
-                <th>Invested Amount</th>
-                <th>Current Value</th>
-                <th>Weight</th>
-                <th>P&L</th>
-            </tr>
-        </thead>
-        <tbody class="ze-table-body">
-            <tr *ngFor="let stockDTO of stockDTOs">
-                <td style="text-align: left;">
-                    <span class="ze-pointer">
-                        <strong>{{stockDTO.name}}</strong>
-                    </span>
-                </td>
-                <td>
-                    <span class="ze-pointer">
-                        <strong>{{stockDTO.fe_currentPrice}}</strong>
-                    </span>
-                </td>
-                <td>
-                    one day change
-                </td>
-                <td>
-                    {{stockDTO.quantity}}
-                </td>
-                <td>
-                    {{stockDTO.averagePrice}}
-                </td>
-                <td style="text-align: right">
-                    {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
-                </td>
-                <td style="text-align: right">
-                    {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
-                </td>
-                <td>
-                    weight %
-                </td>
-                <td>
-                    {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <ng-container *ngIf="selectedGroupBy === StocksGroupBy.NONE">
+        <table class="table mt-4">
+            <thead class="ze-table-heading">
+                <tr>
+                    <th class="col-4">Name</th>
+                    <th class="col-1">Latest Price</th>
+                    <th class="col-1">Qty</th>
+                    <th class="col-1">Average Buy Price</th>
+                    <th class="col-1">Invested Amount</th>
+                    <th class="col-1">Current Value</th>
+                    <th class="col-1">Weight</th>
+                    <th class="col-1">P&L</th>
+                    <th class="col-1"></th>
+                </tr>
+            </thead>
+            <tbody class="ze-table-body">
+                <tr *ngFor="let stockDTO of stockDTOs">
+                    <td class="col-3" style="text-align: left;">
+                        <span class="ze-pointer">
+                            <strong>{{stockDTO.name}}</strong>
+                        </span>
+                    </td>
+                    <td class="col-1">
+                        <span class="ze-pointer">
+                            <strong>{{stockDTO.fe_currentPrice}}</strong>
+                        </span>
+                    </td>
+                    <td class="col-1">
+                        {{stockDTO.quantity}}
+                    </td>
+                    <td class="col-1">
+                        {{stockDTO.averagePrice}}
+                    </td>
+                    <td class="col-1" style="text-align: right">
+                        {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
+                    </td>
+                    <td class="col-1" style="text-align: right">
+                        {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
+                    </td>
+                    <td class="col-1">
+                        {{(stockDTO.fe_currentPrice / totalInvestment) | percent:'1.2-2'}}
+                    </td>
+                    <td class="col-1">
+                        {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
+                    </td>
+                    <td class="col-1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+    <ng-container *ngIf="selectedGroupBy !== StocksGroupBy.NONE">
+        <ng-container class="mt-4">
+            <app-expanding-stocks-table [stockDTOs]="stockDTOs" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
+        </ng-container>
+    </ng-container>
 </div>

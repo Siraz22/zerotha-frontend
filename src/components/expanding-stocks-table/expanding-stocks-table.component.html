@@ -1,0 +1,79 @@
+<div>
+    <table class="table mt-4">
+        <thead class="ze-table-heading">
+            <tr>
+                <th class="col-4">Name</th>
+                <th class="col-1">Latest Price</th>
+                <th class="col-1">Qty</th>
+                <th class="col-1">Average Buy Price</th>
+                <th class="col-1">Invested Amount</th>
+                <th class="col-1">Current Value</th>
+                <th class="col-1">Weight</th>
+                <th class="col-1">P&L</th>
+                <th class="col-1"></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let keyAndImg of mapKeysAndImg" class="ze-table-body">
+            <tr class="ze-pointer" (click)="toggleRowCollapse(keyAndImg[0])">
+                <td class="col-2" style="text-align: left;">
+                    <img class="option-switchbar-icon" src={{keyAndImg[1]}}>
+                    <span class="p-2">
+                        <span>
+                            <strong>{{formatEnumHeading(groupBy,keyAndImg[0])}}</strong>
+                        </span>
+                    </span>
+                </td>
+                <td class="col-1">
+                </td>
+                <td class="col-1">
+                </td>
+                <td class="col-1">
+                </td>
+                <td class="col-1" style="text-align: right">
+                </td>
+                <td class="col-1" style="text-align: right">
+                </td>
+                <td class="col-1">
+                </td>
+                <td class="col-1">
+                </td>
+                <td class="col-1">
+                    <i [ngClass]="{'fa-caret-down': isRowCollapsed[keyAndImg[0]], 'fa-caret-up': !isRowCollapsed[keyAndImg[0]]}" class="fa-solid"></i>
+                </td>
+            </tr>
+            <ng-container *ngIf="isRowCollapsed[keyAndImg[0]]">
+                <tr class='table-secondary' *ngFor="let stockDTO of groupedTableData[keyAndImg[0]]" [@myAnimation]>
+                    <td class="col-4" style="text-align: left;">
+                        <span class="ze-pointer">
+                            {{stockDTO.name}}
+                        </span>
+                    </td>
+                    <td class="col-1">
+                        <span class="ze-pointer">
+                            {{stockDTO.fe_currentPrice}}
+                        </span>
+                    </td>
+                    <td class="col-1">
+                        {{stockDTO.quantity}}
+                    </td>
+                    <td class="col-1">
+                        {{stockDTO.averagePrice}}
+                    </td>
+                    <td class="col-1" style="text-align: right">
+                        {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
+                    </td>
+                    <td class="col-1" style="text-align: right">
+                        {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
+                    </td>
+                    <td class="col-1">
+                        {{(stockDTO.fe_currentPrice / 150) | percent:'1.2-2'}}
+                    </td>
+                    <td class="col-1">
+                        {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
+                    </td>
+                    <td class="col-1"></td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

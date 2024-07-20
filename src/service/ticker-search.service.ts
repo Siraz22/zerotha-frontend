@@ -25,7 +25,7 @@ export class TickerSearchService {
         if (symbol === 'MSFT')
             return of({
                 bar: {
-                    c: 105.0, // Closing price
+                    c: 100.0, // Closing price
                     h: 110.0, // Highest price
                     l: 95.0, // Lowest price
                     n: 1000, // Number of trades
@@ -39,7 +39,7 @@ export class TickerSearchService {
         else
             return of({
                 bar: {
-                    c: 55.0, // Closing price
+                    c: 50.0, // Closing price
                     h: 60.0, // Highest price
                     l: 40.0, // Lowest price
                     n: 1100, // Number of trades
