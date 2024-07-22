@@ -19,6 +19,7 @@ import { AddCountryModalComponent } from '../components/modal-components/add-cou
 import { AddStocksOrderModalComponent } from '../components/modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
 import { EditStocksOrderModalComponent } from '../components/modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
+import { ViewStockInsightsComponent } from '../components/view-stock-insights/view-stock-insights.component';
 import { ZeSwitchbarComponent } from '../components/ze-switchbar/ze-switchbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { AppComponent } from './app.component';
         AddStocksOrderModalComponent,
         EditStocksOrderModalComponent,
         ExpandingStocksTableComponent,
+        ViewStockInsightsComponent,
     ],
     imports: [
         BrowserModule,

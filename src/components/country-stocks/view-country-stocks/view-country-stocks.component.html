@@ -70,7 +70,7 @@
     <div ngbNavItem="Insights">
         <ng-template ngbNavContent>
             <div class="container">
-                Insights Component
+                <app-view-stock-insights *ngIf="stockDTOs" [stockDTOs]="stockDTOs"></app-view-stock-insights>
             </div>
         </ng-template>
     </div>
