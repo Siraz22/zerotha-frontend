@@ -4,6 +4,7 @@ import { switchMap } from 'rxjs';
 
 import { CountryDTO } from '../../dto/CountryDTO';
 import { InvestmentType } from '../../enums/Investment-type';
+import { environment } from '../../environments/environment';
 import { CountryService } from '../../service/country.service';
 import { isNotNullOrUndefined } from '../../utils/common-utils';
 import { ViewCountryRequestParams } from '../requests-params/view-country-request-params';
@@ -22,6 +23,7 @@ export class ViewCountryComponent implements OnInit {
 
     ngOnInit() {
         this.findOne();
+        console.log(environment);
     }
 
     public setSelectedInvestmentType(investmentType?: string): void {
