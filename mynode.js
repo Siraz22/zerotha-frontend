@@ -14,7 +14,7 @@ const envFileProd = `export const environment = {
 
 const envFileDev = `export const environment = {
     production: false,
-    API_ENDPOINT: '${process.env.API_ENDPOINT}',
+    API_ENDPOINT: 'http://localhost:8080/api/v1',
     ALPACA_KEY: '${process.env.ALPACA_KEY}',
     ALPACA_SECRET: '${process.env.ALPACA_SECRET}',
 };
