@@ -4,9 +4,20 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
+import { LatestBar } from '../../../interface/latestBar';
+import { StockAlpacaService } from '../../../service/stock-alpaca.service';
+import { StocksService } from '../../../service/stocks.service';
 
-interface CountryInvestmentQueryParams {
+interface ViewCountryStocksSearchParams {
     activeTab?: string;
+}
+
+interface Bars {
+    [symbol: string]: LatestBar;
+}
+
+interface MultipleBarsResponse {
+    bars: Bars;
 }
 
 @Component({
@@ -15,17 +26,23 @@ interface CountryInvestmentQueryParams {
     styleUrls: ['./view-country-stocks.component.css'],
 })
 export class ViewCountryStocksComponent {
-    constructor(private route: ActivatedRoute, private router: Router) {}
+    constructor(private route: ActivatedRoute, private router: Router, private stockService: StocksService, private stockAlpacaService: StockAlpacaService) {}
 
     @Input()
     public countryDTO: CountryDTO;
 
-    public stockDTOs: StockDTO[] = [];
-    public searchParams: CountryInvestmentQueryParams = {};
+    public stockDTOs: StockDTO[];
+    public searchParams: ViewCountryStocksSearchParams = { activeTab: 'Insights' };
     public activeTabIndexForMatTab = 0;
 
+    public currentValue = 0;
+    public investedAmount = 0;
+
+    public todaysOpeningTotal = 0;
+    public todaysClosingTotal = 0;
+
     ngOnInit() {
-        this.findParams();
+        this.findAll();
     }
 
     public tabClicked(selectedTab: MatTabChangeEvent): void {
@@ -34,10 +51,41 @@ export class ViewCountryStocksComponent {
         this.setRouteQueryParams();
     }
 
-    private findParams(): void {
+    public refreshStocks(refresh: boolean): void {
+        if (refresh) {
+            this.findAll();
+        }
+    }
+
+    private findAll(): void {
+        this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
+            this.stockDTOs = stockDTOs;
+            this.populateLivePrices();
+        });
+
         this.route.queryParams.subscribe((queryParams) => {
             this.setSearchParams(queryParams);
             this.activeTabIndexForMatTab = this.getActiveTabIndex();
+        });
+    }
+
+    private populateLivePrices(): void {
+        const symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+        this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
+            const barsMap: Bars = data.bars;
+            console.log(barsMap);
+
+            this.stockDTOs.forEach((stockDTO) => {
+                const stockBar = barsMap[stockDTO.symbol];
+
+                stockDTO.fe_currentPrice = stockBar.c;
+
+                this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
+                this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
+
+                this.todaysOpeningTotal += stockBar.o;
+                this.todaysClosingTotal += stockBar.c;
+            });
         });
     }
 

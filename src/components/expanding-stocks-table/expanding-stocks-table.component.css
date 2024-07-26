@@ -1,0 +1,12 @@
+.option-switchbar-icon {
+    height: 26px;
+    width: 26px;
+}
+
+.table-secondary {
+    --bs-table-bg: #ebebeb;
+}
+
+.light-font {
+    font: 'GraphikLight';
+}

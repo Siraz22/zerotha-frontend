@@ -29,6 +29,10 @@ export class ObjectNgSelectComponent implements ControlValueAccessor {
     public bindValue: string;
     @Input()
     public disabled: boolean;
+    @Input()
+    public hideClearAll: boolean;
+    @Input()
+    public clearable = true;
 
     @Output()
     public selectedObject = new EventEmitter<any>();
@@ -38,6 +42,7 @@ export class ObjectNgSelectComponent implements ControlValueAccessor {
     public onTouch: () => void;
 
     constructor() {}
+
     writeValue(obj: any): void {
         this.value = obj;
     }

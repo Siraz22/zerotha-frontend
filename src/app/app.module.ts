@@ -14,10 +14,12 @@ import { ViewDashboardComponent } from 'src/components/view-dashboard/view-dashb
 import { ViewCountryStockHoldingsComponent } from '../components/country-stocks/view-country-stock-holdings/view-country-stock-holdings.component';
 import { ViewCountryStockOrderComponent } from '../components/country-stocks/view-country-stock-order/view-country-stock-order.component';
 import { ViewCountryStocksComponent } from '../components/country-stocks/view-country-stocks/view-country-stocks.component';
+import { ExpandingStocksTableComponent } from '../components/expanding-stocks-table/expanding-stocks-table.component';
 import { AddCountryModalComponent } from '../components/modal-components/add-country-modal/add-country-modal.component';
 import { AddStocksOrderModalComponent } from '../components/modal-components/add-stocks-order-modal/add-stocks-order-modal.component';
 import { EditStocksOrderModalComponent } from '../components/modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
+import { ViewStockInsightsComponent } from '../components/view-stock-insights/view-stock-insights.component';
 import { ZeSwitchbarComponent } from '../components/ze-switchbar/ze-switchbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,8 +39,21 @@ import { AppComponent } from './app.component';
         ZeSwitchbarComponent,
         AddStocksOrderModalComponent,
         EditStocksOrderModalComponent,
+        ExpandingStocksTableComponent,
+        ViewStockInsightsComponent,
     ],
-    imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, NgbModule, NgSelectModule, AppRoutingModule, BrowserAnimationsModule, MatTabsModule],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgbModule,
+        NgSelectModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTabsModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })

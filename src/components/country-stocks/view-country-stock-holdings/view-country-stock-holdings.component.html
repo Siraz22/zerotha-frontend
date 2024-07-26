@@ -1,3 +1,75 @@
-<p>
-  view-country-stock-holdings works!
-</p>
+<div class="mt-4">
+    <div class="row">
+        <div class="col-4">
+            <input class="form-control" type="text" placeholder="Search for Stocks/Ticker" />
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <ng-select name="selectedOption" [clearable]="false" [items]="groupByOptions" [(ngModel)]="selectedGroupBy">
+                <ng-template ng-label-tmp let-item="item" let-clear="clear">
+                    <span aria-hidden="true" (click)="clear(item)" class="ng-value-icon left">×</span>
+                    <span class="ng-value-label">{{'Group by: '+item}}</span>
+                </ng-template>
+                <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+                    <div>{{'Group by: '+item}}</div>
+                </ng-template>
+            </ng-select>
+        </div>
+    </div>
+    <ng-container *ngIf="selectedGroupBy === StocksGroupBy.NONE">
+        <table class="table mt-4">
+            <thead class="ze-table-heading">
+                <tr>
+                    <th class="col-4">Name</th>
+                    <th class="col-1">Latest Price</th>
+                    <th class="col-1">Qty</th>
+                    <th class="col-1">Average Buy Price</th>
+                    <th class="col-1">Invested Amount</th>
+                    <th class="col-1">Current Value</th>
+                    <th class="col-1">Weight</th>
+                    <th class="col-1">P&L</th>
+                    <th class="col-1"></th>
+                </tr>
+            </thead>
+            <tbody class="ze-table-body">
+                <tr *ngFor="let stockDTO of stockDTOs">
+                    <td class="col-3" style="text-align: left;">
+                        <span class="ze-pointer">
+                            <strong>{{stockDTO.name}}</strong>
+                        </span>
+                    </td>
+                    <td class="col-1">
+                        <span class="ze-pointer">
+                            <strong>{{stockDTO.fe_currentPrice}}</strong>
+                        </span>
+                    </td>
+                    <td class="col-1">
+                        {{stockDTO.quantity}}
+                    </td>
+                    <td class="col-1">
+                        {{stockDTO.averagePrice}}
+                    </td>
+                    <td class="col-1" style="text-align: right">
+                        {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
+                    </td>
+                    <td class="col-1" style="text-align: right">
+                        {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
+                    </td>
+                    <td class="col-1">
+                        {{(stockDTO.fe_currentPrice*stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
+
+                    </td>
+                    <td class="col-1">
+                        {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
+                    </td>
+                    <td class="col-1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+    <ng-container *ngIf="selectedGroupBy !== StocksGroupBy.NONE">
+        <ng-container class="mt-4">
+            <app-expanding-stocks-table [stockDTOs]="stockDTOs" [currentTotalValue]="currentTotalValue" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
+        </ng-container>
+    </ng-container>
+</div>

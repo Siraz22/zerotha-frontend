@@ -24,8 +24,8 @@ export class ViewCountryComponent implements OnInit {
         this.findOne();
     }
 
-    public setSelectedInvestmentType(investmentType?: InvestmentType): void {
-        this.searchParams.investmentType = investmentType;
+    public setSelectedInvestmentType(investmentType?: string): void {
+        this.searchParams.investmentType = investmentType as InvestmentType;
         this.redirectToInvestmentType();
     }
 
@@ -49,6 +49,6 @@ export class ViewCountryComponent implements OnInit {
 
     private setSearchParams(params: Params): void {
         this.searchParams.countryId = Number(params['countryId']);
-        this.searchParams.investmentType = params['investmentType'] as InvestmentType;
+        this.searchParams.investmentType = params['investmentType'].toUpperCase() as InvestmentType;
     }
 }

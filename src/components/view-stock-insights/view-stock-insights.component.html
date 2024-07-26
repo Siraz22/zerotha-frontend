@@ -1,0 +1,18 @@
+<div class="mt-4">
+    <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'News & Events '}}</span>
+    <table class="table" style="margin-top: 15px;">
+        <tbody class="ze-table-body">
+            <tr class="ze-pointer" *ngFor="let news of newsUpdates" (click)="redirectToNews(news.url)">
+                <td class="col-8" style="text-align: left;">
+                    <strong>{{news.symbols}}</strong>
+                    <br>
+                    <span>{{news.headline}}</span>
+                    <span *ngIf="news.summary">{{news.summary}}</span>
+                </td>
+                <td class="col-4">
+                    <img style="max-width: 140px; height: auto;" src={{news?.images[0]?.url}}>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

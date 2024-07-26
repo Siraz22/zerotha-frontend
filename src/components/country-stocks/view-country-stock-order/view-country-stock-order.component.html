@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-8 ">
             <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'All Orders '}}</span>
-            <span class="badge rounded-pill bg-secondary ml-n">27</span>
+            <span class="badge rounded-pill bg-secondary ml-n">{{stockDTOs.length}}</span>
         </div>
         <div class="col-2">
             <input class="form-control" type="text" placeholder="Search for Stocks/Ticker" />
@@ -23,8 +23,8 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody *ngFor="let stockDTO of stockDTOs" class="ze-table-body">
-            <tr>
+        <tbody class="ze-table-body">
+            <tr *ngFor="let stockDTO of stockDTOs">
                 <td style="text-align: left;">
                     <span class="ze-pointer">
                         <strong>{{stockDTO.name}}</strong>
@@ -42,10 +42,10 @@
                     {{stockDTO.quantity}}
                 </td>
                 <td>
-                    {{stockDTO.quantity * stockDTO.averagePrice}}
+                    {{stockDTO.quantity * stockDTO.averagePrice | number}}
                 </td>
                 <td style="text-align: right">
-                    {{stockDTO.quantity * stockDTO.fe_currentPrice}}
+                    {{stockDTO.quantity * stockDTO.fe_currentPrice | number}}
                 </td>
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">
