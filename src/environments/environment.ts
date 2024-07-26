@@ -1,4 +1,6 @@
 export const environment = {
     production: false,
-    API_ENDPOINT: 'http://localhost:8080/api/v1',
+    API_ENDPOINT: '',
+    ALPACA_KEY: '',
+    ALPACA_SECRET: '',
 };
