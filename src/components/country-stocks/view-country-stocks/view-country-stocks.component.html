@@ -77,7 +77,7 @@
     <div ngbNavItem="Holdings">
         <ng-template ngbNavContent>
             <div class="container">
-                <app-view-country-stock-holdings *ngIf="stockDTOs" [stockDTOs]="stockDTOs">
+                <app-view-country-stock-holdings *ngIf="stockDTOs" [stockDTOs]="stockDTOs" [currentTotalValue]="currentValue">
                 </app-view-country-stock-holdings>
             </div>
         </ng-template>

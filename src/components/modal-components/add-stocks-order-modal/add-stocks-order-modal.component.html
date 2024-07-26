@@ -167,9 +167,9 @@
     </form>
 </div>
 
-<div *ngIf="selectedStock">
-    <p>Low : {{selectedStock.bar.l}}, Closing : {{selectedStock.bar.c}}, High : {{selectedStock.bar.h}}</p>
-    As of {{selectedStock.bar.t}}
+<div *ngIf="selectedStockBar">
+    <p>Low : {{selectedStockBar.l}}, Closing : {{selectedStockBar.c}}, High : {{selectedStockBar.h}}</p>
+    As of {{selectedStockBar.t}}
 </div>
 
 {{debugForm.value | json}}

@@ -42,10 +42,10 @@
                     {{stockDTO.quantity}}
                 </td>
                 <td>
-                    {{stockDTO.quantity * stockDTO.averagePrice}}
+                    {{stockDTO.quantity * stockDTO.averagePrice | number}}
                 </td>
                 <td style="text-align: right">
-                    {{stockDTO.quantity * stockDTO.fe_currentPrice}}
+                    {{stockDTO.quantity * stockDTO.fe_currentPrice | number}}
                 </td>
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">

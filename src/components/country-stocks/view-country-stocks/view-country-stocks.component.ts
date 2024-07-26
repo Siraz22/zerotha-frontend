@@ -4,12 +4,20 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
-import { Alpaca_LatestBarSingleResponse } from '../../../interface/Alpaca_LatestBarSingleResponse';
+import { LatestBar } from '../../../interface/latestBar';
+import { StockAlpacaService } from '../../../service/stock-alpaca.service';
 import { StocksService } from '../../../service/stocks.service';
-import { TickerSearchService } from '../../../service/ticker-search.service';
 
 interface ViewCountryStocksSearchParams {
     activeTab?: string;
+}
+
+interface Bars {
+    [symbol: string]: LatestBar;
+}
+
+interface MultipleBarsResponse {
+    bars: Bars;
 }
 
 @Component({
@@ -18,7 +26,7 @@ interface ViewCountryStocksSearchParams {
     styleUrls: ['./view-country-stocks.component.css'],
 })
 export class ViewCountryStocksComponent {
-    constructor(private route: ActivatedRoute, private router: Router, private stockService: StocksService, private tickerSearchService: TickerSearchService) {}
+    constructor(private route: ActivatedRoute, private router: Router, private stockService: StocksService, private stockAlpacaService: StockAlpacaService) {}
 
     @Input()
     public countryDTO: CountryDTO;
@@ -62,18 +70,22 @@ export class ViewCountryStocksComponent {
     }
 
     private populateLivePrices(): void {
-        this.stockDTOs.forEach((stockDTO) => {
-            if (this.countryDTO.name == 'United States') {
-                this.tickerSearchService.getFakeOHLC_US(stockDTO.symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
-                    stockDTO.fe_currentPrice = data.bar.c;
+        const symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+        this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
+            const barsMap: Bars = data.bars;
+            console.log(barsMap);
 
-                    this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
-                    this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
+            this.stockDTOs.forEach((stockDTO) => {
+                const stockBar = barsMap[stockDTO.symbol];
 
-                    this.todaysOpeningTotal += data.bar.o;
-                    this.todaysClosingTotal += data.bar.c;
-                });
-            }
+                stockDTO.fe_currentPrice = stockBar.c;
+
+                this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
+                this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
+
+                this.todaysOpeningTotal += stockBar.o;
+                this.todaysClosingTotal += stockBar.c;
+            });
         });
     }
 

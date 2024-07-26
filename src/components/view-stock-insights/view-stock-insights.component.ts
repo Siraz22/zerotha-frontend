@@ -4,6 +4,25 @@ import { StockDTO } from '../../dto/StockDTO';
 import { NewsService } from '../../service/news.service';
 import { WebSocketService } from '../../service/websocket.service';
 
+interface NewsImage {
+    size: string;
+    url: string;
+}
+
+interface NewsArticle {
+    author: string;
+    content: string;
+    created_at: string;
+    headline: string;
+    id: number;
+    images: NewsImage[];
+    source: string;
+    summary: string;
+    symbols: string[];
+    updated_at: string;
+    url: string;
+}
+
 @Component({
     selector: 'app-view-stock-insights',
     templateUrl: './view-stock-insights.component.html',
@@ -12,22 +31,29 @@ import { WebSocketService } from '../../service/websocket.service';
 export class ViewStockInsightsComponent implements OnInit {
     @Input()
     public stockDTOs: StockDTO[];
+    public newsUpdates: NewsArticle[] = [];
 
-    public newsUpdates: any[] = [];
+    private symbols: string[];
 
     constructor(private newsService: NewsService, private webSocketService: WebSocketService) {}
 
     ngOnInit() {
-        this.newsService.connect();
-        this.newsService.getUpdatedNews().subscribe(
-            (news) => this.newsUpdates.push(news),
-            (err) => console.error(err)
-        );
-
-        // this.webSocketService.connect();
+        this.populateSymbols();
     }
 
-    disconnect(): void {
-        this.newsService.disconnect();
+    redirectToNews(url: string): void {
+        window.open(url, '_blank');
+    }
+
+    private populateSymbols(): void {
+        this.symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+        this.populateNews();
+    }
+
+    private populateNews(): void {
+        this.newsService.getNews(this.symbols).subscribe((data) => {
+            console.log(data);
+            this.newsUpdates = data.news;
+        });
     }
 }

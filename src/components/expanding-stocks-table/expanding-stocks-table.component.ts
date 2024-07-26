@@ -40,7 +40,7 @@ export class ExpandingStocksTableComponent implements OnChanges {
     @Input()
     public groupBy: StocksGroupBy;
     @Input()
-    totalInvestment: number;
+    currentTotalValue: number;
 
     public groupedTableData: { [key: string]: StockDTO[] } = {};
     public mapKeysAndImg: string[][] = [];
@@ -95,7 +95,7 @@ export class ExpandingStocksTableComponent implements OnChanges {
     }
 
     public calculateTotalWeightForGroup(stockDTOs: StockDTO[]): number {
-        return stockDTOs.reduce((total, stockDTO) => total + stockDTO.fe_currentPrice || 0, 0) / this.totalInvestment;
+        return stockDTOs.reduce((total, stockDTO) => total + stockDTO.fe_currentPrice || 0, 0) / this.currentTotalValue;
     }
 
     public formatEnumHeading(groupBy: StocksGroupBy, key: string): string {

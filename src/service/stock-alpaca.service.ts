@@ -5,10 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
     providedIn: 'root',
 })
-export class NewsService {
+export class StockAlpacaService {
     constructor(private httpClient: HttpClient) {}
 
-    private apiUrl = 'https://data.alpaca.markets/v1beta1/news';
+    //US Market Section
     private apiKey = 'PK1O4HNXXOX7D8V5PPQI';
     private apiSecretKey = 'G8knEQ4rc7KTNqEFzGuaiZ8oYwrS8uImD5LQ8aJn';
 
@@ -18,19 +18,29 @@ export class NewsService {
         'APCA-API-SECRET-KEY': this.apiSecretKey,
     });
 
-    public getNews(symbols: string[]): Observable<any> {
+    public getBar(symbol: string): Observable<any> {
         const options = {
             headers: this.headers,
-            params: this.createParams(symbols),
         };
 
-        const reqUrl = this.apiUrl;
+        const reqUrl = 'https://data.alpaca.markets/v2/stocks/' + symbol + '/bars/latest?feed=iex';
         return this.httpClient.get<any>(reqUrl, options);
     }
 
-    private createParams(symbols: string[]): HttpParams {
+    public getBars(symbols: string[]): Observable<any> {
+        const options = {
+            headers: this.headers,
+            params: this.createParamsBars(symbols),
+        };
+
+        const reqUrl = 'https://data.alpaca.markets/v2/stocks/bars/latest';
+        return this.httpClient.get<any>(reqUrl, options);
+    }
+
+    public createParamsBars(symbols: string[]): HttpParams {
         let params = new HttpParams();
         params = params.append('symbols', symbols.join(','));
+        params = params.append('feed', 'iex');
         return params;
     }
 }

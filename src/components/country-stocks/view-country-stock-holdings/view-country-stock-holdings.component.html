@@ -56,7 +56,8 @@
                         {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
                     </td>
                     <td class="col-1">
-                        {{(stockDTO.fe_currentPrice / totalInvestment) | percent:'1.2-2'}}
+                        {{(stockDTO.fe_currentPrice*stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
+
                     </td>
                     <td class="col-1">
                         {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
@@ -68,7 +69,7 @@
     </ng-container>
     <ng-container *ngIf="selectedGroupBy !== StocksGroupBy.NONE">
         <ng-container class="mt-4">
-            <app-expanding-stocks-table [stockDTOs]="stockDTOs" [totalInvestment]="totalInvestment" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
+            <app-expanding-stocks-table [stockDTOs]="stockDTOs" [currentTotalValue]="currentTotalValue" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
         </ng-container>
     </ng-container>
 </div>

@@ -11,15 +11,18 @@ import { StocksGroupBy } from '../../../enums/stocks-group-by';
 export class ViewCountryStockHoldingsComponent implements OnInit {
     @Input()
     public stockDTOs: StockDTO[];
-    public totalInvestment: number;
+    @Input()
+    public currentTotalValue = 0;
 
     public StocksGroupBy = StocksGroupBy;
     public groupByOptions = [StocksGroupBy.NONE, StocksGroupBy.MARKET_CAP, StocksGroupBy.SECTOR];
-    public selectedGroupBy = StocksGroupBy.MARKET_CAP;
+    public selectedGroupBy = StocksGroupBy.NONE;
 
     constructor() {}
 
-    ngOnInit() {
-        this.totalInvestment = this.stockDTOs.reduce((total, stock) => total + stock.fe_currentPrice || 0, 0);
+    public calculateWeight(price: number, total: number): number {
+        return price / total;
     }
+
+    ngOnInit() {}
 }

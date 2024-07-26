@@ -7,11 +7,16 @@ import { StockDTO } from '../../../dto/StockDTO';
 import { InvestmentType } from '../../../enums/Investment-type';
 import { MarketCap } from '../../../enums/market-cap';
 import { Sector } from '../../../enums/sector';
-import { Alpaca_LatestBarSingleResponse } from '../../../interface/Alpaca_LatestBarSingleResponse';
+import { LatestBar } from '../../../interface/latestBar';
 import { IStockJson } from '../../../interface/StockJsonI';
 import { LocalAssetService } from '../../../service/local-asset.service';
+import { StockAlpacaService } from '../../../service/stock-alpaca.service';
 import { StocksService } from '../../../service/stocks.service';
-import { TickerSearchService } from '../../../service/ticker-search.service';
+
+interface SingleBarResponse {
+    bar: LatestBar;
+    symbol: string;
+}
 
 @Component({
     selector: 'app-add-stocks-order-modal',
@@ -27,7 +32,7 @@ export class AddStocksOrderModalComponent implements OnInit {
     public labelFn: (stockJson: IStockJson) => string = this.labelFunction;
     public searchFn: (searchTerm: string, stockJson: IStockJson) => boolean = this.searchFunction;
 
-    public selectedStock: any;
+    public selectedStockBar: LatestBar;
     public stocks: IStockJson[] = [];
 
     public MarketCap = MarketCap;
@@ -37,7 +42,7 @@ export class AddStocksOrderModalComponent implements OnInit {
         private formBuilder: FormBuilder,
         private activeModal: NgbActiveModal,
         private localAssetService: LocalAssetService,
-        private tickerSearchService: TickerSearchService,
+        private stockAlpacaService: StockAlpacaService,
         private stockService: StocksService
     ) {}
 
@@ -54,8 +59,9 @@ export class AddStocksOrderModalComponent implements OnInit {
                 const symbol = event.symbol;
                 this.formGroup.get('symbol').setValue(symbol);
                 this.formGroup.updateValueAndValidity();
-                this.tickerSearchService.getOHLC_US(symbol).subscribe((data: Alpaca_LatestBarSingleResponse) => {
-                    this.selectedStock = data;
+                this.stockAlpacaService.getBar(symbol).subscribe((data: SingleBarResponse) => {
+                    console.log(data);
+                    this.selectedStockBar = data.bar;
                 });
             }
         }
