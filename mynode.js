@@ -5,7 +5,7 @@ const checkSign = '\u{2705}';
 const dotenv = require('dotenv').config({path: 'src/.env'}); ;
 
 const envFile = `export const environment = {
-    production:true,
+    production:'${process.env.production}',
     API_ENDPOINT:'${process.env.API_ENDPOINT}',
     ALPACA_KEY:'${process.env.ALPACA_KEY}',
     ALPACA_SECRET:'${process.env.ALPACA_SECRET}',
