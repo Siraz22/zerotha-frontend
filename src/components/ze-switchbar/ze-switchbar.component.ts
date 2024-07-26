@@ -18,7 +18,5 @@ export class ZeSwitchbarComponent implements OnInit {
 
     ngOnInit() {}
 
-    public itemSelected(item: any): void {
-        console.log(item);
-    }
+    public itemSelected(item: any): void {}
 }

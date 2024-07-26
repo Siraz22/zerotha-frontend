@@ -73,7 +73,6 @@ export class ViewCountryStocksComponent {
         const symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
         this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
             const barsMap: Bars = data.bars;
-            console.log(barsMap);
 
             this.stockDTOs.forEach((stockDTO) => {
                 const stockBar = barsMap[stockDTO.symbol];
