@@ -72,6 +72,13 @@ export class ExpandingStocksTableComponent implements OnChanges {
 
             const c = this.groupedTableData[key].reduce((total, stockDTO) => total + stockDTO.fe_currentPrice || 0, 0);
         });
+
+        if (this.groupBy === StocksGroupBy.MARKET_CAP) {
+            const marketCapOrder = [MarketCap.MEGA_CAP, MarketCap.LARGE_CAP, MarketCap.MID_CAP, MarketCap.SMALL_CAP];
+            this.mapKeysAndImg.sort((a, b) => {
+                return marketCapOrder.indexOf(a[0] as MarketCap) - marketCapOrder.indexOf(b[0] as MarketCap);
+            });
+        }
     }
 
     //To do : convert this to a pipe to avoid repeat calls
