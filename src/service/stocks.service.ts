@@ -13,18 +13,18 @@ export class StocksService {
     constructor(private httpClient: HttpClient) {}
 
     public saveStock(stockDTO: StockDTO): Observable<StockDTO> {
-        return this.httpClient.post<StockDTO>(`${environment.apiEndpoint}/stock`, stockDTO);
+        return this.httpClient.post<StockDTO>(`${environment.API_ENDPOINT}/stock`, stockDTO);
     }
 
     public updateStock(stockUpdateDTO: StockUpdateDTO): Observable<StockDTO> {
-        return this.httpClient.patch<StockDTO>(`${environment.apiEndpoint}/stock`, stockUpdateDTO);
+        return this.httpClient.patch<StockDTO>(`${environment.API_ENDPOINT}/stock`, stockUpdateDTO);
     }
 
     public delete(id: number): Observable<Object> {
-        return this.httpClient.delete(`${environment.apiEndpoint}/stock/${id}`);
+        return this.httpClient.delete(`${environment.API_ENDPOINT}/stock/${id}`);
     }
 
     public findAll(): Observable<StockDTO[]> {
-        return this.httpClient.get<StockDTO[]>(`${environment.apiEndpoint}/stock`);
+        return this.httpClient.get<StockDTO[]>(`${environment.API_ENDPOINT}/stock`);
     }
 }

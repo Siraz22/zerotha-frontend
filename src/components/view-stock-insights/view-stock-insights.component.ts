@@ -33,7 +33,7 @@ export class ViewStockInsightsComponent implements OnInit {
     public stockDTOs: StockDTO[];
     public newsUpdates: NewsArticle[] = [];
 
-    private symbols: string[];
+    public symbols: string[];
 
     constructor(private newsService: NewsService, private webSocketService: WebSocketService) {}
 
@@ -52,7 +52,6 @@ export class ViewStockInsightsComponent implements OnInit {
 
     private populateNews(): void {
         this.newsService.getNews(this.symbols).subscribe((data) => {
-            console.log(data);
             this.newsUpdates = data.news;
         });
     }

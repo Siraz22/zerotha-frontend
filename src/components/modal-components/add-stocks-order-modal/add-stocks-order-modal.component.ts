@@ -60,7 +60,6 @@ export class AddStocksOrderModalComponent implements OnInit {
                 this.formGroup.get('symbol').setValue(symbol);
                 this.formGroup.updateValueAndValidity();
                 this.stockAlpacaService.getBar(symbol).subscribe((data: SingleBarResponse) => {
-                    console.log(data);
                     this.selectedStockBar = data.bar;
                 });
             }
@@ -75,10 +74,6 @@ export class AddStocksOrderModalComponent implements OnInit {
 
     public closeModal(isSaved: boolean): void {
         this.activeModal.close(isSaved);
-    }
-
-    public onStockSelect(event: any): void {
-        console.log(event);
     }
 
     public saveStock(): void {

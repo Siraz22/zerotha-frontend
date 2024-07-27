@@ -56,7 +56,6 @@ export class ViewCountryStockOrderComponent implements OnInit {
         confirmationModalInstance.result.then((resultBoolean: boolean) => {
             if (resultBoolean) {
                 this.stockService.delete(stockDTOToDelete.id).subscribe((_) => {
-                    console.log('Deleted!');
                     this.refreshStocks.emit(true);
                 });
             }

@@ -4,7 +4,7 @@
         <tbody class="ze-table-body">
             <tr class="ze-pointer" *ngFor="let news of newsUpdates" (click)="redirectToNews(news.url)">
                 <td class="col-8" style="text-align: left;">
-                    <strong>{{news.symbols}}</strong>
+                    <strong>{{news.symbols | findRelevantStocks : symbols}}</strong>
                     <br>
                     <span>{{news.headline}}</span>
                     <span *ngIf="news.summary">{{news.summary}}</span>

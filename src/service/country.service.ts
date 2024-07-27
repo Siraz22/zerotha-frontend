@@ -18,7 +18,7 @@ export class CountryService {
 
     constructor(private httpClient: HttpClient) {}
 
-    private countryApiPath = environment.apiEndpoint + '/country';
+    private countryApiPath = environment.API_ENDPOINT + '/country';
 
     public saveCountry(countryDTO: CountryDTO): Observable<CountryDTO> {
         return this.httpClient.post<CountryDTO>(this.countryApiPath, countryDTO);
@@ -29,6 +29,6 @@ export class CountryService {
     }
 
     public findOne(countryId: number): Observable<CountryDTO> {
-        return this.httpClient.get<CountryDTO>(`${environment.apiEndpoint}/country/${countryId}`);
+        return this.httpClient.get<CountryDTO>(`${environment.API_ENDPOINT}/country/${countryId}`);
     }
 }
