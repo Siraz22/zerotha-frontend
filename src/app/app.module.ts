@@ -22,6 +22,7 @@ import { ObjectNgSelectComponent } from '../components/object-ng-select/object-n
 import { ViewStockInsightsComponent } from '../components/view-stock-insights/view-stock-insights.component';
 import { ZeSwitchbarComponent } from '../components/ze-switchbar/ze-switchbar.component';
 import { FindRelevantStocksPipe } from '../pipe/find-relevant-stocks.pipe';
+import { JoinWithCommaPipe } from '../pipe/join-with-us.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -43,6 +44,7 @@ import { AppComponent } from './app.component';
         ExpandingStocksTableComponent,
         ViewStockInsightsComponent,
         FindRelevantStocksPipe,
+        JoinWithCommaPipe,
     ],
     imports: [
         BrowserModule,

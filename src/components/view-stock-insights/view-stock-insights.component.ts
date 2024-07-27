@@ -52,6 +52,7 @@ export class ViewStockInsightsComponent implements OnInit {
 
     private populateNews(): void {
         this.newsService.getNews(this.symbols).subscribe((data) => {
+            console.log(data.news);
             this.newsUpdates = data.news;
         });
     }
