@@ -33,7 +33,7 @@ export class ViewStockInsightsComponent implements OnInit {
     public stockDTOs: StockDTO[];
     public newsUpdates: NewsArticle[] = [];
 
-    private symbols: string[];
+    public symbols: string[];
 
     constructor(private newsService: NewsService, private webSocketService: WebSocketService) {}
 

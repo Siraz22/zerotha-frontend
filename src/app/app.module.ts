@@ -21,6 +21,7 @@ import { EditStocksOrderModalComponent } from '../components/modal-components/ed
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
 import { ViewStockInsightsComponent } from '../components/view-stock-insights/view-stock-insights.component';
 import { ZeSwitchbarComponent } from '../components/ze-switchbar/ze-switchbar.component';
+import { FindRelevantStocksPipe } from '../pipe/find-relevant-stocks.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -41,6 +42,7 @@ import { AppComponent } from './app.component';
         EditStocksOrderModalComponent,
         ExpandingStocksTableComponent,
         ViewStockInsightsComponent,
+        FindRelevantStocksPipe,
     ],
     imports: [
         BrowserModule,
