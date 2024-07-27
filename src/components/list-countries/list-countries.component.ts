@@ -43,7 +43,7 @@ export class ListCountriesComponent implements OnInit {
         return 0.5;
     }
 
-    public calculateInvestedAmount(CountryDTO: CountryDTO): number {
+    public calculateInvestedAmount(countryDTO: CountryDTO): number {
         return 10000;
     }
 

@@ -34,11 +34,36 @@ export class ViewStockInsightsComponent implements OnInit {
     public newsUpdates: NewsArticle[] = [];
 
     public symbols: string[];
+    public selectedOverview = 'Gainers';
+    public topGainers: StockDTO[];
+    public topLosers: StockDTO[];
 
     constructor(private newsService: NewsService, private webSocketService: WebSocketService) {}
 
     ngOnInit() {
         this.populateSymbols();
+        this.findLosersAndGainers();
+    }
+
+    selectOverview(option: string) {
+        this.selectedOverview = option;
+    }
+
+    public findLosersAndGainers(): void {
+        const sortedStocks = [...this.stockDTOs].sort((a, b) => {
+            const profitA = a.quantity * (a.fe_currentPrice - a.averagePrice);
+            const profitB = b.quantity * (b.fe_currentPrice - b.averagePrice);
+            return profitA - profitB;
+        });
+
+        // Map sorted stocks to a string representation
+        const stockProfits = sortedStocks.map((stock) => `${stock.symbol}: ${stock.quantity * ((stock.fe_currentPrice || 0) - stock.averagePrice)}`).join(', ');
+
+        // Get the top three losers (smallest total values)
+        this.topLosers = sortedStocks.slice(0, 3);
+
+        // Get the top three gainers (largest total values)
+        this.topGainers = sortedStocks.slice(-3).reverse();
     }
 
     redirectToNews(url: string): void {
@@ -52,7 +77,6 @@ export class ViewStockInsightsComponent implements OnInit {
 
     private populateNews(): void {
         this.newsService.getNews(this.symbols).subscribe((data) => {
-            console.log(data.news);
             this.newsUpdates = data.news;
         });
     }

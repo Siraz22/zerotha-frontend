@@ -59,8 +59,8 @@ export class ViewCountryStocksComponent {
 
     private findAll(): void {
         this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
-            this.stockDTOs = stockDTOs;
-            this.populateLivePrices();
+            //this.stockDTOs = stockDTOs;
+            this.populateLivePrices(stockDTOs);
         });
 
         this.route.queryParams.subscribe((queryParams) => {
@@ -69,12 +69,12 @@ export class ViewCountryStocksComponent {
         });
     }
 
-    private populateLivePrices(): void {
-        const symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+    private populateLivePrices(stockDTOs: StockDTO[]): void {
+        const symbols = stockDTOs.map((stockDTO) => stockDTO.symbol);
         this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
             const barsMap: Bars = data.bars;
 
-            this.stockDTOs.forEach((stockDTO) => {
+            stockDTOs.forEach((stockDTO) => {
                 const stockBar = barsMap[stockDTO.symbol];
 
                 stockDTO.fe_currentPrice = stockBar.c;
@@ -85,6 +85,8 @@ export class ViewCountryStocksComponent {
                 this.todaysOpeningTotal += stockBar.o;
                 this.todaysClosingTotal += stockBar.c;
             });
+
+            this.stockDTOs = stockDTOs;
         });
     }
 
