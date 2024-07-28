@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
 import { StocksGroupBy } from '../../../enums/stocks-group-by';
 
@@ -11,6 +12,8 @@ import { StocksGroupBy } from '../../../enums/stocks-group-by';
 export class ViewCountryStockHoldingsComponent implements OnInit {
     @Input()
     public stockDTOs: StockDTO[];
+    @Input()
+    public countryDTO: CountryDTO;
     @Input()
     public currentTotalValue = 0;
 

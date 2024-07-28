@@ -53,13 +53,25 @@
                         {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
                     </td>
                     <td class="col-1" style="text-align: right">
-                        {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
+
+                        {{countryDTO.currencySymbol}}{{(stockDTO.quantity * stockDTO.fe_currentPrice) | number}}
+
                     </td>
                     <td class="col-1">
-                        {{(stockDTO.fe_currentPrice*stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
+                        {{(stockDTO.fe_currentPrice * stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
                     </td>
                     <td class="col-1">
-                        {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
+                        <span [ngClass]="{
+                            'text-success': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0,
+                            'text-danger': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) <= 0
+                        }">
+                            {{
+                                (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
+                                ? '+' 
+                                : '-'
+                            }}
+                            {{countryDTO.currencySymbol}}{{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
+                        </span>
                     </td>
                     <td class="col-1"></td>
                 </tr>

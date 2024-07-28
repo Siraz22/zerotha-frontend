@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { CountryDTO } from '../../dto/CountryDTO';
 import { StockDTO } from '../../dto/StockDTO';
 import { NewsService } from '../../service/news.service';
 import { WebSocketService } from '../../service/websocket.service';
@@ -31,6 +32,9 @@ interface NewsArticle {
 export class ViewStockInsightsComponent implements OnInit {
     @Input()
     public stockDTOs: StockDTO[];
+    @Input()
+    public countryDTO: CountryDTO;
+
     public newsUpdates: NewsArticle[] = [];
 
     public symbols: string[];

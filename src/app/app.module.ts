@@ -20,6 +20,7 @@ import { AddStocksOrderModalComponent } from '../components/modal-components/add
 import { EditStocksOrderModalComponent } from '../components/modal-components/edit-stocks-order-modal/edit-stocks-order-modal.component';
 import { ObjectNgSelectComponent } from '../components/object-ng-select/object-ng-select.component';
 import { ViewStockInsightsComponent } from '../components/view-stock-insights/view-stock-insights.component';
+import { AbsPipe } from '../pipe/abs.pipe';
 import { FindRelevantStocksPipe } from '../pipe/find-relevant-stocks.pipe';
 import { JoinWithCommaPipe } from '../pipe/join-with-us.pipe';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,6 +44,7 @@ import { AppComponent } from './app.component';
         ViewStockInsightsComponent,
         FindRelevantStocksPipe,
         JoinWithCommaPipe,
+        AbsPipe,
     ],
     imports: [
         BrowserModule,

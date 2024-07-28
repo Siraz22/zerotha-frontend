@@ -32,9 +32,9 @@
                                     {{
                                       (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
                                       ? '+' 
-                                      : '' 
+                                      : '-' 
                                     }}
-                                    {{ (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | number }}
+                                    {{countryDTO.currencySymbol}}{{ (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
                                 </span>
                                 <br>
                                 <small>
@@ -64,9 +64,9 @@
                                     {{
                                       (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
                                       ? '+' 
-                                      : '' 
+                                      : '-' 
                                     }}
-                                    {{ (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | number }}
+                                    {{countryDTO.currencySymbol}}{{ (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
                                 </span>
                                 <br>
                                 <small>

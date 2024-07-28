@@ -63,7 +63,7 @@ export class ViewCountryStocksComponent {
 
     private findAll(): void {
         this.stockService.findAll(this.countryStockSearchParams).subscribe((stockDTOs: StockDTO[]) => {
-            this.stockDTOs = this.populateLivePrices(stockDTOs);
+            this.populateLivePrices(stockDTOs);
         });
 
         this.route.queryParams.subscribe((queryParams) => {
@@ -72,26 +72,29 @@ export class ViewCountryStocksComponent {
         });
     }
 
-    private populateLivePrices(stockDTOs: StockDTO[]): StockDTO[] {
-        if (stockDTOs.length > 1) {
-            const symbols = stockDTOs.map((stockDTO) => stockDTO.symbol);
-            this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
-                const barsMap: Bars = data.bars;
-
-                stockDTOs.forEach((stockDTO) => {
-                    const stockBar = barsMap[stockDTO.symbol];
-
-                    stockDTO.fe_currentPrice = stockBar.c;
-
-                    this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
-                    this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
-
-                    this.todaysOpeningTotal += stockBar.o;
-                    this.todaysClosingTotal += stockBar.c;
-                });
-            });
+    private populateLivePrices(stockDTOs: StockDTO[]): void {
+        if (stockDTOs.length == 0) {
+            this.stockDTOs = stockDTOs;
+            return;
         }
-        return stockDTOs;
+
+        const symbols = stockDTOs.map((stockDTO) => stockDTO.symbol);
+        this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
+            const barsMap: Bars = data.bars;
+
+            stockDTOs.forEach((stockDTO) => {
+                const stockBar = barsMap[stockDTO.symbol];
+
+                stockDTO.fe_currentPrice = stockBar.c;
+
+                this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
+                this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
+
+                this.todaysOpeningTotal += stockBar.o;
+                this.todaysClosingTotal += stockBar.c;
+            });
+            this.stockDTOs = stockDTOs;
+        });
     }
 
     private setSearchParams(params: Params): void {
