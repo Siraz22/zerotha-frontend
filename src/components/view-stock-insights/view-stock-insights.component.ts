@@ -69,7 +69,7 @@ export class ViewStockInsightsComponent implements OnInit {
     }
 
     private populateSymbols(): void {
-        this.symbols = this.stockDTOs.length > 1 ? this.stockDTOs.map((stockDTO) => stockDTO.symbol) : ['AAPL', 'TSLA', 'GOOGL'];
+        this.symbols = this.stockDTOs.length > 1 ? this.stockDTOs.map((stockDTO) => stockDTO.symbol) : ['AAPL', 'TSLA', 'GOOGL', 'MSFT'];
         this.populateNews();
     }
 
