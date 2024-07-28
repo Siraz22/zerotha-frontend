@@ -33,3 +33,15 @@
 
 <app-view-country-stocks *ngIf="countryDTO && searchParams.investmentType===InvestmentType.STOCK" [countryDTO]="countryDTO">
 </app-view-country-stocks>
+<div *ngIf="countryDTO && searchParams.investmentType===InvestmentType.DEBT">
+    Coming soon
+</div>
+<div *ngIf="countryDTO && searchParams.investmentType===InvestmentType.PRECIOUS_METALS">
+    Coming soon
+</div>
+<div *ngIf="countryDTO && searchParams.investmentType===InvestmentType.MUTUAL_FUNDS">
+    Coming soon
+</div>
+<div *ngIf="countryDTO && searchParams.investmentType == undefined || null">
+    Coming soon
+</div>

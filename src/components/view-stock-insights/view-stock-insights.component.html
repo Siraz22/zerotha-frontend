@@ -1,18 +1,111 @@
 <div class="mt-4">
-    <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'News & Events '}}</span>
-    <table class="table" style="margin-top: 15px;">
-        <tbody class="ze-table-body">
-            <tr class="ze-pointer" *ngFor="let news of newsUpdates" (click)="redirectToNews(news.url)">
-                <td class="col-8" style="text-align: left;">
-                    <strong>{{news.symbols | findRelevantStocks : symbols}}</strong>
-                    <br>
-                    <span>{{news.headline}}</span>
-                    <span *ngIf="news.summary">{{news.summary}}</span>
-                </td>
-                <td class="col-4">
-                    <img style="max-width: 140px; height: auto;" src={{news?.images[0]?.url}}>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-6">
+            <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'Overviews'}}</span>
+        </div>
+        <div class="col-6 text-end mr-2">
+            <div id="switchbar">
+                <button class="switch" [class.selected]="selectedOverview === 'Gainers'" (click)="selectOverview('Gainers')">
+                    Gainers
+                </button>
+                <button class="switch" [class.selected]="selectedOverview === 'Losers'" (click)="selectOverview('Losers')">
+                    Losers
+                </button>
+            </div>
+        </div>
+        <div style="margin-top: 10px;" class="row">
+            <ng-container *ngIf="selectedOverview === 'Gainers'">
+                <ng-container *ngFor="let stockDTO of topGainers; let i = index">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-header">{{i+1}}.
+                                <strong>{{ stockDTO.name }}</strong>
+                            </div>
+                            <div class="card-body">
+                                <span>Current: {{stockDTO.fe_currentPrice}}</span>
+                                <br>
+                                P&L:
+                                <span [ngClass]="{
+                                    'text-success': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0,
+                                    'text-danger': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) <= 0
+                                }">
+                                    {{
+                                      (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
+                                      ? '+' 
+                                      : '-' 
+                                    }}
+                                    {{countryDTO.currencySymbol}}{{ (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
+                                </span>
+                                <br>
+                                <small>
+                                    {{ stockDTO.symbol }}
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="selectedOverview === 'Losers'">
+                <ng-container *ngFor="let stockDTO of topLosers; let i = index">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-header">{{i+1}}.
+                                <strong>{{ stockDTO.name }}</strong>
+                            </div>
+                            <div class="card-body">
+                                <span>Current: {{stockDTO.fe_currentPrice}}</span>
+                                <br>
+                                P&L:
+                                <span [ngClass]="{
+                                    'text-success': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0,
+                                    'text-danger': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) <= 0
+                                }">
+                                    {{
+                                      (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
+                                      ? '+' 
+                                      : '-' 
+                                    }}
+                                    {{countryDTO.currencySymbol}}{{ (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
+                                </span>
+                                <br>
+                                <small>
+                                    {{ stockDTO.symbol }}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div *ngIf="stockDTOs.length == 0" style="margin-top:10px">
+            No Stocks added
+        </div>
+    </div>
+
+    <!-- News and Events -->
+    <div style="margin-top: 50px;">
+        <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'News & Events '}}</span>
+        <table class="table">
+            <tbody class="ze-table-body">
+                <tr class="ze-pointer" *ngFor="let news of newsUpdates" (click)="redirectToNews(news.url)">
+                    <td class="col-10" style="text-align: left;">
+                        <span class="badge rounded-pill bg-primary ml-n">{{news.symbols | findRelevantStocks : symbols | joinWithCommaPipe}}</span>
+                        <br>
+                        <strong>{{news.headline}}</strong>
+                        <span *ngIf="news.summary">
+                            <br>
+                            {{news.summary}}
+                        </span>
+                        <small>
+                            <br>{{news.author}} - {{news.updated_at}}
+                        </small>
+                    </td>
+                    <td class="col-2">
+                        <img alt="no img" style="border-radius: 10px; max-width: 160px; height: auto;" src={{news?.images[0]?.url}}>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

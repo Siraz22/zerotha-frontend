@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { StockSearchParams } from '../components/search-params/stock-search-params';
 import { StockDTO } from '../dto/StockDTO';
 import { StockUpdateDTO } from '../dto/StockUpdateDTO';
 import { environment } from '../environments/environment';
@@ -24,7 +25,9 @@ export class StocksService {
         return this.httpClient.delete(`${environment.API_ENDPOINT}/stock/${id}`);
     }
 
-    public findAll(): Observable<StockDTO[]> {
-        return this.httpClient.get<StockDTO[]>(`${environment.API_ENDPOINT}/stock`);
+    public findAll(stockSearchParams: StockSearchParams): Observable<StockDTO[]> {
+        let params = new HttpParams();
+        params = params.append('countryId', stockSearchParams.countryId);
+        return this.httpClient.get<StockDTO[]>(`${environment.API_ENDPOINT}/stock`, { params: params });
     }
 }

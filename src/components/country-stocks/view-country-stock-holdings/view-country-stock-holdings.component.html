@@ -1,7 +1,7 @@
 <div class="mt-4">
     <div class="row">
         <div class="col-4">
-            <input class="form-control" type="text" placeholder="Search for Stocks/Ticker" />
+            <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'All Holdings '}}</span>
         </div>
         <div class="col-4"></div>
         <div class="col-4">
@@ -53,14 +53,25 @@
                         {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
                     </td>
                     <td class="col-1" style="text-align: right">
-                        {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
-                    </td>
-                    <td class="col-1">
-                        {{(stockDTO.fe_currentPrice*stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
+
+                        {{countryDTO.currencySymbol}}{{(stockDTO.quantity * stockDTO.fe_currentPrice) | number}}
 
                     </td>
                     <td class="col-1">
-                        {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
+                        {{(stockDTO.fe_currentPrice * stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
+                    </td>
+                    <td class="col-1">
+                        <span [ngClass]="{
+                            'text-success': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0,
+                            'text-danger': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) <= 0
+                        }">
+                            {{
+                                (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
+                                ? '+' 
+                                : '-'
+                            }}
+                            {{countryDTO.currencySymbol}}{{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
+                        </span>
                     </td>
                     <td class="col-1"></td>
                 </tr>
@@ -72,4 +83,7 @@
             <app-expanding-stocks-table [stockDTOs]="stockDTOs" [currentTotalValue]="currentTotalValue" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
         </ng-container>
     </ng-container>
+    <div *ngIf="stockDTOs.length == 0" style="margin-top:10px">
+        No Stocks added
+    </div>
 </div>

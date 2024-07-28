@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { CountryDTO } from '../../dto/CountryDTO';
 import { StockDTO } from '../../dto/StockDTO';
 import { NewsService } from '../../service/news.service';
 import { WebSocketService } from '../../service/websocket.service';
@@ -31,14 +32,36 @@ interface NewsArticle {
 export class ViewStockInsightsComponent implements OnInit {
     @Input()
     public stockDTOs: StockDTO[];
+    @Input()
+    public countryDTO: CountryDTO;
+
     public newsUpdates: NewsArticle[] = [];
 
     public symbols: string[];
+    public selectedOverview = 'Gainers';
+    public topGainers: StockDTO[];
+    public topLosers: StockDTO[];
 
     constructor(private newsService: NewsService, private webSocketService: WebSocketService) {}
 
     ngOnInit() {
         this.populateSymbols();
+        this.findLosersAndGainers();
+    }
+
+    selectOverview(option: string) {
+        this.selectedOverview = option;
+    }
+
+    public findLosersAndGainers(): void {
+        const sortedStocks = [...this.stockDTOs].sort((a, b) => {
+            const profitA = a.quantity * (a.fe_currentPrice - a.averagePrice);
+            const profitB = b.quantity * (b.fe_currentPrice - b.averagePrice);
+            return profitA - profitB;
+        });
+
+        this.topLosers = sortedStocks.slice(0, 3);
+        this.topGainers = sortedStocks.slice(-3).reverse();
     }
 
     redirectToNews(url: string): void {
@@ -46,7 +69,7 @@ export class ViewStockInsightsComponent implements OnInit {
     }
 
     private populateSymbols(): void {
-        this.symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+        this.symbols = this.stockDTOs.length > 1 ? this.stockDTOs.map((stockDTO) => stockDTO.symbol) : ['AAPL', 'TSLA', 'GOOGL', 'MSFT'];
         this.populateNews();
     }
 

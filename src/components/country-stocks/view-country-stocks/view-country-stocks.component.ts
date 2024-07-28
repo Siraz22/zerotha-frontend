@@ -7,6 +7,7 @@ import { StockDTO } from '../../../dto/StockDTO';
 import { LatestBar } from '../../../interface/latestBar';
 import { StockAlpacaService } from '../../../service/stock-alpaca.service';
 import { StocksService } from '../../../service/stocks.service';
+import { StockSearchParams } from '../../search-params/stock-search-params';
 
 interface ViewCountryStocksSearchParams {
     activeTab?: string;
@@ -41,7 +42,10 @@ export class ViewCountryStocksComponent {
     public todaysOpeningTotal = 0;
     public todaysClosingTotal = 0;
 
+    public countryStockSearchParams: StockSearchParams;
+
     ngOnInit() {
+        this.countryStockSearchParams = { countryId: this.countryDTO.id };
         this.findAll();
     }
 
@@ -58,9 +62,8 @@ export class ViewCountryStocksComponent {
     }
 
     private findAll(): void {
-        this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
-            this.stockDTOs = stockDTOs;
-            this.populateLivePrices();
+        this.stockService.findAll(this.countryStockSearchParams).subscribe((stockDTOs: StockDTO[]) => {
+            this.populateLivePrices(stockDTOs);
         });
 
         this.route.queryParams.subscribe((queryParams) => {
@@ -69,12 +72,17 @@ export class ViewCountryStocksComponent {
         });
     }
 
-    private populateLivePrices(): void {
-        const symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+    private populateLivePrices(stockDTOs: StockDTO[]): void {
+        if (stockDTOs.length == 0) {
+            this.stockDTOs = stockDTOs;
+            return;
+        }
+
+        const symbols = stockDTOs.map((stockDTO) => stockDTO.symbol);
         this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
             const barsMap: Bars = data.bars;
 
-            this.stockDTOs.forEach((stockDTO) => {
+            stockDTOs.forEach((stockDTO) => {
                 const stockBar = barsMap[stockDTO.symbol];
 
                 stockDTO.fe_currentPrice = stockBar.c;
@@ -85,6 +93,7 @@ export class ViewCountryStocksComponent {
                 this.todaysOpeningTotal += stockBar.o;
                 this.todaysClosingTotal += stockBar.c;
             });
+            this.stockDTOs = stockDTOs;
         });
     }
 
