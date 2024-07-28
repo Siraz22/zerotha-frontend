@@ -7,6 +7,7 @@ import { StockDTO } from '../../../dto/StockDTO';
 import { LatestBar } from '../../../interface/latestBar';
 import { StockAlpacaService } from '../../../service/stock-alpaca.service';
 import { StocksService } from '../../../service/stocks.service';
+import { StockSearchParams } from '../../search-params/stock-search-params';
 
 interface ViewCountryStocksSearchParams {
     activeTab?: string;
@@ -41,7 +42,10 @@ export class ViewCountryStocksComponent {
     public todaysOpeningTotal = 0;
     public todaysClosingTotal = 0;
 
+    public countryStockSearchParams: StockSearchParams;
+
     ngOnInit() {
+        this.countryStockSearchParams = { countryId: this.countryDTO.id };
         this.findAll();
     }
 
@@ -58,8 +62,7 @@ export class ViewCountryStocksComponent {
     }
 
     private findAll(): void {
-        this.stockService.findAll().subscribe((stockDTOs: StockDTO[]) => {
-            //this.stockDTOs = stockDTOs;
+        this.stockService.findAll(this.countryStockSearchParams).subscribe((stockDTOs: StockDTO[]) => {
             this.populateLivePrices(stockDTOs);
         });
 
