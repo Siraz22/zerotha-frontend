@@ -1,6 +1,4 @@
 <div class="mt-4">
-    <!-- Insights -->
-
     <div class="row">
         <div class="col-6">
             <span style="font-family: 'GraphikMedium'; font-size: 1.3rem;">{{'Overviews'}}</span>
@@ -80,6 +78,9 @@
                 </ng-container>
             </ng-container>
         </div>
+        <div *ngIf="stockDTOs.length == 0" style="margin-top:10px">
+            No Stocks added
+        </div>
     </div>
 
     <!-- News and Events -->
@@ -107,3 +108,4 @@
             </tbody>
         </table>
     </div>
+</div>

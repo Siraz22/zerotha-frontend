@@ -8,8 +8,7 @@
             <tr>
                 <th style="width: 40%; font-size: 1.4em; text-align: left; ">Country</th>
                 <th>Currency</th>
-                <th>Weight</th>
-                <th style="text-align: right;">Current Amount</th>
+
                 <th></th>
             </tr>
         </thead>
@@ -21,8 +20,7 @@
                     </span>
                 </td>
                 <td class="currency">{{countryDTO.currency}}</td>
-                <td>{{calculateWeight(countryDTO.id)}}</td>
-                <td style="text-align: right">{{countryDTO.currencySymbol}} {{calculateInvestedAmount(countryDTO)}}</td>
+
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">
                         <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>

@@ -71,4 +71,7 @@
             <app-expanding-stocks-table [stockDTOs]="stockDTOs" [currentTotalValue]="currentTotalValue" [groupBy]="selectedGroupBy"></app-expanding-stocks-table>
         </ng-container>
     </ng-container>
+    <div *ngIf="stockDTOs.length == 0" style="margin-top:10px">
+        No Stocks added
+    </div>
 </div>

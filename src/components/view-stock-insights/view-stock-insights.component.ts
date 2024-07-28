@@ -56,13 +56,7 @@ export class ViewStockInsightsComponent implements OnInit {
             return profitA - profitB;
         });
 
-        // Map sorted stocks to a string representation
-        const stockProfits = sortedStocks.map((stock) => `${stock.symbol}: ${stock.quantity * ((stock.fe_currentPrice || 0) - stock.averagePrice)}`).join(', ');
-
-        // Get the top three losers (smallest total values)
         this.topLosers = sortedStocks.slice(0, 3);
-
-        // Get the top three gainers (largest total values)
         this.topGainers = sortedStocks.slice(-3).reverse();
     }
 
@@ -71,7 +65,7 @@ export class ViewStockInsightsComponent implements OnInit {
     }
 
     private populateSymbols(): void {
-        this.symbols = this.stockDTOs.map((stockDTO) => stockDTO.symbol);
+        this.symbols = this.stockDTOs.length > 1 ? this.stockDTOs.map((stockDTO) => stockDTO.symbol) : ['AAPL', 'TSLA', 'GOOGL'];
         this.populateNews();
     }
 

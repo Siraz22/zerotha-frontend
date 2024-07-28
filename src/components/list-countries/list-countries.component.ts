@@ -39,14 +39,6 @@ export class ListCountriesComponent implements OnInit {
         });
     }
 
-    public calculateWeight(id: number): number {
-        return 0.5;
-    }
-
-    public calculateInvestedAmount(countryDTO: CountryDTO): number {
-        return 10000;
-    }
-
     private findAll(): void {
         this.countryService.findAll().subscribe((result: CountryDTO[]) => {
             this.countryDTOs = result;
