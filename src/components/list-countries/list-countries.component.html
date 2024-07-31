@@ -6,24 +6,24 @@
     <table class="table" style="margin-top: 15px;">
         <thead class="ze-table-heading">
             <tr>
-                <th style="width: 40%; font-size: 1.4em; text-align: left; ">Country</th>
-                <th>Currency</th>
-
-                <th></th>
+                <th class="col-6" style="width: 40%; font-size: 1.4em; text-align: left; ">Country</th>
+                <th class="col-3">Currency</th>
+                <th class="col-2">Currency Symbol</th>
+                <th class="col-1"></th>
             </tr>
         </thead>
         <tbody class="ze-table-body">
-            <tr *ngFor="let countryDTO of countryDTOs">
-                <td style="text-align: left;">
-                    <span class="ze-pointer" (click)="goToCountry(countryDTO.id)">
+            <tr class="ze-pointer" *ngFor="let countryDTO of countryDTOs">
+                <td (click)="goToCountry(countryDTO.id)" class="col-6" style="text-align: left;">
+                    <span class="ze-pointer">
                         <strong>{{countryDTO.name}}</strong>
                     </span>
                 </td>
-                <td class="currency">{{countryDTO.currency}}</td>
-
+                <td (click)="goToCountry(countryDTO.id)" class="col-3 currency">{{countryDTO.currency}}</td>
+                <td class="col-2">{{countryDTO.currencySymbol}}</td>
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">
-                        <i ngbDropdownToggle class="fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>
+                        <i ngbDropdownToggle class="col-1 fas fa-ellipsis-vertical ze-icon-btn ze-pointer"></i>
                         <div ngbDropdownMenu>
                             <button ngbDropdownItem>Edit</button>
                             <button ngbDropdownItem>Delete</button>

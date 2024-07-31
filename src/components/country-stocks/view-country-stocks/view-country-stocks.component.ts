@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import * as Highcharts from 'highcharts';
+import TreemapModule from 'highcharts/modules/treemap';
 
 import { CountryDTO } from '../../../dto/CountryDTO';
 import { StockDTO } from '../../../dto/StockDTO';
@@ -8,6 +10,9 @@ import { LatestBar } from '../../../interface/latestBar';
 import { StockAlpacaService } from '../../../service/stock-alpaca.service';
 import { StocksService } from '../../../service/stocks.service';
 import { StockSearchParams } from '../../search-params/stock-search-params';
+
+// Initialize the Treemap module
+TreemapModule(Highcharts);
 
 interface ViewCountryStocksSearchParams {
     activeTab?: string;
@@ -43,6 +48,34 @@ export class ViewCountryStocksComponent {
     public todaysClosingTotal = 0;
 
     public countryStockSearchParams: StockSearchParams;
+
+    updateFlag: boolean = false;
+    Highcharts: typeof Highcharts = Highcharts;
+    chartOptions: Highcharts.Options = {
+        title: null,
+        chart: {
+            height: 230,
+        },
+        series: [
+            {
+                type: 'treemap',
+                layoutAlgorithm: 'squarified',
+                data: [
+                    {
+                        name: 'Loading',
+                        value: 1,
+                    },
+                ],
+            },
+        ],
+        tooltip: {
+            formatter: function () {
+                const point = this.point as any;
+                const roundedPnl = point.custom.pnl.toFixed(2); // Round to 2 decimal places
+                return `${point.custom.name}: ${roundedPnl}`;
+            },
+        },
+    };
 
     ngOnInit() {
         this.countryStockSearchParams = { countryId: this.countryDTO.id };
@@ -82,19 +115,43 @@ export class ViewCountryStocksComponent {
         this.stockAlpacaService.getBars(symbols).subscribe((data: MultipleBarsResponse) => {
             const barsMap: Bars = data.bars;
 
+            const treemapSeries = this.chartOptions.series[0] as Highcharts.SeriesTreemapOptions;
+            treemapSeries.data = [];
+
+            //Reset
+            this.todaysOpeningTotal = 0;
+            this.todaysClosingTotal = 0;
+            this.investedAmount = 0;
+            this.currentValue = 0;
+
             stockDTOs.forEach((stockDTO) => {
                 const stockBar = barsMap[stockDTO.symbol];
 
                 stockDTO.fe_currentPrice = stockBar.c;
+
+                const pnl = stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice);
 
                 this.investedAmount += stockDTO.averagePrice * stockDTO.quantity;
                 this.currentValue += stockDTO.fe_currentPrice * stockDTO.quantity;
 
                 this.todaysOpeningTotal += stockBar.o;
                 this.todaysClosingTotal += stockBar.c;
+
+                treemapSeries.data.push({
+                    name: stockDTO.symbol,
+                    value: Math.abs(pnl),
+                    color: pnl > 0 ? '#4caf50' : '#e04343',
+                    custom: { name: stockDTO.name, pnl },
+                });
             });
+
+            this.updateFlag = true;
             this.stockDTOs = stockDTOs;
         });
+    }
+
+    private updateChart(): void {
+        this.Highcharts.chart('container', this.chartOptions);
     }
 
     private setSearchParams(params: Params): void {

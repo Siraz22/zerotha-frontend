@@ -4,13 +4,13 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <div class="container">
-                        <p>
+                        <span>
                             <strong>{{'Good Afternoon, @Username! 🎉'}}</strong>
-                        </p>
+                        </span>
                         <p>{{'Change is the only constant!'}}</p>
                         <div class="card">
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row" style="margin: 20px 0px;">
                                     <div class="col-6">
                                         <div class="card-text">
                                             Current Value
@@ -23,6 +23,7 @@
                                         <div class="card-text">
                                             Invested Amount : {{countryDTO.currencySymbol}}{{investedAmount | number}}
                                         </div>
+                                        <br>
                                         <div class="card-text">
                                             Total P&L :
                                             <span [ngClass]="{
@@ -38,6 +39,7 @@
                                                 ({{((currentValue - investedAmount) / investedAmount) | percent:'1.2-2'}})
                                             </span>
                                         </div>
+                                        <br>
                                         <div class="card-text">
                                             Today's P&L :
                                             <span [ngClass]="{
@@ -54,7 +56,6 @@
                                             </span>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -64,15 +65,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-6">
-                                Your Profit and Loss
-                            </div>
-                            <div style="right: 2rem" class="col-6">
-                                <ng-select class="ze-ng-select" placeholder="Dropdown"></ng-select>
+                                <strong>{{'Your Profit and Loss! 🎉'}}</strong>
+                                <br>
+                                <small>{{'Hover to see'}}</small>
                             </div>
                         </div>
-                        <br>
                         <div>
-                            <p>Tree Chart here</p>
+                            <highcharts-chart [(update)]="updateFlag" [Highcharts]="Highcharts" [options]="chartOptions">
+                            </highcharts-chart>
                         </div>
                     </div>
                 </div>
@@ -112,4 +112,5 @@
         </ng-template>
     </div>
 </div>
+
 <div [ngbNavOutlet]="nav"></div>
