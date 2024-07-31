@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HighchartsChartModule } from 'highcharts-angular';
 import { ListCountriesComponent } from 'src/components/list-countries/list-countries.component';
 import { NavbarComponent } from 'src/components/navbar/navbar.component';
 import { ViewCountryComponent } from 'src/components/view-country/view-country.component';
@@ -57,6 +58,7 @@ import { AppComponent } from './app.component';
         AppRoutingModule,
         BrowserAnimationsModule,
         MatTabsModule,
+        HighchartsChartModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
