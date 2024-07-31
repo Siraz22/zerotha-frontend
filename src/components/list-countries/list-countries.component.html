@@ -13,9 +13,9 @@
             </tr>
         </thead>
         <tbody class="ze-table-body">
-            <tr *ngFor="let countryDTO of countryDTOs">
+            <tr *ngFor="let countryDTO of countryDTOs" (click)="goToCountry(countryDTO.id)">
                 <td style="text-align: left;">
-                    <span class="ze-pointer" (click)="goToCountry(countryDTO.id)">
+                    <span class="ze-pointer">
                         <strong>{{countryDTO.name}}</strong>
                     </span>
                 </td>
