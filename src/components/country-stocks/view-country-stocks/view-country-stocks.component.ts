@@ -118,6 +118,12 @@ export class ViewCountryStocksComponent {
             const treemapSeries = this.chartOptions.series[0] as Highcharts.SeriesTreemapOptions;
             treemapSeries.data = [];
 
+            //Reset
+            this.todaysOpeningTotal = 0;
+            this.todaysClosingTotal = 0;
+            this.investedAmount = 0;
+            this.currentValue = 0;
+
             stockDTOs.forEach((stockDTO) => {
                 const stockBar = barsMap[stockDTO.symbol];
 
@@ -133,8 +139,8 @@ export class ViewCountryStocksComponent {
 
                 treemapSeries.data.push({
                     name: stockDTO.symbol,
-                    value: Math.abs(pnl), // Absolute value to indicate size
-                    color: pnl > 0 ? 'green' : 'red', // Color based on profit or loss
+                    value: Math.abs(pnl),
+                    color: pnl > 0 ? '#4caf50' : '#e04343',
                     custom: { name: stockDTO.name, pnl },
                 });
             });
