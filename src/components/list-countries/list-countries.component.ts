@@ -29,7 +29,7 @@ export class ListCountriesComponent implements OnInit {
     public openAddCountryModal(): void {
         const addCountryModalInstance = this.modalService.open(AddCountryModalComponent);
         addCountryModalInstance.result.then((modalResult: ModalResult) => {
-            if (modalResult.response === ModalResponse.SUCCESS) {
+            if (modalResult?.response === ModalResponse.SUCCESS) {
                 const countryDTO: CountryDTO = modalResult.data;
                 this.countryService.saveCountry(countryDTO).subscribe(
                     (response) => {},
