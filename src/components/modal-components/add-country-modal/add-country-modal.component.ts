@@ -34,7 +34,6 @@ export class AddCountryModalComponent implements OnInit {
     constructor(private activeModal: NgbActiveModal, private formBuilder: FormBuilder, private localAssetService: LocalAssetService) {}
     ngOnInit() {
         this.fetchRecords();
-        this.createFormGroup();
     }
 
     public closeModal(): void {
@@ -69,10 +68,15 @@ export class AddCountryModalComponent implements OnInit {
             currencySymbol: [null],
             investedAmount: 0,
         });
+
+        this.autofillCountryDetails();
     }
 
     private fetchRecords(): void {
-        this.localAssetService.getLocalCountryRecords().subscribe((offlineRecords) => (this.offlineRecords = offlineRecords));
+        this.localAssetService.getLocalCountryRecords().subscribe((offlineRecords) => {
+            this.offlineRecords = offlineRecords;
+            this.createFormGroup();
+        });
     }
 
     private compileCountryDTO() {

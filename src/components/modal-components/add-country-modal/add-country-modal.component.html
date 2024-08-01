@@ -3,7 +3,7 @@
     <i class="fa-solid fa-xmark close-icon ze-icon-btn ze-pointer" (click)="closeModal()"></i>
 </div>
 <div class="modal-body">
-    <form #debugForm="ngForm" [formGroup]="formGroup">
+    <form #debugForm="ngForm" *ngIf="formGroup" [formGroup]="formGroup">
         <div class="form-group row">
             <label class="col-sm-3 col-form-label">Name</label>
             <div class="col-sm-9">
@@ -35,8 +35,6 @@
         </div>
     </form>
 </div>
-
-{{debugForm.value | json}}
 
 <div class="modal-footer d-flex justify-content-between">
     <button type="button" class="ze-btn" (click)="closeModal()">Cancel</button>

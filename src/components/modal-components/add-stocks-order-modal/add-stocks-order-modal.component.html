@@ -165,15 +165,13 @@
             </div>
         </div>
     </form>
+    <div class="mt-2" *ngIf="selectedStockBar">
+        Low: {{countryDTO.currencySymbol+""+selectedStockBar.l}}, Closing : {{countryDTO.currencySymbol+""+selectedStockBar.c}}, High :
+        {{countryDTO.currencySymbol+""+selectedStockBar.h}}
+        <br>
+        <small>As of {{selectedStockBar.t | date}}</small>
+    </div>
 </div>
-
-<div *ngIf="selectedStockBar">
-    <p>Low : {{selectedStockBar.l}}, Closing : {{selectedStockBar.c}}, High : {{selectedStockBar.h}}</p>
-    As of {{selectedStockBar.t}}
-</div>
-
-{{debugForm.value | json}}
-
 <div class="modal-footer d-flex justify-content-between">
     <button type="button" class="ze-btn" (click)="closeModal(false)">Cancel</button>
     <button type="button" class="ze-btn ze-btn-primary" (click)="saveStock()">Create</button>

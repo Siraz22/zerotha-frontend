@@ -19,7 +19,7 @@ export class ViewCountryStockHoldingsComponent implements OnInit {
 
     public StocksGroupBy = StocksGroupBy;
     public groupByOptions = [StocksGroupBy.NONE, StocksGroupBy.MARKET_CAP, StocksGroupBy.SECTOR];
-    public selectedGroupBy = StocksGroupBy.NONE;
+    public selectedGroupBy = StocksGroupBy.MARKET_CAP;
 
     constructor() {}
 
