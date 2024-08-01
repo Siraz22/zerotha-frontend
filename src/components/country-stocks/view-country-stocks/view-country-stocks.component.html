@@ -80,9 +80,21 @@
         </div>
 
         <mat-tab-group [selectedIndex]="activeTabIndexForMatTab" (selectedTabChange)="tabClicked($event)" mat-stretch-tabs="false" mat-align-tabs="start">
-            <mat-tab label="Insights"></mat-tab>
-            <mat-tab label="Holdings"></mat-tab>
-            <mat-tab label="Orders"></mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Insights&nbsp;<i *ngIf="activeTabIndexForMatTab!=0" class="fa-regular fa-hand-pointer fa-beat-fade"></i>
+                </ng-template>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Holdings&nbsp;<i *ngIf="activeTabIndexForMatTab!=1" class="fa-regular fa-hand-pointer fa-beat-fade"></i>
+                </ng-template>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Orders&nbsp;<i *ngIf="activeTabIndexForMatTab!=2" class="fa-regular fa-hand-pointer fa-beat-fade"></i>
+                </ng-template>
+            </mat-tab>
         </mat-tab-group>
     </div>
 </div>

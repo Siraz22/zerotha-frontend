@@ -83,7 +83,7 @@ export class ViewCountryStocksComponent {
     }
 
     public tabClicked(selectedTab: MatTabChangeEvent): void {
-        this.searchParams.activeTab = selectedTab.tab.textLabel;
+        this.searchParams.activeTab = this.getSelectedTabName(selectedTab.index);
         this.activeTabIndexForMatTab = selectedTab.index;
         this.setRouteQueryParams();
     }
@@ -173,6 +173,19 @@ export class ViewCountryStocksComponent {
                 return 2;
             default:
                 return 0;
+        }
+    }
+
+    private getSelectedTabName(selectedIndex: number): string {
+        switch (selectedIndex) {
+            case 0:
+                return 'Insights';
+            case 1:
+                return 'Holdings';
+            case 2:
+                return 'Orders';
+            default:
+                return 'Insights';
         }
     }
 }
