@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
+import { CountryDTO } from '../../dto/CountryDTO';
 import { StockDTO } from '../../dto/StockDTO';
 import { MarketCap } from '../../enums/market-cap';
 import { Sector } from '../../enums/sector';
@@ -37,6 +38,8 @@ import { StocksGroupBy } from '../../enums/stocks-group-by';
 export class ExpandingStocksTableComponent implements OnChanges {
     @Input()
     public stockDTOs: StockDTO[];
+    @Input()
+    public countryDTO: CountryDTO;
     @Input()
     public groupBy: StocksGroupBy;
     @Input()

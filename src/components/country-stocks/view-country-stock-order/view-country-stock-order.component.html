@@ -29,20 +29,20 @@
                 </td>
                 <td>
                     <span class="ze-pointer">
-                        <strong>{{stockDTO.fe_currentPrice}}</strong>
+                        <strong>{{countryDTO.currencySymbol}}{{stockDTO.fe_currentPrice}}</strong>
                     </span>
                 </td>
                 <td class="currency">
-                    {{stockDTO.averagePrice}}
+                    {{countryDTO.currencySymbol}}{{stockDTO.averagePrice}}
                 </td>
                 <td>
-                    {{stockDTO.quantity}}
+                    {{countryDTO.currencySymbol}}{{stockDTO.quantity}}
                 </td>
                 <td>
-                    {{stockDTO.quantity * stockDTO.averagePrice | number}}
+                    {{countryDTO.currencySymbol}}{{stockDTO.quantity * stockDTO.averagePrice | number}}
                 </td>
                 <td style="text-align: right">
-                    {{stockDTO.quantity * stockDTO.fe_currentPrice | number}}
+                    {{countryDTO.currencySymbol}}{{stockDTO.quantity * stockDTO.fe_currentPrice | number}}
                 </td>
                 <td>
                     <div ngbDropdown #countryActions="ngbDropdown">

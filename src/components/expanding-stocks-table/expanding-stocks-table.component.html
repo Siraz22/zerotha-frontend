@@ -9,13 +9,13 @@
                 <th class="col-1">Invested Amount</th>
                 <th class="col-1">Current Value</th>
                 <th class="col-1">Weight</th>
-                <th class="col-1">P&L</th>
+                <th class="col-2">P&L</th>
                 <th class="col-1"></th>
             </tr>
         </thead>
         <tbody *ngFor="let keyAndImg of mapKeysAndImg" class="ze-table-body">
             <tr class="ze-pointer" (click)="toggleRowCollapse(keyAndImg[0])">
-                <td class="col-2" style="text-align: left;">
+                <td class="col-4" style="text-align: left;">
                     <img class="option-switchbar-icon" src={{keyAndImg[1]}}>
                     <span class="p-2">
                         <span>
@@ -30,19 +30,29 @@
                 <td class="col-1">
                 </td>
                 <td class="col-1" style="text-align: right">
-                    {{ calculateTotalInvestedValueForGroup(groupedTableData[keyAndImg[0]]) | number }}
+                    {{countryDTO.currencySymbol}}{{ calculateTotalInvestedValueForGroup(groupedTableData[keyAndImg[0]]) | number }}
                 </td>
                 <td class="col-1" style="text-align: right">
-                    {{ calculateTotalCurrentValueForGroup(groupedTableData[keyAndImg[0]]) | number }}
+                    {{countryDTO.currencySymbol}}{{ calculateTotalCurrentValueForGroup(groupedTableData[keyAndImg[0]]) | number }}
                 </td>
                 <td class="col-1">
                     {{ calculateTotalWeightForGroup(groupedTableData[keyAndImg[0]]) | percent:'1.2-2' }}
                 </td>
-                <td class="col-1">
-                    {{ calculateTotalPAndLForGroup(groupedTableData[keyAndImg[0]]) | number }}
+                <td class="col-2">
+                    <span [ngClass]="{
+                        'text-success': calculateTotalPAndLForGroup(groupedTableData[keyAndImg[0]]) > 0,
+                        'text-danger': calculateTotalPAndLForGroup(groupedTableData[keyAndImg[0]]) <= 0
+                    }">
+                        {{
+                            calculateTotalPAndLForGroup(groupedTableData[keyAndImg[0]]) > 0 
+                            ? '+' 
+                            : '-'
+                        }}
+                        {{countryDTO.currencySymbol}}{{ calculateTotalPAndLForGroup(groupedTableData[keyAndImg[0]]) | absPipe | number }}
+                    </span>
                 </td>
                 <td class="col-1">
-                    <i [ngClass]="{'fa-caret-down': isRowCollapsed[keyAndImg[0]], 'fa-caret-up': !isRowCollapsed[keyAndImg[0]]}" class="fa-solid"></i>
+                    <i [ngClass]="{'fa-caret-down': isRowCollapsed[keyAndImg[0]], 'fa-caret-up': !isRowCollapsed[keyAndImg[0]]}" class="fa-solid fa-beat-fade"></i>
                 </td>
             </tr>
             <ng-container *ngIf="isRowCollapsed[keyAndImg[0]]">
@@ -54,26 +64,36 @@
                     </td>
                     <td class="col-1">
                         <span class="ze-pointer">
-                            {{stockDTO.fe_currentPrice}}
+                            {{countryDTO.currencySymbol}}{{stockDTO.fe_currentPrice}}
                         </span>
                     </td>
                     <td class="col-1">
-                        {{stockDTO.quantity}}
+                        {{countryDTO.currencySymbol}}{{stockDTO.quantity}}
                     </td>
                     <td class="col-1">
-                        {{stockDTO.averagePrice}}
+                        {{countryDTO.currencySymbol}}{{stockDTO.averagePrice}}
                     </td>
                     <td class="col-1" style="text-align: right">
-                        {{(stockDTO.quantity * stockDTO.averagePrice) | number}}
+                        {{countryDTO.currencySymbol}}{{(stockDTO.quantity * stockDTO.averagePrice) | number}}
                     </td>
                     <td class="col-1" style="text-align: right">
-                        {{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
+                        {{countryDTO.currencySymbol}}{{(stockDTO.quantity * stockDTO.fe_currentPrice ) | number}}
                     </td>
                     <td class="col-1">
                         {{(stockDTO.fe_currentPrice * stockDTO.quantity / currentTotalValue) | percent:'1.2-2'}}
                     </td>
-                    <td class="col-1">
-                        {{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) |  number}}
+                    <td class="col-2">
+                        <span [ngClass]="{
+                            'text-success': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0,
+                            'text-danger': (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) <= 0
+                        }">
+                            {{
+                                (stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) > 0 
+                                ? '+' 
+                                : '-'
+                            }}
+                            {{countryDTO.currencySymbol}}{{countryDTO.currencySymbol}}{{(stockDTO.quantity * (stockDTO.fe_currentPrice - stockDTO.averagePrice)) | absPipe | number }}
+                        </span>
                     </td>
                     <td class="col-1"></td>
                 </tr>
