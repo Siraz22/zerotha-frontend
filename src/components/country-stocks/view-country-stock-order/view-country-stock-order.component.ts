@@ -47,6 +47,12 @@ export class ViewCountryStockOrderComponent implements OnInit {
     public openEditStockModal(stockDTOToEdit: StockDTO): void {
         const editStocksModalInstance = this.modalService.open(EditStocksOrderModalComponent, { size: 'lg' });
         editStocksModalInstance.componentInstance.stockDTO = stockDTOToEdit;
+
+        editStocksModalInstance.result.then((stockUpdated: boolean) => {
+            if (stockUpdated) {
+                this.refreshStocks.emit(true);
+            }
+        });
     }
 
     public openDeleteStockModal(stockDTOToDelete: StockDTO): void {

@@ -38,13 +38,13 @@ export class EditStocksOrderModalComponent implements OnInit {
         this.createFormGroup();
     }
 
-    public closeModal(): void {
-        this.activeModal.close();
+    public closeModal(stockUpdated: boolean): void {
+        this.activeModal.close(stockUpdated);
     }
 
     public updateStock(stockId: number): void {
         this.stockService.updateStock(this.compileStockUpdateDTO(stockId)).subscribe((_) => {
-            this.closeModal();
+            this.closeModal(true);
         });
     }
 
